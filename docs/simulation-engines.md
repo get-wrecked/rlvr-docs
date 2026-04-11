@@ -87,6 +87,28 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 
 ---
 
+### NVIDIA Isaac Lab (successor to Isaac Gym)
+
+| | |
+|---|---|
+| **URL** | https://github.com/isaac-sim/IsaacLab |
+| **License** | BSD 3-Clause (open source) |
+| **Cost** | **Free** (requires Isaac Sim + NVIDIA GPU) |
+| **Language** | Python (PyTorch tensor interface) |
+
+**What it's great at**: Massively parallel RL training environments built on Isaac Sim. Direct GPU tensor API — no CPU-GPU transfer bottleneck. Thousands of environments on one GPU. Locomotion, manipulation, dexterous grasping.
+
+| Pros | Cons |
+|------|------|
+| Extreme throughput for parallel verification | Requires Isaac Sim (heavy) |
+| Direct PyTorch tensor access | NVIDIA GPU only |
+| Gymnasium-compatible wrappers | Isaac Gym standalone is deprecated |
+| Growing library of tasks | |
+
+**RLVR verifier quality**: **Excellent** for parallel robotics verification at scale.
+
+---
+
 ### NVIDIA Warp
 
 | | |
@@ -712,16 +734,37 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 | **Cost** | **Free** |
 | **Language** | Python (PyTorch) |
 
-**What it's great at**: Diffusion-based molecular docking. State-of-the-art on PoseBusters benchmark. Generates diverse binding poses. Faster than traditional docking for large-scale virtual screening.
+**What it's great at**: Diffusion-based molecular docking. State-of-the-art on PoseBusters benchmark. Generates diverse binding poses. Blind docking — no predefined binding pocket needed.
 
 | Pros | Cons |
 |------|------|
 | State-of-the-art accuracy (2024-2025) | Requires GPU |
-| Fast inference | Less validated than Vina historically |
-| Generates diverse poses | ML model may have blind spots |
+| Blind docking (no box definition needed) | Less validated than Vina historically |
+| Generates diverse poses with confidence scores | ML model may have blind spots |
 | Active development | |
 
 **RLVR verifier quality**: **Good** for modern docking verification.
+
+---
+
+### Uni-Dock (DP Technology)
+
+| | |
+|---|---|
+| **URL** | https://github.com/dptech-corp/Uni-Dock |
+| **License** | Apache 2.0 |
+| **Cost** | **Free** |
+| **Language** | C++/CUDA, Python wrapper |
+
+**What it's great at**: GPU-accelerated molecular docking. ~1000x faster than Vina by running on GPU. Designed for ultra-large-scale virtual screening. Vina-compatible interface.
+
+| Pros | Cons |
+|------|------|
+| Extreme throughput (1000x Vina) | Requires NVIDIA GPU |
+| Vina-compatible interface | Relatively new, less battle-tested |
+| Open source | Same scoring limitations as Vina |
+
+**RLVR verifier quality**: **Very Good** for large-scale batch docking verification.
 
 ---
 
@@ -1231,25 +1274,26 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 
 ---
 
-### Yosys
+### Yosys + SymbiYosys
 
 | | |
 |---|---|
-| **URL** | https://github.com/YosysHQ/yosys |
+| **URL** | https://github.com/YosysHQ/yosys (synthesis) / https://github.com/YosysHQ/sby (formal) |
 | **License** | ISC |
 | **Cost** | **Free** |
-| **Language** | C++, Python (pyosys) |
+| **Language** | C++, TCL scripting, Python (pyosys) |
 
-**What it's great at**: Open-source synthesis tool. Converts RTL (Verilog) to gate-level netlists. Formal verification (via sby/SymbiYosys). The backbone of the open-source FPGA toolchain.
+**What it's great at**: Open-source synthesis tool. Converts RTL (Verilog) to gate-level netlists. **SymbiYosys** is the formal verification frontend — takes SystemVerilog Assertions (SVA) and proves/disproves them via bounded model checking, k-induction, etc. The backbone of the open-source FPGA toolchain (with nextpnr).
 
 | Pros | Cons |
 |------|------|
-| Industry-quality synthesis | Verilog only (no VHDL) |
-| Formal verification (SymbiYosys) | |
+| Industry-quality synthesis | Verilog only (no VHDL natively) |
+| SymbiYosys proves properties without testbenches | SystemVerilog subset (improving) |
+| Equivalence checking between designs | Formal verification expensive for large designs |
+| JSON netlist output for programmatic analysis | |
 | Open-source FPGA flow (with nextpnr) | |
-| Python scripting | |
 
-**RLVR verifier quality**: **Excellent** for synthesis and formal verification tasks.
+**RLVR verifier quality**: **Excellent** for synthesis and formal verification tasks. Synthesis success/failure + gate count + formal property proof provide strong verification signals.
 
 ---
 
@@ -1565,6 +1609,28 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 
 ---
 
+### Wolfram Engine
+
+| | |
+|---|---|
+| **URL** | https://www.wolfram.com/engine/ |
+| **License** | **Free for development/pre-production**. Full Mathematica is commercial (~$160/yr student, ~$375/yr individual). |
+| **Cost** | Free (dev), paid (production/commercial) |
+| **Language** | Wolfram Language, Python via `wolframclient` (`pip install wolframclient`) |
+
+**What it's great at**: The most powerful CAS in existence. Symbolic math, numerical computation, knowledge base, NLP, image processing. `FullSimplify`, `Reduce`, `FindInstance` are extremely strong decision procedures. Largest curated mathematical knowledge base available.
+
+| Pros | Cons |
+|------|------|
+| Most powerful simplification/equivalence checking | "Free for dev" license is ambiguous at scale |
+| Huge built-in dataset (identities, sequences, constants) | Proprietary, not open source |
+| `wolframclient` Python bridge | Wolfram Language learning curve |
+| Wolfram Engine is genuinely free for dev | Startup time (seconds per kernel) |
+
+**RLVR verifier quality**: **Excellent** for mathematical verification where SymPy falls short. The free Engine tier makes it viable for RLVR, but license terms should be reviewed for production training at scale.
+
+---
+
 ### GAP (Groups, Algorithms, Programming)
 
 | | |
@@ -1572,9 +1638,9 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 | **URL** | https://www.gap-system.org |
 | **License** | GPL v2 |
 | **Cost** | **Free** |
-| **Language** | GAP language, Python via `gap_jupyter` |
+| **Language** | GAP language, Python via `gappy` or SageMath's GAP interface |
 
-**What it's great at**: Computational group theory. The gold standard for: group construction, character tables, representation theory, permutation groups, finitely presented groups.
+**What it's great at**: Computational group theory. The gold standard for: group construction, character tables, representation theory, permutation groups, finitely presented groups. 150+ packages. If GAP says two groups are isomorphic, they are.
 
 **RLVR verifier quality**: **Excellent** for abstract algebra verification.
 
@@ -1730,6 +1796,21 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 
 ## 21. Climate, Weather & Geospatial
 
+### ERA5 (ECMWF Reanalysis)
+
+| | |
+|---|---|
+| **URL** | https://cds.climate.copernicus.eu |
+| **License** | Copernicus license (free, open, requires attribution) |
+| **Cost** | **Free** |
+| **Language** | Python via CDS API (`pip install cdsapi`) |
+
+**What it's great at**: The gold standard climate reanalysis dataset. Hourly data from 1940-present. Global coverage, ~30km resolution. Temperature, pressure, wind, humidity, precipitation, radiation — hundreds of variables. Petabytes of data. Also available on Google BigQuery, AWS, and Azure.
+
+**RLVR verifier quality**: **Excellent** for verifying any historical weather/climate claim against authoritative data.
+
+---
+
 ### xarray + cfgrib
 
 | | |
@@ -1753,6 +1834,36 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 | **Install** | `pip install geopandas` |
 
 **What it's great at**: Geospatial data analysis in Python. Spatial joins, distance calculations, projections. Built on Shapely, Fiona, and pyproj.
+
+---
+
+### Shapely
+
+| | |
+|---|---|
+| **URL** | https://shapely.readthedocs.io |
+| **License** | BSD 3-Clause |
+| **Cost** | **Free** |
+| **Install** | `pip install shapely` |
+
+**What it's great at**: Computational geometry in Python. Point, line, polygon operations. Set-theoretic operations (union, intersection, difference), buffering, convex hull, Voronoi, triangulation. Shapely 2.0 is vectorized and much faster than 1.x (backed by GEOS C library).
+
+**RLVR verifier quality**: **Excellent** for computational geometry verification — area, intersection, containment, distance, validity.
+
+---
+
+### Rasterio
+
+| | |
+|---|---|
+| **URL** | https://rasterio.readthedocs.io |
+| **License** | BSD 3-Clause |
+| **Cost** | **Free** |
+| **Install** | `pip install rasterio` |
+
+**What it's great at**: Pythonic raster data access. Reading/writing GeoTIFFs and other raster formats. Windowed reading, reprojection, masking, raster algebra. Clean API over GDAL's raster capabilities with NumPy integration.
+
+**RLVR verifier quality**: **Good** for raster statistics, spatial extent, projection, and pixel value verification.
 
 ---
 
@@ -1899,6 +2010,21 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 
 ---
 
+### OpenDSS (EPRI)
+
+| | |
+|---|---|
+| **URL** | https://www.epri.com/pages/sa/opendss |
+| **License** | BSD |
+| **Cost** | **Free** |
+| **Language** | Python via OpenDSSDirect.py or dss-python |
+
+**What it's great at**: The industry standard for utility distribution system analysis. Time-series power flow (8760 hours), harmonics, fault analysis. Designed for distribution grids with DERs (solar, storage, EVs).
+
+**RLVR verifier quality**: **Good** for distribution system and time-series power analysis tasks.
+
+---
+
 ## 26. Recommendation Matrix
 
 ### For each RLVR domain, the recommended engine:
@@ -1914,7 +2040,7 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 | **Molecular dynamics** | OpenMM (bio) / LAMMPS (materials) | GROMACS | `conda install openmm` |
 | **Protein structure** | Boltz-1 (open) / AlphaFold 3 | ESMFold (fast) | `pip install boltz` |
 | **Protein design** | RFdiffusion + ProteinMPNN | — | See GitHub |
-| **Molecular docking** | AutoDock Vina | GNINA, DiffDock | `pip install vina` |
+| **Molecular docking** | AutoDock Vina | GNINA, DiffDock, Uni-Dock (GPU) | `pip install vina` |
 | **Retrosynthesis** | AiZynthFinder | RDChiral | `pip install aizynthfinder` |
 | **DNA/RNA design** | NUPACK (complex) / ViennaRNA (simple) | — | See URLs |
 | **Bioinformatics** | Biopython + BLAST+ | — | `pip install biopython` |
@@ -1927,18 +2053,18 @@ A comprehensive catalog of every physics, chemistry, biology, engineering, and m
 | **Theorem proving** | Lean 4 (math) / Coq (CS) | Isabelle | See URLs |
 | **SMT solving** | Z3 | CVC5 | `pip install z3-solver` |
 | **First-order ATP** | Vampire | E prover | See URLs |
-| **Symbolic math** | SymPy (light) / SageMath (full) | — | `pip install sympy` |
+| **Symbolic math** | SymPy (light) / SageMath (full) | Wolfram Engine (free dev) | `pip install sympy` |
 | **Group theory** | GAP | SageMath | See URLs |
 | **Number theory** | PARI/GP | SageMath | See URLs |
 | **LP/MIP optimization** | HiGHS (free) / Gurobi (academic) | SCIP | `pip install highspy` |
 | **Constraint satisfaction** | OR-Tools CP-SAT | MiniZinc | `pip install ortools` |
 | **Graph algorithms** | NetworkX | igraph (large graphs) | `pip install networkx` |
 | **Climate/weather data** | xarray + cfgrib | — | `pip install xarray` |
-| **Geospatial** | GeoPandas | — | `pip install geopandas` |
+| **Geospatial** | GeoPandas + Shapely (vector) | Rasterio (raster) | `pip install geopandas` |
 | **Materials science** | ASE + pymatgen | Quantum ESPRESSO | `pip install ase pymatgen` |
 | **Systems biology** | Tellurium / COPASI | — | `pip install tellurium` |
 | **Epidemiology** | Mesa | EpiModel | `pip install mesa` |
-| **Power systems** | pandapower / PyPSA | — | `pip install pandapower` |
+| **Power systems** | pandapower / PyPSA | OpenDSS (distribution) | `pip install pandapower` |
 | **RL environments** | Gymnasium | PettingZoo (multi-agent) | `pip install gymnasium` |
 | **Vehicle dynamics** | Project Chrono | — | See URLs |
 
