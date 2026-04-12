@@ -158,35 +158,6 @@ cargo test math_numerical
 cargo test sudoku
 ```
 
-## Training Protocol
-
-### Phase 0: Policy Initialization
-Load a pre-trained VLM (Qwen2-VL, LLaVA-OneVision, InternVL) as the starting policy.
-
-### Phase 1: Stage 1 RLVR (Months 1-2)
-Train on ~55 rule-recognition environments: synthetic rule inference, formal logic, basic math, basic code, basic perception. GRPO with 4-8 generations per prompt, binary rewards. Target 40-60% success rate.
-
-### Phase 2: Stage 2 RLVR (Months 2-6)
-Expand to ~110 system-mastery environments: all language tasks, full code capability, full mathematics, science, vision, agent tasks, games. Maintain Stage 1 at 10% compute.
-
-### Phase 3: Stage 3 RLVR (Months 6-12)
-Add ~80 capability-climbing environments: molecular generation, protein design, CTF challenges, medical diagnosis, compiler optimization. Push difficulty to 8-10 (superhuman).
-
-### Phase 4: Unified AGI Training (Months 12+)
-All 272 environments simultaneously. Dynamic curriculum maintains ~40-60% success rate per domain by adjusting difficulty.
-
-### Compute Estimate
-
-| Phase | Duration | Compute | Domains |
-|-------|----------|---------|---------|
-| Phase 0 (NCA pre-pre) | 1 week | ~500 H100-hours | Synthetic |
-| Phase 1 (Stage 1) | 1-2 months | ~5K H100-hours | ~55 |
-| Phase 2 (Stage 2) | 3-4 months | ~50K H100-hours | ~165 |
-| Phase 3 (Stage 3) | 6 months | ~200K H100-hours | ~245 |
-| Phase 4 (Unified) | Ongoing | ~500K+ H100-hours | All 272 |
-
-Total to initial AGI-level breadth: ~250K H100-hours (~$750K at cloud pricing).
-
 ## Verification Principles
 
 Every verifier satisfies four properties:
