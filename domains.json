@@ -10,6 +10,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "24-game",
+    "domain": "24 Game (Make 24 from 4 Numbers)",
+    "category": "Games",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Given 4 numbers, use +\u2212\u00d7\u00f7 to make 24. Verify by evaluating expression. Classic math puzzle."
+  },
+  {
     "slug": "3d-mesh-processing",
     "domain": "3D Mesh & Point Cloud Processing",
     "category": "computational-geometry",
@@ -48,6 +59,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "a-okvqa",
+    "domain": "A-OKVQA (Augmented OK-VQA)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~25K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Augmented version of OK-VQA with rationales. Schwenk et al."
   },
   {
     "slug": "abbreviation-expansion",
@@ -110,6 +132,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "acid-base-equilibrium",
+    "domain": "Acid-Base Equilibrium",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute pH, buffer capacity, Henderson-Hasselbalch. Verify against analytical solutions."
+  },
+  {
     "slug": "acoustic-room-simulation",
     "domain": "Acoustic / Room Simulation",
     "category": "Science",
@@ -118,6 +151,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "acrobot",
+    "domain": "Acrobot",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium. Swing up two-link robot. gym.make('Acrobot-v1'). MIT."
   },
   {
     "slug": "acrostic-generation",
@@ -130,6 +174,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "action-recognition-video",
+    "domain": "Action Recognition (Video)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~650K from Kinetics-700",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Kinetics-700 from DeepMind. YouTube clips. 700 human action classes."
+  },
+  {
     "slug": "actuarial-computation",
     "domain": "Actuarial & Insurance Computation",
     "category": "domain-expert",
@@ -138,6 +193,50 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "ade20k-segmentation",
+    "domain": "ADE20K Semantic Segmentation",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~25K images",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "MIT Scene Parsing Benchmark. 150 categories. groups.csail.mit.edu/vision/datasets/ADE20K."
+  },
+  {
+    "slug": "adroit-hand",
+    "domain": "Adroit Hand (Dexterous)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~4 tasks",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "D4RL Adroit. Door, pen, hammer, relocate. High-DOF hand manipulation."
+  },
+  {
+    "slug": "adult-income",
+    "domain": "Adult Income Prediction (Census)",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~49K from UCI",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Adult dataset. Predict income >$50K. archive.ics.uci.edu. Classic fairness benchmark."
+  },
+  {
+    "slug": "adversarial-nli-r4",
+    "domain": "ANLI Round 4 (Harder)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~170K total",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Adversarial NLI rounds 1-3 + potential round 4. Iteratively harder NLI. From Meta."
   },
   {
     "slug": "adversarial-robustness",
@@ -150,6 +249,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "afriqa",
+    "domain": "AfriQA (African Language QA)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10 African languages",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "QA benchmark for African languages. From Masakhane community."
+  },
+  {
     "slug": "agentbench",
     "domain": "AgentBench",
     "category": "Agent",
@@ -158,6 +268,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "agieval",
+    "domain": "AGIEval (Standardized Test Benchmark)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "~8K from various exams",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "SAT, LSAT, GaoKao, civil service exams. From Microsoft Research."
   },
   {
     "slug": "ai2d-diagrams",
@@ -230,6 +351,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "amazon-reviews",
+    "domain": "Amazon Product Reviews",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~233M reviews",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Amazon Review Data (2018). Ni et al. Predict star rating."
+  },
+  {
+    "slug": "amazons-game",
+    "domain": "Game of the Amazons",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Combinatorial game. Move queen + shoot arrow. Complex endgame theory."
+  },
+  {
     "slug": "amc-archive",
     "domain": "AMC 8/10/12 Archive",
     "category": "Math",
@@ -238,6 +381,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "ames-mutagenicity",
+    "domain": "Ames Mutagenicity Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~7.3K",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC Toxicity. Hansen et al. Ames test dataset. tdcommons.ai."
+  },
+  {
+    "slug": "ami-meeting",
+    "domain": "AMI Meeting Corpus",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100 hours",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "groups.inf.ed.ac.uk/ami. CC-BY. Meeting recordings with transcriptions."
   },
   {
     "slug": "anagram-wordplay",
@@ -290,6 +455,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "ant-locomotion",
+    "domain": "Ant Locomotion (MuJoCo)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Gymnasium MuJoCo. 4-legged ant walker. gym.make('Ant-v4'). Apache (MuJoCo)."
+  },
+  {
     "slug": "antenna-design",
     "domain": "Antenna Design & Radiation Pattern",
     "category": "Science",
@@ -308,6 +484,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "antibody-binding",
+    "domain": "Antibody-Antigen Binding Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~570 from SAbDab",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "From Structural Antibody Database (SAbDab). opig.stats.ox.ac.uk/webapps/sabdab-sabpred/."
+  },
+  {
+    "slug": "antibody-structure",
+    "domain": "Antibody Structure Prediction",
+    "category": "Science",
+    "verification_type": "diff",
+    "dataset_scale": "~5K from SAbDab",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "SAbDab (Structural Antibody Database). Predict CDR loop structures. opig.stats.ox.ac.uk."
   },
   {
     "slug": "ap-exam-problems",
@@ -350,6 +548,17 @@
     "status": "growing"
   },
   {
+    "slug": "api-versioning",
+    "domain": "API Version Migration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "~10K from deprecation changelogs",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Migrate code from deprecated API to new version. Verify compilation + test passage."
+  },
+  {
     "slug": "apps-coding",
     "domain": "APPS (10K Coding Problems)",
     "category": "Code",
@@ -368,6 +577,28 @@
     "difficulty_range": "hard/superhuman",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "arc-challenge-only",
+    "domain": "ARC-Challenge (Harder Science QA)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~2.6K from ARC",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Allen AI ARC Challenge set. Science questions that retrieval fails on."
+  },
+  {
+    "slug": "arc-da-science",
+    "domain": "ARC-DA (Direct Answer Science)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~7.8K from Allen AI",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ARC with direct answers instead of multiple choice. More challenging free-form variant."
   },
   {
     "slug": "argument-analysis",
@@ -568,6 +799,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "bank-marketing",
+    "domain": "Bank Marketing Prediction",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~45K from UCI",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Bank Marketing. Predict term deposit subscription."
   },
   {
     "slug": "bar-exam-mbe",
@@ -880,6 +1122,17 @@
     "status": "Mixed \u2014 some tasks have strong verification, others are fundamentally approximate"
   },
   {
+    "slug": "bipedal-walker",
+    "domain": "Bipedal Walker",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium. Walk across terrain. gym.make('BipedalWalker-v3'). MIT."
+  },
+  {
     "slug": "bird-identification",
     "domain": "Bird Species Identification",
     "category": "Vision",
@@ -920,6 +1173,17 @@
     "status": "remembered"
   },
   {
+    "slug": "boolean-algebra-simplification",
+    "domain": "Boolean Algebra Simplification",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Simplify Boolean expressions. Verify via truth table comparison. Karnaugh maps."
+  },
+  {
     "slug": "boolean-function-learning",
     "domain": "Boolean Function Learning",
     "category": "theoretical-cs",
@@ -938,6 +1202,39 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "boston-housing",
+    "domain": "Boston Housing (Regression)",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~506",
+    "difficulty_range": "easy",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Classic regression dataset. NOTE: ethical concerns about racial variable. Consider Ames Housing instead."
+  },
+  {
+    "slug": "breakout-atari",
+    "domain": "Breakout (Atari)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 game",
+    "difficulty_range": "medium",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ALE/Gymnasium. Atari breakout. Brick-breaking game."
+  },
+  {
+    "slug": "breast-cancer-classification",
+    "domain": "Breast Cancer Classification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~569 from UCI",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Wisconsin Breast Cancer. UCI archive. sklearn.datasets.load_breast_cancer."
   },
   {
     "slug": "bridge-card-play",
@@ -960,6 +1257,39 @@
     "status": "early-stage"
   },
   {
+    "slug": "building-code-compliance",
+    "domain": "Building Code Compliance Check",
+    "category": "Expert",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited from IBC/IRC",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Verify designs against International Building Code. Egress, fire separation, structural. Code-based verification."
+  },
+  {
+    "slug": "bulls-and-cows",
+    "domain": "Bulls and Cows (Mastermind variant)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Number guessing game. Like Mastermind but with digits. Verify feedback accuracy."
+  },
+  {
+    "slug": "caco2-permeability",
+    "domain": "Caco-2 Permeability Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~906",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC ADME. Wang et al. Caco-2 dataset. tdcommons.ai."
+  },
+  {
     "slug": "cad-modeling",
     "domain": "CAD Modeling / 3D Geometry Generation",
     "category": "engineering",
@@ -968,6 +1298,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "cafa-protein-function",
+    "domain": "CAFA (Protein Function Prediction)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100K from CAFA challenge",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "CAFA (Critical Assessment of Functional Annotation). biofunctionprediction.org. Uses GO ontology."
   },
   {
     "slug": "calendar-date-of-easter",
@@ -1010,6 +1351,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "california-housing",
+    "domain": "California Housing Prediction",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~20K",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "sklearn.datasets.fetch_california_housing. StatLib. Predict median house value."
+  },
+  {
+    "slug": "calorimetry-computation",
+    "domain": "Calorimetry Computation",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Heat transfer, specific heat, phase changes. q=mc\u0394T, latent heat. Verify energy conservation."
+  },
+  {
     "slug": "calvin-robot",
     "domain": "CALVIN (Long-horizon Robot)",
     "category": "Agent",
@@ -1030,6 +1393,17 @@
     "status": "remembered"
   },
   {
+    "slug": "carcinogens-prediction",
+    "domain": "Carcinogenicity Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~278",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC Toxicity. CPDB carcinogenicity potency database."
+  },
+  {
     "slug": "card-games",
     "domain": "card-games",
     "category": "games/card-games",
@@ -1048,6 +1422,17 @@
     "difficulty_range": "medium/hard",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "cartpole",
+    "domain": "CartPole (Classic Control)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium. Classic pole balancing. gym.make('CartPole-v1'). MIT."
   },
   {
     "slug": "casehold",
@@ -1128,6 +1513,17 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "multimodal",
     "status": "verified"
+  },
+  {
+    "slug": "ceval-chinese",
+    "domain": "C-Eval (Chinese Evaluation)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~14K Chinese",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Chinese evaluation benchmark. 52 subjects. cevalbenchmark.com."
   },
   {
     "slug": "chart-understanding",
@@ -1220,6 +1616,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "chess-puzzle-tactic",
+    "domain": "Chess Tactical Puzzles",
+    "category": "Games",
+    "verification_type": "rule",
+    "dataset_scale": "~3M from Lichess puzzles",
+    "difficulty_range": "medium/hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Lichess puzzle database (CC0). Find best move sequence. Verify with Stockfish engine."
+  },
+  {
     "slug": "chess",
     "domain": "chess",
     "category": "games/board-games",
@@ -1238,6 +1645,17 @@
     "difficulty_range": "hard",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "chinese-chess-xiangqi",
+    "domain": "Chinese Chess (Xiangqi)",
+    "category": "Games",
+    "verification_type": "rule",
+    "dataset_scale": "~100K games from databases",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Xiangqi game databases. River rules, palace restrictions. Verify move legality."
   },
   {
     "slug": "chip-design-rtl",
@@ -1260,6 +1678,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "churn-prediction",
+    "domain": "Customer Churn Prediction",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~7K from Kaggle",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Telco Customer Churn. kaggle.com/blastchar/telco-customer-churn."
+  },
+  {
     "slug": "cicd-pipeline",
     "domain": "CI/CD Pipeline Configuration",
     "category": "devops",
@@ -1268,6 +1697,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "cifar10",
+    "domain": "CIFAR-10 (Image Classification)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~60K",
+    "difficulty_range": "easy/medium",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "cs.toronto.edu/~kriz/cifar.html. MIT license. 10 classes, 32x32 images."
+  },
+  {
+    "slug": "cifar100",
+    "domain": "CIFAR-100 (Fine-grained Classification)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~60K",
+    "difficulty_range": "medium",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Same source as CIFAR-10. 100 classes grouped into 20 superclasses."
   },
   {
     "slug": "circuit-analysis-dc",
@@ -1300,6 +1751,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "circuit-rc-rl-rlc",
+    "domain": "RC/RL/RLC Circuit Analysis",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Transient and steady-state analysis of RC, RL, RLC circuits. Verify against SPICE or analytical solutions."
+  },
+  {
     "slug": "circuit-satisfiability",
     "domain": "Circuit Satisfiability",
     "category": "Logic",
@@ -1320,6 +1782,17 @@
     "tags": "[citation, attribution, nli, source-verification, scientific]"
   },
   {
+    "slug": "cityscapes-segmentation",
+    "domain": "Cityscapes (Urban Segmentation)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~25K images",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "cityscapes-dataset.com. Urban street scenes. 30 classes. Requires registration."
+  },
+  {
     "slug": "class-level-code-generation",
     "domain": "Class-Level Code Generation",
     "category": "Code",
@@ -1328,6 +1801,28 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "clearance-prediction",
+    "domain": "Drug Clearance Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.1K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC ADME benchmark. Hepatocyte/microsomal clearance. tdcommons.ai."
+  },
+  {
+    "slug": "clevr-vqa",
+    "domain": "CLEVR (Synthetic VQA)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1M questions",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "cs.stanford.edu/people/jcjohns/clevr. CC-BY. Synthetic scenes, compositional reasoning."
   },
   {
     "slug": "climate-science",
@@ -1348,6 +1843,17 @@
     "difficulty_range": "Climatology lookup to skillful multi-day forecasting",
     "modality": "Text-in, text-out (numerical predictions, categorical forecasts)",
     "status": "Problematic for RLVR \u2014 stochasticity makes single-prediction verification unreliable"
+  },
+  {
+    "slug": "clinical-ner",
+    "domain": "Clinical NER (Medical Text)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~25K from n2c2/i2b2",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "n2c2 (National NLP Clinical Challenges). portal.dbmi.hms.harvard.edu. Requires DUA."
   },
   {
     "slug": "clinical-trial-design",
@@ -1380,6 +1886,17 @@
     "tags": "[cloze, fill-in-the-blank, language-modeling, masked]"
   },
   {
+    "slug": "clue-chinese",
+    "domain": "CLUE (Chinese Language Understanding)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10 tasks",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Chinese GLUE benchmark. clue.ai. Multiple Chinese NLU tasks."
+  },
+  {
     "slug": "clutrr-kinship",
     "domain": "CLUTRR (Kinship Reasoning)",
     "category": "Language",
@@ -1388,6 +1905,50 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "cmmlu-chinese",
+    "domain": "CMMLU (Chinese MMLU)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~12K Chinese subjects",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Chinese Massive Multitask Language Understanding. From SJTU. 67 subjects."
+  },
+  {
+    "slug": "cocktail-recipe-construction",
+    "domain": "Cocktail Recipe Formulation",
+    "category": "Expert",
+    "verification_type": "constraint",
+    "dataset_scale": "~3K from IBA/Jerry Thomas",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Construct cocktail recipes meeting volume/ratio constraints. Verify ratios and technique."
+  },
+  {
+    "slug": "coco-detection",
+    "domain": "COCO Object Detection",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~330K images",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "cocodataset.org. CC-BY. 80 object categories. Standard detection benchmark."
+  },
+  {
+    "slug": "coco-panoptic",
+    "domain": "COCO Panoptic Segmentation",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~164K images",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "COCO panoptic annotations. Stuff + things segmentation."
   },
   {
     "slug": "code-agent-swe-task",
@@ -1510,6 +2071,17 @@
     "status": "emerging"
   },
   {
+    "slug": "code-transpilation-js",
+    "domain": "JavaScript Transpilation (ES6\u2192ES5)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "unlimited from GitHub",
+    "difficulty_range": "medium",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert modern JS to ES5. Verify functional equivalence via test execution."
+  },
+  {
     "slug": "code-vulnerability-detection",
     "domain": "Code Vulnerability Detection",
     "category": "Code & Software",
@@ -1630,6 +2202,17 @@
     "status": "verified"
   },
   {
+    "slug": "commonvoice",
+    "domain": "Common Voice (Multilingual ASR)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100+ languages",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "commonvoice.mozilla.org. CC0. Crowdsourced speech in 100+ languages."
+  },
+  {
     "slug": "competitive-coding-interactive",
     "domain": "Competitive Programming (Interactive & Advanced)",
     "category": "code",
@@ -1680,6 +2263,17 @@
     "status": "emerging"
   },
   {
+    "slug": "complex-analysis",
+    "domain": "Complex Analysis Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute residues, contour integrals, conformal mappings. Verify with SymPy."
+  },
+  {
     "slug": "compression-encoding",
     "domain": "compression-encoding",
     "category": "miscellaneous",
@@ -1728,6 +2322,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text | code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "connect-four-7x6",
+    "domain": "Connect Four (Standard 7x6)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "solved game",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Standard 7 columns, 6 rows. First player wins with perfect play. Verify against solved database."
   },
   {
     "slug": "connect-four",
@@ -1790,6 +2395,28 @@
     "status": "Strong \u2014 simulation-based verification is reliable for well-defined systems"
   },
   {
+    "slug": "conversational-qa",
+    "domain": "Conversational QA (QuAC)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~98K from QuAC",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Question Answering in Context. Multi-turn information-seeking. quac.ai."
+  },
+  {
+    "slug": "conversational-recommendation",
+    "domain": "Conversational Recommendation",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from ReDial",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ReDial dataset. Recommend movies through dialogue. redial-dataset.github.io."
+  },
+  {
     "slug": "convex-hull",
     "domain": "Convex Hull Computation",
     "category": "Math",
@@ -1840,6 +2467,17 @@
     "status": "remembered"
   },
   {
+    "slug": "countdown-numbers",
+    "domain": "Countdown Numbers Game",
+    "category": "Games",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UK TV show Countdown. Reach target number using 6 given numbers and +\u2212\u00d7\u00f7. Verify by evaluation."
+  },
+  {
     "slug": "counterfactual-reasoning",
     "domain": "Counterfactual Reasoning",
     "category": "Language",
@@ -1860,6 +2498,28 @@
     "status": "remembered"
   },
   {
+    "slug": "covertype-classification",
+    "domain": "Forest Cover Type Classification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~581K from UCI",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Predict forest cover type from cartographic variables. UCI archive."
+  },
+  {
+    "slug": "covost2-speech-translation",
+    "domain": "CoVoST2 (Speech Translation)",
+    "category": "Audio",
+    "verification_type": "approximate",
+    "dataset_scale": "~21 languages",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "CommonVoice-based speech translation. 21 language pairs. From Meta."
+  },
+  {
     "slug": "cpa-exam",
     "domain": "CPA Exam Questions",
     "category": "Expert",
@@ -1870,6 +2530,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "cpt-procedure-coding",
+    "domain": "CPT Procedure Coding",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K codes from AMA CPT",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Map procedures to CPT codes. CPT is copyrighted by AMA (PROPRIETARY). Use free HCPCS alternatives."
+  },
+  {
     "slug": "crafter-open-world",
     "domain": "Crafter (Open-World Survival)",
     "category": "Games",
@@ -1878,6 +2549,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "credit-default",
+    "domain": "Credit Card Default Prediction",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~30K from UCI",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Taiwan credit card default dataset. UCI archive."
   },
   {
     "slug": "cribbage",
@@ -1990,6 +2672,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "csqa2",
+    "domain": "CommonsenseQA 2.0",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~14K",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "CommonsenseQA 2.0 from Tel Aviv U. Yes/no commonsense questions. Gamification-based collection."
+  },
+  {
     "slug": "css-selector-generation",
     "domain": "CSS Selector Generation",
     "category": "Code",
@@ -2038,6 +2731,28 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "cyp450-inhibition",
+    "domain": "CYP450 Inhibition Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~12K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC benchmark. Predict cytochrome P450 enzyme inhibition. Reconstruct from Therapeutics Data Commons (tdcommons.ai)."
+  },
+  {
+    "slug": "d4rl-locomotion",
+    "domain": "D4RL Locomotion (Offline RL)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~12 tasks",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "D4RL offline RL benchmark. HalfCheetah/Hopper/Walker with various dataset qualities. github.com/Farama-Foundation/D4RL."
   },
   {
     "slug": "data-augmentation-design",
@@ -2210,6 +2925,61 @@
     "status": "verified"
   },
   {
+    "slug": "davis-video-segmentation",
+    "domain": "DAVIS (Video Object Segmentation)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~90 videos",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "davischallenge.org. Dense video segmentation annotations."
+  },
+  {
+    "slug": "dcase-audio-scene",
+    "domain": "DCASE (Audio Scene Classification)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100 hours",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "dcase.community. Detection and Classification of Acoustic Scenes and Events."
+  },
+  {
+    "slug": "ddi-interaction",
+    "domain": "Drug-Drug Interaction Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~192K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC DDI. DrugBank DDI pairs. tdcommons.ai."
+  },
+  {
+    "slug": "dead-code-elimination",
+    "domain": "Dead Code Elimination",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "unlimited from GitHub",
+    "difficulty_range": "medium",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Remove unused code. Verify tests still pass and code coverage doesn't change."
+  },
+  {
+    "slug": "deepfake-detection",
+    "domain": "Deepfake Detection",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100K from FaceForensics++",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "FaceForensics++ (requires agreement). Google DFD dataset. Detect face manipulation."
+  },
+  {
     "slug": "deepmind-math",
     "domain": "DeepMind Mathematics Dataset",
     "category": "Math",
@@ -2218,6 +2988,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "defect-formation-energy",
+    "domain": "Defect Formation Energy Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1K from literature",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Point defect databases. Freysoldt et al. corrections. Very challenging DFT benchmark."
+  },
+  {
+    "slug": "dental-charting",
+    "domain": "Dental Charting & Notation",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Universal/Palmer/ISO dental notation. Verify tooth numbering and charting conventions."
   },
   {
     "slug": "dependency-parsing",
@@ -2250,6 +3042,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "diabetes-prediction",
+    "domain": "Diabetes Prediction (Pima)",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~768 from UCI/NIDDK",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Pima Indians Diabetes. Classic medical ML dataset."
+  },
+  {
     "slug": "dialogue-state-tracking",
     "domain": "Dialogue State Tracking",
     "category": "nlp-dialogue",
@@ -2260,6 +3063,17 @@
     "status": "verified"
   },
   {
+    "slug": "dielectric-constant-prediction",
+    "domain": "Dielectric Constant Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from Materials Project",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Materials Project dielectric data. Predict from crystal structure/composition."
+  },
+  {
     "slug": "differential-equations",
     "domain": "Differential Equations (ODE & PDE)",
     "category": "math-analysis",
@@ -2268,6 +3082,28 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "digital-logic-design",
+    "domain": "Digital Logic Design (Combinational)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Design combinational circuits. Verify truth tables. Minimize with Karnaugh maps or Quine-McCluskey."
+  },
+  {
+    "slug": "dili-liver-toxicity",
+    "domain": "DILI (Drug-Induced Liver Injury)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~475",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC Toxicity. Xu et al. DILI dataset. tdcommons.ai."
   },
   {
     "slug": "diophantine-equations",
@@ -2340,6 +3176,17 @@
     "status": "verified"
   },
   {
+    "slug": "dna-methylation-prediction",
+    "domain": "DNA Methylation Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100K from ENCODE/Roadmap",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ENCODE bisulfite-seq data. Roadmap Epigenomics. Predict CpG methylation from sequence."
+  },
+  {
     "slug": "dna-sequence-design",
     "domain": "DNA/RNA Sequence Design",
     "category": "synthetic-biology",
@@ -2400,6 +3247,17 @@
     "tags": "[document-understanding, layout, tables, forms, ocr]"
   },
   {
+    "slug": "document-re",
+    "domain": "Document-Level Relation Extraction",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from DocRED",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "DocRED from THU. Cross-sentence relation extraction. MIT license."
+  },
+  {
     "slug": "docvqa",
     "domain": "DocVQA",
     "category": "Vision",
@@ -2410,6 +3268,17 @@
     "status": "remembered"
   },
   {
+    "slug": "dosage-calculation",
+    "domain": "Pharmaceutical Dosage Calculation",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute drug dosages by weight, BSA, renal function. Verify against pharmacological formulas."
+  },
+  {
     "slug": "dose-response-modeling",
     "domain": "Dose-Response Modeling (Toxicology)",
     "category": "Science",
@@ -2418,6 +3287,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "dots-and-boxes",
+    "domain": "Dots and Boxes",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Classic children's game with deep strategy. Count completed boxes. Verify move legality."
+  },
+  {
+    "slug": "dream-dialogue-comprehension",
+    "domain": "DREAM (Dialogue Reading Comprehension)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from dialogue exams",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "DREAM dataset from Tencent AI. Dialogue-based multiple choice. dataset.org/dream."
   },
   {
     "slug": "drone-navigation",
@@ -2458,6 +3349,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "remembered"
+  },
+  {
+    "slug": "dti-binding-prediction",
+    "domain": "Drug-Target Interaction Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~30K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC DTI. DAVIS/KIBA kinase binding data. tdcommons.ai."
   },
   {
     "slug": "dynamical-system-identification",
@@ -2530,6 +3432,39 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "eigenvalue-problem",
+    "domain": "Eigenvalue Problem",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Find eigenvalues/eigenvectors. Verify Av = \u03bbv. Generate with NumPy."
+  },
+  {
+    "slug": "eight-queens-variant",
+    "domain": "Eight Queens (All Solutions)",
+    "category": "Games",
+    "verification_type": "constraint",
+    "dataset_scale": "92 solutions for 8x8",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Find all solutions to N-Queens. Enumerate and verify each is valid."
+  },
+  {
+    "slug": "elastic-constants-prediction",
+    "domain": "Elastic Constants Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~13K from Materials Project",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Materials Project elasticity data. Predict C_ij tensor from crystal structure."
+  },
+  {
     "slug": "election-apportionment",
     "domain": "Election Apportionment",
     "category": "Expert",
@@ -2538,6 +3473,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "electrical-code-nec",
+    "domain": "NEC Electrical Code Compliance",
+    "category": "Expert",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited from NEC",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Verify electrical designs against National Electrical Code. Wire sizing, breaker selection, grounding."
   },
   {
     "slug": "electrical-engineering",
@@ -2620,6 +3566,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "embodied-qa",
+    "domain": "Embodied QA (EQA)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~5K from EmbodiedQA",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Navigate 3D environment to answer questions. embodiedqa.org."
+  },
+  {
     "slug": "emotion-recognition",
     "domain": "Emotion Recognition",
     "category": "multimodal",
@@ -2658,6 +3615,17 @@
     "difficulty_range": "Single-variable sizing to multi-objective topology optimization",
     "modality": "Text-in, structured-out (design variables, dimensions, material selections)",
     "status": "Promising \u2014 verification is solid but computationally expensive"
+  },
+  {
+    "slug": "enhancer-prediction",
+    "domain": "Enhancer Region Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~50K from ENCODE",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ENCODE Project (encodeproject.org). Predict enhancer regions from DNA sequence. ChromHMM annotations."
   },
   {
     "slug": "entity-linking",
@@ -2710,6 +3678,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "equilibrium-constant",
+    "domain": "Chemical Equilibrium Constant Problems",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute Kp, Kc, ICE tables, Le Chatelier's principle. Verify mass balance."
+  },
+  {
     "slug": "error-correction-codes",
     "domain": "Error-Correcting Code Design",
     "category": "coding-theory",
@@ -2730,6 +3709,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "error-probability-comm",
+    "domain": "Communication Error Probability",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute BER for various modulation schemes over AWGN/fading channels. Verify with known formulas."
+  },
+  {
     "slug": "esol-solubility",
     "domain": "ESOL (Aqueous Solubility)",
     "category": "Science",
@@ -2748,6 +3738,39 @@
     "difficulty_range": "hard/superhuman",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "euler-circuit",
+    "domain": "Euler Circuit / Path Finding",
+    "category": "Games",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Find Euler circuit/path in graph. Verify each edge used exactly once."
+  },
+  {
+    "slug": "event-extraction",
+    "domain": "Event Extraction (ACE)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~600 docs from ACE",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ACE 2005 event extraction. LDC. Triggers + arguments. PROPRIETARY base but annotations discussed in papers."
+  },
+  {
+    "slug": "face-alignment",
+    "domain": "Face Alignment / Landmark Detection",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~29K from 300-W/WFLW",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "300-W (ibug.doc.ic.ac.uk). WFLW (98 landmarks). Detect facial keypoints."
   },
   {
     "slug": "face-detection-recognition",
@@ -2810,6 +3833,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "few-shot-ner",
+    "domain": "Few-Shot NER",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~70K from Few-NERD",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Few-NERD from THU. 66 fine-grained entity types. MIT license."
+  },
+  {
     "slug": "fifteen-puzzle",
     "domain": "15-Puzzle / Sliding Tile",
     "category": "Games",
@@ -2858,6 +3892,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "filter-design-iir-fir",
+    "domain": "IIR/FIR Filter Design",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Design Butterworth, Chebyshev, Parks-McClellan filters. Verify frequency response with scipy.signal."
   },
   {
     "slug": "fimo-imo",
@@ -2918,6 +3963,28 @@
     "difficulty_range": "easy/medium",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "fleurs-speech-multilingual",
+    "domain": "FLEURS (Few-shot Speech)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~102 languages",
+    "difficulty_range": "medium/hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Multilingual speech benchmark. 102 languages from Google. Based on FLoRes."
+  },
+  {
+    "slug": "flickr30k-entities",
+    "domain": "Flickr30K Entities (Grounding)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~31K images",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Plummer et al. Phrase grounding in images. CC-BY."
   },
   {
     "slug": "floor-plan-analysis",
@@ -3040,6 +4107,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "fraud-detection",
+    "domain": "Credit Card Fraud Detection",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~284K from Kaggle",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Highly imbalanced fraud detection. kaggle.com/mlg-ulb/creditcardfraud."
+  },
+  {
     "slug": "freesolv",
     "domain": "FreeSolv (Solvation Energy)",
     "category": "Science",
@@ -3058,6 +4136,17 @@
     "difficulty_range": "superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "frostbite-atari",
+    "domain": "Frostbite (Atari)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 game",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ALE/Gymnasium. Atari Frostbite. Hard exploration."
   },
   {
     "slug": "functional-programming",
@@ -3120,6 +4209,17 @@
     "status": "verified"
   },
   {
+    "slug": "gaokao-bench",
+    "domain": "GaoKao-Bench (Chinese College Entrance)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "~2.8K from GaoKao",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Chinese National College Entrance Exam questions. Multiple subjects."
+  },
+  {
     "slug": "garbage-collector-implementation",
     "domain": "Garbage Collector Implementation",
     "category": "Code",
@@ -3148,6 +4248,17 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "gene-regulatory-network",
+    "domain": "Gene Regulatory Network Inference",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from DREAM challenges",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "DREAM challenges (dreamchallenges.org). BEELINE benchmark for GRN inference."
   },
   {
     "slug": "genealogy-relationship",
@@ -3240,6 +4351,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "gigaspeech",
+    "domain": "GigaSpeech (Large-scale ASR)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K hours",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "github.com/SpeechColab/GigaSpeech. Apache. Large-scale English ASR."
+  },
+  {
     "slug": "git-hook-generation",
     "domain": "Git Hook Generation",
     "category": "Code",
@@ -3248,6 +4370,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "git-rebase-resolution",
+    "domain": "Git Rebase Conflict Resolution",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "unlimited from Git repos",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Resolve conflicts during git rebase. Verify result compiles and tests pass."
   },
   {
     "slug": "github-actions-generation",
@@ -3280,6 +4413,17 @@
     "status": "verified"
   },
   {
+    "slug": "go-tsumego",
+    "domain": "Go Tsumego (Life & Death Problems)",
+    "category": "Games",
+    "verification_type": "rule",
+    "dataset_scale": "~50K from tsumego databases",
+    "difficulty_range": "medium/hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Go life-and-death problems. Verify with KataGo/Leela Zero."
+  },
+  {
     "slug": "google-code-jam",
     "domain": "Google Code Jam Archive",
     "category": "Code",
@@ -3288,6 +4432,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "code",
     "status": "remembered"
+  },
+  {
+    "slug": "gqa-visual-reasoning",
+    "domain": "GQA (Visual Reasoning)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~22M questions",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "visualreasoning.net. From Stanford. Scene graph-based VQA."
   },
   {
     "slug": "graduate-level-qa",
@@ -3328,6 +4483,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "graph-isomorphism-testing",
+    "domain": "Graph Isomorphism Testing",
+    "category": "Games",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Determine if two graphs are isomorphic. Verify by checking bijection preserves edges."
   },
   {
     "slug": "graph-query-languages",
@@ -3410,6 +4576,39 @@
     "status": "remembered"
   },
   {
+    "slug": "half-life-prediction",
+    "domain": "Drug Half-Life Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~667",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC ADME. Obach et al. dataset. tdcommons.ai."
+  },
+  {
+    "slug": "halfcheetah",
+    "domain": "HalfCheetah (MuJoCo)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Gymnasium MuJoCo. 2D running. gym.make('HalfCheetah-v4'). Apache."
+  },
+  {
+    "slug": "hamiltonian-path",
+    "domain": "Hamiltonian Path Finding",
+    "category": "Games",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Find path visiting every vertex exactly once. Verify all vertices visited. NP-complete."
+  },
+  {
     "slug": "hanabi-cooperative",
     "domain": "Hanabi (Cooperative Imperfect Information)",
     "category": "Games",
@@ -3418,6 +4617,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "hand-pose-estimation",
+    "domain": "Hand Pose Estimation",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100K from FreiHAND/InterHand",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "FreiHAND (CC-BY-NC), InterHand2.6M (CC-BY-NC). 3D hand joint detection."
   },
   {
     "slug": "handwriting-math-recognition",
@@ -3460,6 +4670,17 @@
     "status": "remembered"
   },
   {
+    "slug": "hate-speech-detection",
+    "domain": "Hate Speech Detection",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~25K from Davidson et al.",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Multiple hate speech datasets. Davidson et al. Waseem & Hovy. Ethical considerations."
+  },
+  {
     "slug": "hearts-card",
     "domain": "Hearts (Card Game)",
     "category": "Games",
@@ -3480,6 +4701,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "hellaswag-adversarial",
+    "domain": "HellaSwag (Adversarial Completion)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~70K",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Adversarial commonsense completion. AF-generated wrong answers. Zellers et al."
+  },
+  {
+    "slug": "herg-toxicity",
+    "domain": "hERG Toxicity Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~650",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC benchmark. Predict hERG channel blocking (cardiac toxicity). tdcommons.ai."
+  },
+  {
     "slug": "hex-game",
     "domain": "Hex Game",
     "category": "Games",
@@ -3488,6 +4731,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "higgs-boson",
+    "domain": "Higgs Boson Detection",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~11M from UCI/CERN",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ATLAS experiment simulated data. Classify Higgs boson signal vs background."
   },
   {
     "slug": "highway-design",
@@ -3560,6 +4814,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "hopper-locomotion",
+    "domain": "Hopper (MuJoCo)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Gymnasium MuJoCo. One-legged hopper. gym.make('Hopper-v4'). Apache."
+  },
+  {
+    "slug": "house-prices-prediction",
+    "domain": "House Prices Prediction (Ames)",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.5K from Kaggle",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Kaggle. Ames Housing dataset. kaggle.com/c/house-prices-advanced-regression-techniques."
+  },
+  {
     "slug": "household-task-simulation",
     "domain": "Household Task Simulation (BEHAVIOR/VirtualHome)",
     "category": "Agent",
@@ -3600,6 +4876,17 @@
     "status": "remembered"
   },
   {
+    "slug": "human-mesh-recovery",
+    "domain": "Human Mesh Recovery (3D Body)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~100K from 3DPW/Human3.6M",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "3DPW (outdoor), Human3.6M (indoor). Recover 3D SMPL body mesh from image."
+  },
+  {
     "slug": "humaneval-plus",
     "domain": "HumanEval+",
     "category": "Code",
@@ -3618,6 +4905,17 @@
     "difficulty_range": "superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "humanoid-locomotion",
+    "domain": "Humanoid (MuJoCo)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Gymnasium MuJoCo. 3D humanoid walking. gym.make('Humanoid-v4'). Apache. 17 DOF."
   },
   {
     "slug": "hvac-design",
@@ -3660,6 +4958,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "icd10-coding",
+    "domain": "ICD-10 Diagnosis Coding",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "~70K codes from ICD-10-CM",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Map clinical descriptions to ICD-10 codes. WHO ICD-10 is public. Verify against code manual."
+  },
+  {
     "slug": "icpc-problems",
     "domain": "ICPC Archive",
     "category": "Code",
@@ -3668,6 +4977,28 @@
     "difficulty_range": "hard/superhuman",
     "modality": "code",
     "status": "remembered"
+  },
+  {
+    "slug": "ideal-gas-mixtures",
+    "domain": "Ideal Gas Mixture Problems",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Dalton's law, partial pressures, Graham's law. Verify against formula computation."
+  },
+  {
+    "slug": "image-aesthetics",
+    "domain": "Image Aesthetics Assessment",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~255K from AVA",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "AVA dataset (Aesthetic Visual Analysis). Murray et al. Predict aesthetic score."
   },
   {
     "slug": "image-captioning-factual",
@@ -3710,6 +5041,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "image-manipulation-detection",
+    "domain": "Image Manipulation Detection",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100K from various",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "NIST MFC, Columbia/CASIA datasets. Detect splicing, copy-move, inpainting."
+  },
+  {
+    "slug": "image-quality-assessment",
+    "domain": "Image Quality Assessment (No-reference)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from KonIQ/PIPAL",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "KonIQ-10k (CC-BY-NC-SA). No-reference image quality scoring."
+  },
+  {
     "slug": "image-segmentation",
     "domain": "Image Segmentation & Object Detection",
     "category": "vision",
@@ -3740,6 +5093,72 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "imagenet-1k",
+    "domain": "ImageNet-1K",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.28M",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "image-net.org. Requires registration. ILSVRC 2012 labels. The standard vision benchmark."
+  },
+  {
+    "slug": "imagenet-a",
+    "domain": "ImageNet-A (Adversarial Natural)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~7.5K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Natural adversarial examples for ImageNet. Hendrycks et al."
+  },
+  {
+    "slug": "imagenet-r",
+    "domain": "ImageNet-R (Renditions)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~30K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ImageNet-Renditions. Art, cartoons, deviantart, etc. Tests robustness to style."
+  },
+  {
+    "slug": "imagenet-sketch",
+    "domain": "ImageNet-Sketch",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~50K sketches",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Sketch versions of ImageNet classes. Wang et al."
+  },
+  {
+    "slug": "imagenet-v2",
+    "domain": "ImageNet-V2 (Distribution Shift)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "New test set for ImageNet. Recht et al. Tests distribution shift."
+  },
+  {
+    "slug": "imdb-sentiment",
+    "domain": "IMDB Sentiment Classification",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~50K reviews",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ai.stanford.edu/~amaas/data/sentiment. Classic binary sentiment. Open."
+  },
+  {
     "slug": "imo-problem-solving",
     "domain": "IMO Problem Solving",
     "category": "Math",
@@ -3748,6 +5167,28 @@
     "difficulty_range": "superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "inaturalist",
+    "domain": "iNaturalist (Fine-grained Species)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~2.7M from iNat2021",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "github.com/visipedia/inat_comp. 10K species. Fine-grained recognition."
+  },
+  {
+    "slug": "indicnlp-suite",
+    "domain": "IndicNLP Suite",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~12 Indic languages",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP benchmarks for Indian languages. AI4Bharat. indicnlp.ai4bharat.org."
   },
   {
     "slug": "infographicvqa",
@@ -3818,6 +5259,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "integration-by-parts",
+    "domain": "Integration by Parts / Techniques",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute integrals using various techniques. Verify with SymPy.integrate."
+  },
+  {
+    "slug": "intent-detection",
+    "domain": "Intent Detection (NLU)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~25K from ATIS/SNIPS",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ATIS (LDC), SNIPS (CC0). Detect user intent from utterance."
   },
   {
     "slug": "interactive-fiction",
@@ -3910,6 +5373,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "iris-classification",
+    "domain": "Iris Classification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~150",
+    "difficulty_range": "easy",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Fisher's Iris. The original ML dataset. sklearn.datasets.load_iris."
+  },
+  {
     "slug": "isbn-issn-validation",
     "domain": "ISBN/ISSN/EAN Validation",
     "category": "Misc",
@@ -3918,6 +5392,17 @@
     "difficulty_range": "easy",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "jglue-japanese",
+    "domain": "JGLUE (Japanese GLUE)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5 tasks",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Japanese language understanding benchmark. From Yahoo Japan/RIKEN."
   },
   {
     "slug": "json-path-query",
@@ -3950,6 +5435,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "keyphrase-generation",
+    "domain": "Keyphrase Generation (not just extraction)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~570K from KP20k",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "KP20k dataset. Meng et al. Generate keyphrases including absent ones. From CS papers."
+  },
+  {
     "slug": "keyword-extraction",
     "domain": "Keyword Extraction",
     "category": "Language",
@@ -3958,6 +5454,50 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "kinetics-700",
+    "domain": "Kinetics-700 (Video Classification)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~650K clips",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "DeepMind Kinetics. 700 human action classes. YouTube clips."
+  },
+  {
+    "slug": "kitchen-tasks",
+    "domain": "Franka Kitchen (Multi-task)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~7 subtasks",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "D4RL Franka Kitchen. Open micro, slide door, etc. github.com/rail-berkeley/d4rl."
+  },
+  {
+    "slug": "kitti-3d",
+    "domain": "KITTI (3D Detection & Depth)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~15K frames",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "cvlibs.net/datasets/kitti. CC-BY-NC-SA. Autonomous driving. LiDAR + camera."
+  },
+  {
+    "slug": "klue-korean",
+    "domain": "KLUE (Korean Language Understanding)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~8 tasks",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Korean Language Understanding Evaluation. From KAIST."
   },
   {
     "slug": "knitting-pattern-generation",
@@ -3978,6 +5518,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "knot-tying",
+    "domain": "Knot Tying Instructions",
+    "category": "Expert",
+    "verification_type": "constraint",
+    "dataset_scale": "~100 standard knots",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Generate knot tying instructions. Verify crossing diagram produces correct knot type."
   },
   {
     "slug": "knowledge-base-querying",
@@ -4020,6 +5571,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "lambada",
+    "domain": "LAMBADA (Word Prediction)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from LAMBADA",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Predict final word of passages. Requires broad context understanding. Paperno et al."
+  },
+  {
     "slug": "lambda-calculus",
     "domain": "Lambda Calculus Evaluation",
     "category": "Logic",
@@ -4030,6 +5592,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "lane-detection",
+    "domain": "Lane Detection (Autonomous Driving)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~100K from TuSimple/CULane",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "TuSimple (free), CULane (open). Detect lane markings from camera."
+  },
+  {
     "slug": "language-table-robot",
     "domain": "Language-Table (Tabletop)",
     "category": "Agent",
@@ -4038,6 +5611,17 @@
     "difficulty_range": "medium/hard",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "laplace-transform",
+    "domain": "Laplace Transform Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute Laplace/inverse Laplace transforms. Verify with SymPy.laplace_transform."
   },
   {
     "slug": "latent-concept-learning",
@@ -4060,6 +5644,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "latin-square",
+    "domain": "Latin Square Completion",
+    "category": "Games",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Complete NxN Latin square (each symbol once per row/column). Verify uniqueness constraints."
+  },
+  {
     "slug": "lattice-problems",
     "domain": "Lattice Problems (Cryptographic)",
     "category": "Math",
@@ -4068,6 +5663,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "ld50-acute-toxicity",
+    "domain": "LD50 Acute Toxicity Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~7.4K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC Toxicity. Zhu et al. LD50 dataset. tdcommons.ai."
   },
   {
     "slug": "lean-mathlib-contribution",
@@ -4148,6 +5754,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "librispeech-asr",
+    "domain": "LibriSpeech ASR",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~960 hours",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "openslr.org/12. CC-BY. English read speech. The standard ASR benchmark."
   },
   {
     "slug": "lights-out-puzzle",
@@ -4340,6 +5957,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "lunar-lander",
+    "domain": "Lunar Lander",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium. Land on moon. gym.make('LunarLander-v2'). MIT. Box2D physics."
+  },
+  {
+    "slug": "lvis-long-tail",
+    "domain": "LVIS (Long-tail Detection)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~160K images, 1203 categories",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "lvisdataset.org. Long-tail object detection. From Meta."
+  },
+  {
     "slug": "m4-forecasting",
     "domain": "M4 Forecasting Competition",
     "category": "ML",
@@ -4360,6 +5999,17 @@
     "status": "remembered"
   },
   {
+    "slug": "machine-reading-comprehension",
+    "domain": "Machine Reading Comprehension (CoQA)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~127K from CoQA",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Conversational QA. Reddy et al. Multi-turn dialogue over passages."
+  },
+  {
     "slug": "maestro-transcription",
     "domain": "MAESTRO Piano Transcription",
     "category": "Audio",
@@ -4368,6 +6018,28 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "magic-square",
+    "domain": "Magic Square Construction",
+    "category": "Games",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Construct NxN magic squares (all rows/cols/diags sum to same value). Verify sum constraints."
+  },
+  {
+    "slug": "magnetic-ordering-prediction",
+    "domain": "Magnetic Ordering Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from Materials Project",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Materials Project magnetic data. Predict FM/AFM/NM ordering."
   },
   {
     "slug": "makefile-generation",
@@ -4490,6 +6162,17 @@
     "status": "Mixed \u2014 verification is strong for known materials, weak for novel predictions"
   },
   {
+    "slug": "math-500",
+    "domain": "MATH-500 (Curated Subset)",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "~500",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Curated 500 from Hendrycks MATH. Balanced across levels and topics. Used by labs for eval."
+  },
+  {
     "slug": "math-competition",
     "domain": "Math Competition",
     "category": "Math",
@@ -4568,6 +6251,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "text",
     "status": "needs_validation"
+  },
+  {
+    "slug": "math-word-problem-generation",
+    "domain": "Math Word Problem Generation",
+    "category": "Math",
+    "verification_type": "execution",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Generate word problems. Verify by solving generated problem \u2014 answer must match the intended one."
   },
   {
     "slug": "math-word-problems-visual",
@@ -4660,6 +6354,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "matrix-operations",
+    "domain": "Matrix Operations (Determinant, Inverse)",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute determinants, inverses, ranks. Verify det(A)*det(A^-1)=1, A*A^-1=I."
+  },
+  {
     "slug": "maximum-flow",
     "domain": "Maximum Flow / Min-Cut",
     "category": "Math",
@@ -4688,6 +6393,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "medbench-chinese",
+    "domain": "MedBench (Chinese Medical)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "~40K Chinese medical",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Chinese medical benchmark. From Shanghai AI Lab. Remembered from 2024 paper."
   },
   {
     "slug": "medical-coding",
@@ -4820,6 +6536,17 @@
     "status": "remembered"
   },
   {
+    "slug": "mirna-target-prediction",
+    "domain": "miRNA Target Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from miRTarBase",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "miRTarBase (mirtarbase.cuhk.edu.cn). Experimentally validated miRNA-target interactions."
+  },
+  {
     "slug": "ml-engineering-competition",
     "domain": "ML Engineering Competition (MLE-bench)",
     "category": "ML",
@@ -4838,6 +6565,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "mlqa-crosslingual",
+    "domain": "MLQA (Multi-lingual QA)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~46K from Meta",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Multilingual Question Answering in 7 languages. Lewis et al. From Meta."
   },
   {
     "slug": "mm-vet",
@@ -4880,6 +6618,39 @@
     "status": "remembered"
   },
   {
+    "slug": "mnist-handwritten",
+    "domain": "MNIST (Handwritten Digits)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~70K",
+    "difficulty_range": "easy",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "The classic. yann.lecun.com/exdb/mnist. CC-BY-SA. Trivially solvable but good for curriculum."
+  },
+  {
+    "slug": "mnist-tabular",
+    "domain": "Tabular MNIST (Digit Classification)",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~70K",
+    "difficulty_range": "easy",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "MNIST flattened to tabular. Good for tabular ML benchmarking."
+  },
+  {
+    "slug": "mnli-hans",
+    "domain": "MNLI + HANS (Heuristic Analysis)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~30K HANS probe",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "HANS diagnostic dataset for NLI. McCoy et al. Tests lexical overlap, subsequence, constituent heuristics."
+  },
+  {
     "slug": "modal-logic",
     "domain": "Modal Logic",
     "category": "Logic",
@@ -4900,6 +6671,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "modelnet40",
+    "domain": "ModelNet40 (3D Classification)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~12K 3D CAD models",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "modelnet.cs.princeton.edu. 40 categories."
+  },
+  {
     "slug": "modular-arithmetic",
     "domain": "Modular Arithmetic",
     "category": "Math",
@@ -4918,6 +6700,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "monocular-depth-estimation",
+    "domain": "Monocular Depth Estimation",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~50K from NYU Depth V2",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "NYU Depth V2, KITTI Depth, MiDaS benchmark. Predict depth from single image."
   },
   {
     "slug": "montezuma-revenge",
@@ -4958,6 +6751,17 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "mountain-car",
+    "domain": "Mountain Car",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium. Push car up hill. gym.make('MountainCar-v0'). MIT."
   },
   {
     "slug": "msmarco-passage",
@@ -5080,6 +6884,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "music-chord-naming",
+    "domain": "Music Chord Naming & Construction",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Name chords from notes or construct chords from names. Verify interval structure matches chord type."
+  },
+  {
     "slug": "music-counterpoint",
     "domain": "Musical Counterpoint",
     "category": "Creative",
@@ -5128,6 +6943,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "music-scale-construction",
+    "domain": "Music Scale Construction",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Build scales from interval patterns (major, minor, modes, exotic). Verify intervals."
   },
   {
     "slug": "music-sight-reading",
@@ -5260,6 +7086,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "nested-ner",
+    "domain": "Nested NER (Overlapping Entities)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~25K from ACE/GENIA",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Nested named entities. ACE 2005 (LDC) or GENIA (open). Use GENIA for open access."
+  },
+  {
     "slug": "nethack-minihack",
     "domain": "NetHack / MiniHack (Roguelike Game)",
     "category": "Games",
@@ -5350,6 +7187,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "nim-variants",
+    "domain": "Nim Game Variants (Wythoff, Fibonacci)",
+    "category": "Games",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Wythoff's game, Fibonacci Nim, multi-heap Nim. Verify Sprague-Grundy values."
+  },
+  {
+    "slug": "nine-mens-morris",
+    "domain": "Nine Men's Morris",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "solved game",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Classic strategy game. Solved (draw with perfect play). Place, slide, fly phases."
+  },
+  {
     "slug": "nmr-prediction",
     "domain": "NMR Spectrum Prediction",
     "category": "Science",
@@ -5358,6 +7217,17 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "nocaps-captioning",
+    "domain": "NoCaps (Novel Object Captioning)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~15K images",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "nocaps.org. Captioning with novel objects not in training set."
   },
   {
     "slug": "nonogram-solving",
@@ -5388,6 +7258,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "nuclear-physics-computation",
+    "domain": "Nuclear Physics Computation",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute binding energies, Q-values, decay rates. Verify with NUBASE/AME mass tables."
+  },
+  {
+    "slug": "number-base-arithmetic",
+    "domain": "Number Base Arithmetic",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Add/subtract/multiply in non-decimal bases. Verify by converting to decimal."
   },
   {
     "slug": "number-theory-computation",
@@ -5460,6 +7352,28 @@
     "status": "remembered"
   },
   {
+    "slug": "nursing-care-plan",
+    "domain": "Nursing Assessment (NCLEX-style)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from NCLEX prep",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Nursing exam questions. Select best nursing intervention. Verify against NCLEX answer key."
+  },
+  {
+    "slug": "nuscenes-3d",
+    "domain": "nuScenes (3D Detection)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~1.4M 3D boxes",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "nuscenes.org. CC-BY-NC-SA. 1000 scenes. LiDAR + cameras + radar."
+  },
+  {
     "slug": "nutrition-label-parsing",
     "domain": "Nutrition Label / Food Label Parsing",
     "category": "Vision",
@@ -5480,6 +7394,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "nutrition-planning",
+    "domain": "Nutrition / Meal Planning",
+    "category": "Expert",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Plan meals meeting caloric/macro/micro targets. Verify against USDA database."
+  },
+  {
     "slug": "object-counting",
     "domain": "Object Counting in Images",
     "category": "Vision",
@@ -5488,6 +7413,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "objectnet",
+    "domain": "ObjectNet (Viewpoint/Background Shift)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~50K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "objectnet.dev. MIT. New views, backgrounds, rotations of objects."
+  },
+  {
+    "slug": "obqa-with-context",
+    "domain": "OpenBookQA (with Retrieval)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~6K from Allen AI",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenBookQA from Allen AI. Science QA requiring external knowledge. Already in datasets but this is the retrieval variant."
   },
   {
     "slug": "ocrbench",
@@ -5508,6 +7455,83 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "ogbg-molhiv",
+    "domain": "OGB-MolHIV (Graph Classification)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~41K molecules",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Open Graph Benchmark molecule classification. ogb.stanford.edu. Predict HIV activity from molecular graph."
+  },
+  {
+    "slug": "ogbg-molpcba",
+    "domain": "OGB-MolPCBA (Multi-task Graph)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~438K molecules",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OGB multi-task molecular prediction. 128 binary classification tasks. ogb.stanford.edu."
+  },
+  {
+    "slug": "ogbl-citation2",
+    "domain": "OGB-Citation2 (Citation Link Prediction)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~30M edges",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OGB citation link prediction. Predict future citations."
+  },
+  {
+    "slug": "ogbl-collab",
+    "domain": "OGB-Collab (Link Prediction)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~235K author pairs",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OGB link prediction on author collaboration graph."
+  },
+  {
+    "slug": "ogbn-arxiv",
+    "domain": "OGB-ArXiv (Node Classification)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~170K papers",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OGB node classification on arXiv citation graph. Predict paper subject area."
+  },
+  {
+    "slug": "ogbn-products",
+    "domain": "OGB-Products (Large Node Classification)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~2.4M products",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OGB node classification on Amazon product co-purchasing graph."
+  },
+  {
+    "slug": "ok-vqa",
+    "domain": "OK-VQA (Outside Knowledge VQA)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~14K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Requires external knowledge to answer visual questions. Marino et al."
   },
   {
     "slug": "omni-math",
@@ -5540,6 +7564,39 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "op-amp-circuits",
+    "domain": "Operational Amplifier Circuit Analysis",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Inverting, non-inverting, integrator, differentiator. Verify gain, bandwidth via ideal op-amp equations."
+  },
+  {
+    "slug": "open-domain-event-extraction",
+    "domain": "Open-Domain Event Extraction",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from MAVEN",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "MAVEN dataset from THU. 168 event types. github.com/THU-KEG/MAVEN-dataset."
+  },
+  {
+    "slug": "open-images-v7",
+    "domain": "Open Images V7 (Detection)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~9M images",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "storage.googleapis.com/openimages. CC-BY. Google. 600 classes."
+  },
+  {
     "slug": "operating-system-concepts",
     "domain": "Operating System Concepts (Scheduling, Memory, Concurrency)",
     "category": "systems-cs",
@@ -5570,6 +7627,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "optical-flow-estimation",
+    "domain": "Optical Flow Estimation (Learned)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~40K from Sintel/KITTI",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Sintel (CC-BY), KITTI (CC-BY-NC-SA). Estimate per-pixel motion between frames."
+  },
+  {
     "slug": "optical-flow",
     "domain": "Optical Flow",
     "category": "vision",
@@ -5590,6 +7658,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "optimization-calculus",
+    "domain": "Calculus Optimization Problems",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Find maxima/minima with constraints. Verify with second derivative test. Verify with scipy.optimize."
+  },
+  {
     "slug": "options-pricing",
     "domain": "Options Pricing",
     "category": "Expert",
@@ -5608,6 +7687,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "origami-fold-sequence",
+    "domain": "Origami Fold Sequence",
+    "category": "Expert",
+    "verification_type": "simulation",
+    "dataset_scale": "~500 standard models",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Generate fold sequences for origami models. Verify flat-foldability and final shape via computational origami."
   },
   {
     "slug": "orm-query-generation",
@@ -5690,6 +7780,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "pascal-voc",
+    "domain": "Pascal VOC (Detection/Segmentation)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~11K images",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PASCAL Visual Object Classes. host.robots.ox.ac.uk/pascal/VOC. Classic benchmark."
+  },
+  {
     "slug": "password-strength-estimation",
     "domain": "Password Strength Estimation",
     "category": "Security",
@@ -5720,6 +7821,17 @@
     "status": "remembered"
   },
   {
+    "slug": "paws-paraphrase",
+    "domain": "PAWS (Paraphrase Adversaries)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~108K from Google",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "PAWS from Google. Adversarial paraphrase pairs with high word overlap but different meaning."
+  },
+  {
     "slug": "payroll-computation",
     "domain": "Payroll & Tax Withholding Computation",
     "category": "Expert",
@@ -5738,6 +7850,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "pcqm4mv2",
+    "domain": "PCQM4Mv2 (Large-Scale QC)",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~3.8M molecules",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OGB-LSC quantum chemistry. HOMO-LUMO gap prediction. ogb.stanford.edu."
   },
   {
     "slug": "pdbbind",
@@ -5760,6 +7883,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "pedestrian-detection",
+    "domain": "Pedestrian Detection",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~350K from CityPersons/EuroCity",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "CityPersons (CC-BY-NC-SA). EuroCity Persons. Urban pedestrian detection."
+  },
+  {
     "slug": "peg-solitaire",
     "domain": "Peg Solitaire",
     "category": "Games",
@@ -5770,6 +7904,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "pendulum-control",
+    "domain": "Pendulum (Classic Control)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium. Swing up and balance pendulum. gym.make('Pendulum-v1'). MIT."
+  },
+  {
     "slug": "pentomino-tiling",
     "domain": "Pentomino Tiling",
     "category": "Games",
@@ -5778,6 +7923,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "peptides-functional",
+    "domain": "Peptides Functional Classification",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~15K peptides",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Long Range Graph Benchmark. Peptides-func and peptides-struct. From LRGB paper."
   },
   {
     "slug": "periodic-table-queries",
@@ -5818,6 +7974,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "pgp-inhibition",
+    "domain": "P-glycoprotein Inhibition",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.2K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC ADME. Broccatelli et al. dataset. tdcommons.ai."
   },
   {
     "slug": "pharmacokinetics",
@@ -5900,6 +8067,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "piezoelectric-prediction",
+    "domain": "Piezoelectric Coefficient Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1K from Materials Project",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Materials Project piezoelectric data. Limited dataset, high impact."
+  },
+  {
+    "slug": "pigeonhole-arguments",
+    "domain": "Pigeonhole Principle Applications",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Count-based existence proofs. Verify by constructing explicit example or checking count."
+  },
+  {
     "slug": "pipe-sizing",
     "domain": "Pipe Sizing (Darcy-Weisbach)",
     "category": "Expert",
@@ -5910,6 +8099,17 @@
     "status": "remembered"
   },
   {
+    "slug": "piqa-physical-intuition",
+    "domain": "PIQA (Physical Intuition)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~21K from Allen AI",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Physical Intuition QA. Everyday physical reasoning. Already have PIQA data, this is the extended benchmark."
+  },
+  {
     "slug": "pixel-art-generation",
     "domain": "Pixel Art Generation",
     "category": "creative-constrained",
@@ -5918,6 +8118,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "needs_validation"
+  },
+  {
+    "slug": "places365",
+    "domain": "Places365 (Scene Recognition)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.8M",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "places2.csail.mit.edu. 365 scene categories."
   },
   {
     "slug": "planetary-ephemeris",
@@ -5950,6 +8161,17 @@
     "status": "remembered"
   },
   {
+    "slug": "plumbing-code-compliance",
+    "domain": "Plumbing Code Compliance",
+    "category": "Expert",
+    "verification_type": "constraint",
+    "dataset_scale": "unlimited from IPC",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Verify plumbing designs against International Plumbing Code. Fixture units, pipe sizing, venting."
+  },
+  {
     "slug": "poetry-formal",
     "domain": "poetry-formal",
     "category": "creative-with-constraints",
@@ -5958,6 +8180,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "point-cloud-segmentation",
+    "domain": "Point Cloud Semantic Segmentation",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~15K from S3DIS/ScanNet",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Stanford S3DIS (large-scale indoor). ScanNet point clouds. SemanticKITTI for outdoor."
   },
   {
     "slug": "point-in-polygon",
@@ -6010,6 +8243,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "pong-atari",
+    "domain": "Pong (Atari)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 game",
+    "difficulty_range": "easy/medium",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ALE/Gymnasium. Classic Atari pong. ale.farama.org."
+  },
+  {
     "slug": "popqa",
     "domain": "PopQA (Long-tail Knowledge)",
     "category": "Language",
@@ -6058,6 +8302,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "ppbr-prediction",
+    "domain": "Plasma Protein Binding Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.6K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC ADME. AstraZeneca dataset. tdcommons.ai."
   },
   {
     "slug": "prime-factorization",
@@ -6160,6 +8415,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "proof-by-induction",
+    "domain": "Proof by Mathematical Induction",
+    "category": "Math",
+    "verification_type": "rule",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Verify base case and inductive step. For computational claims, verify for first N values."
+  },
+  {
     "slug": "proof-complexity",
     "domain": "Computational Complexity & Reductions",
     "category": "theoretical-cs",
@@ -6210,6 +8476,17 @@
     "status": "remembered"
   },
   {
+    "slug": "propaganda-detection",
+    "domain": "Propaganda Technique Detection",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~21K from SemEval",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "SemEval-2020 Task 11. Detect propaganda techniques in news."
+  },
+  {
     "slug": "property-based-test-generation",
     "domain": "Property-Based Test Generation",
     "category": "Code & Software",
@@ -6218,6 +8495,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "protein-binding-site",
+    "domain": "Protein Binding Site Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from sc-PDB/PDBbind",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "sc-PDB database. PDBbind binding sites. BioLiP database."
   },
   {
     "slug": "protein-contact-map",
@@ -6238,6 +8526,28 @@
     "difficulty_range": "hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "protein-disorder-prediction",
+    "domain": "Protein Disorder Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~10K from DisProt/MobiDB",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "DisProt database (disprot.org). MobiDB (mobidb.bio.unipd.it). CAID challenge."
+  },
+  {
+    "slug": "protein-fitness-landscape",
+    "domain": "Protein Fitness Landscape Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~2.5M from ProteinGym",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ProteinGym benchmark. Deep mutational scanning data for ~220 proteins. github.com/OATML-Markslab/ProteinGym. CC-BY-NC."
   },
   {
     "slug": "protein-folding-energy",
@@ -6300,6 +8610,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "protein-solubility",
+    "domain": "Protein Solubility Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~17K from eSol/PSI",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "eSol database (Niwa et al.). Price et al. solubility dataset. From E. coli expression data."
+  },
+  {
+    "slug": "protein-stability-ddg",
+    "domain": "Protein Stability (\u0394\u0394G) Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~7K from ProThermDB/Mega-scale",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Mega-scale protein stability dataset (Tsuboyama et al. 2023). ProThermDB for historical data. Verify ProThermDB hosting."
+  },
+  {
     "slug": "protocol-compliance",
     "domain": "protocol-compliance",
     "category": "format-constrained",
@@ -6328,6 +8660,17 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "push-t-manipulation",
+    "domain": "Push-T (Planar Pushing)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 task",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Diffusion Policy benchmark task. Push T-shaped block to target. chi-diffusion.github.io."
   },
   {
     "slug": "putnam-bench",
@@ -6360,6 +8703,17 @@
     "status": "remembered"
   },
   {
+    "slug": "qbert-atari",
+    "domain": "Q*bert (Atari)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 game",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ALE/Gymnasium. Atari Q*bert."
+  },
+  {
     "slug": "qm9",
     "domain": "QM9 (Quantum Chemistry 134K)",
     "category": "Science",
@@ -6370,6 +8724,28 @@
     "status": "remembered"
   },
   {
+    "slug": "qqp-adversarial",
+    "domain": "QQP + Adversarial Probe",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~400K + probes",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Quora Question Pairs + adversarial test sets. Zhang et al. PAWS probes."
+  },
+  {
+    "slug": "quail-text-comprehension",
+    "domain": "QuAIL (Question Answering with Inference)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~15K",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "QuAIL from UMass. Multi-domain text comprehension. Questions require different reasoning types."
+  },
+  {
     "slug": "quantum-computing",
     "domain": "Quantum Computing",
     "category": "Engineering/Science",
@@ -6378,6 +8754,28 @@
     "difficulty_range": "Single-qubit gates to multi-qubit algorithm design and optimization",
     "modality": "Text-in, structured-out (gate sequences, circuit descriptions)",
     "status": "Strong for small circuits \u2014 verification is exact; scalability is the constraint"
+  },
+  {
+    "slug": "quantum-mechanics-1d",
+    "domain": "1D Quantum Mechanics Problems",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Particle in box, harmonic oscillator, hydrogen atom energies. Verify against analytical solutions."
+  },
+  {
+    "slug": "query-rewriting",
+    "domain": "Search Query Rewriting",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~50K from TREC/Bing",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TREC CAsT (Conversational Assistance Track). Query reformulation for search."
   },
   {
     "slug": "question-answering-closed",
@@ -6420,6 +8818,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "race-reading",
+    "domain": "RACE (Reading Comprehension)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100K Chinese English exams",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "RACE dataset from CMU. Middle/high school English exams. race-benchmark on GitHub."
+  },
+  {
+    "slug": "reacher",
+    "domain": "Reacher (MuJoCo)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "medium",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Gymnasium MuJoCo. 2-link arm reaching target. gym.make('Reacher-v4'). Apache."
+  },
+  {
     "slug": "reaction-kinetics",
     "domain": "Chemical Reaction Kinetics",
     "category": "Science",
@@ -6428,6 +8848,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "reaction-yield-prediction",
+    "domain": "Reaction Yield Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~4K from Buchwald-Hartwig",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "High-throughput experimentation datasets. Ahneman et al. Science 2018. Doyle et al. datasets on GitHub."
   },
   {
     "slug": "reading-comprehension",
@@ -6520,6 +8951,28 @@
     "status": "verified"
   },
   {
+    "slug": "redox-half-reactions",
+    "domain": "Redox Half-Reaction Balancing",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Balance half-reactions in acidic/basic solution. Verify electron + atom + charge conservation."
+  },
+  {
+    "slug": "referring-expressions",
+    "domain": "RefCOCO/RefCOCO+/RefCOCOg",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~142K expressions",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Referring expression comprehension. Point to object described in text."
+  },
+  {
     "slug": "regex-crossword",
     "domain": "regex-crossword",
     "category": "format-constrained",
@@ -6528,6 +8981,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "regex-debugging",
+    "domain": "Regex Debugging & Repair",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Given broken regex + failing examples, fix it. Verify against test strings. Generate procedurally."
   },
   {
     "slug": "regex-golf",
@@ -6660,6 +9124,17 @@
     "status": "remembered"
   },
   {
+    "slug": "retrosynthesis-planning-multi",
+    "domain": "Multi-Step Retrosynthesis Planning",
+    "category": "Science",
+    "verification_type": "execution",
+    "dataset_scale": "~190K from USPTO-full",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "USPTO patent reaction data (public domain, US gov). Use AiZynthFinder or ASKCOS to verify routes. Lowe's USPTO extraction on figshare."
+  },
+  {
     "slug": "retrosynthetic-step-verification",
     "domain": "Single-Step Retrosynthetic Verification",
     "category": "Science",
@@ -6668,6 +9143,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "reverie-remote-grounding",
+    "domain": "REVERIE (Remote Grounding)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~21K",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Navigate to find specific objects described in language. Extends R2R with target object grounding."
   },
   {
     "slug": "reverse-engineering",
@@ -6680,6 +9166,28 @@
     "status": "verified"
   },
   {
+    "slug": "reversi-corner",
+    "domain": "Reversi/Othello (Corner Strategy)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Othello with focus on corner strategy. Verify disc counting and flip rules."
+  },
+  {
+    "slug": "river-crossing-puzzle",
+    "domain": "River Crossing Puzzles",
+    "category": "Games",
+    "verification_type": "simulation",
+    "dataset_scale": "~100 classic variants",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Wolf-goat-cabbage type puzzles. Verify each crossing is legal, no constraint violations."
+  },
+  {
     "slug": "rlbench-robot",
     "domain": "RLBench (Robot Learning)",
     "category": "Agent",
@@ -6688,6 +9196,28 @@
     "difficulty_range": "hard/superhuman",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "rna-3d-structure",
+    "domain": "RNA 3D Structure Prediction",
+    "category": "Science",
+    "verification_type": "diff",
+    "dataset_scale": "~5K from PDB RNA structures",
+    "difficulty_range": "hard/superhuman",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "RNA-Puzzles benchmark + PDB RNA structures. CASP-RNA evaluations. rna-puzzles.org."
+  },
+  {
+    "slug": "robocasa-home",
+    "domain": "RoboCasa (Home Robot)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~100 tasks",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "From UT Austin. Kitchen/household robot tasks. robocasa.ai. Verify: may be 2024 release."
   },
   {
     "slug": "robosuite",
@@ -6750,6 +9280,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "rumor-detection",
+    "domain": "Rumor Detection & Verification",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from PHEME/RumourEval",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "RumourEval shared task. Verify/debunk rumors. PHEME dataset."
+  },
+  {
     "slug": "rush-hour",
     "domain": "Rush Hour (Sliding Cars)",
     "category": "Games",
@@ -6780,6 +9321,17 @@
     "status": "remembered"
   },
   {
+    "slug": "sampling-theorem",
+    "domain": "Nyquist Sampling Theorem Problems",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Determine sampling rate, reconstruct signals, aliasing detection. Verify with DSP theory."
+  },
+  {
     "slug": "samsum-dialogue-summary",
     "domain": "SAMSum (Dialogue Summarization)",
     "category": "Language",
@@ -6788,6 +9340,17 @@
     "difficulty_range": "medium",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "sarcasm-detection",
+    "domain": "Sarcasm Detection",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~30K from Reddit/Twitter",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Multiple sarcasm datasets. Headlines, Reddit, Twitter sources."
   },
   {
     "slug": "sat-encoding",
@@ -6828,6 +9391,17 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "scannet-3d-indoor",
+    "domain": "ScanNet (3D Indoor)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~1.5K scenes",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "scannet.org. Indoor 3D mesh + semantics. Requires agreement."
   },
   {
     "slug": "scene-graph-generation",
@@ -6920,6 +9494,17 @@
     "status": "remembered"
   },
   {
+    "slug": "seaquest-atari",
+    "domain": "Seaquest (Atari)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 game",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ALE/Gymnasium. Atari Seaquest. Requires oxygen management."
+  },
+  {
     "slug": "seed-bench",
     "domain": "SEED-Bench",
     "category": "Vision",
@@ -6980,6 +9565,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "sentiment-aspect-triplet",
+    "domain": "Aspect Sentiment Triplet Extraction",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "SemEval ASTE. Extract (aspect, opinion, sentiment) triplets. Recent NLP subtask."
+  },
+  {
     "slug": "sequence-prediction",
     "domain": "Integer Sequence Prediction (OEIS)",
     "category": "Math",
@@ -6988,6 +9584,17 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "sequential-logic-design",
+    "domain": "Sequential Logic Design (FSM)",
+    "category": "Science",
+    "verification_type": "simulation",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Design FSMs, flip-flop circuits. Verify state transitions via simulation."
   },
   {
     "slug": "serialization-deserialization",
@@ -7000,6 +9607,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "series-convergence",
+    "domain": "Series Convergence Testing",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Determine if infinite series converges. Compute partial sums, apply ratio/root tests."
+  },
+  {
     "slug": "set-cover",
     "domain": "Set Cover Problem",
     "category": "Math",
@@ -7010,6 +9628,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "set-theory-operations",
+    "domain": "Set Theory Operations",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute unions, intersections, complements, power sets. Verify with Python sets."
+  },
+  {
     "slug": "shader-programming",
     "domain": "Shader Programming (GLSL/HLSL/WGSL)",
     "category": "creative-code",
@@ -7018,6 +9647,17 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "multimodal",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "shapenet-3d",
+    "domain": "ShapeNet (3D Model Classification)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~51K 3D models",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "shapenet.org. 55 categories. Requires agreement."
   },
   {
     "slug": "shell-commands",
@@ -7070,6 +9710,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "signal-modulation",
+    "domain": "Signal Modulation/Demodulation",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "AM, FM, PM, PSK, QAM modulation. Verify spectrum and BER."
+  },
+  {
     "slug": "signal-processing",
     "domain": "Signal Processing",
     "category": "Engineering",
@@ -7090,6 +9741,17 @@
     "status": "remembered"
   },
   {
+    "slug": "simpler-real-eval",
+    "domain": "SimplerEnv (Sim-to-Real Eval)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~10 tasks",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Evaluate real robot policies in simulation. From Stanford."
+  },
+  {
     "slug": "simulation-modeling",
     "domain": "Agent-Based & Discrete Event Simulation",
     "category": "computational-modeling",
@@ -7108,6 +9770,17 @@
     "difficulty_range": "hard",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "skin-sensitization",
+    "domain": "Skin Sensitization Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~404",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC Toxicity. LLNA skin sensitization data. tdcommons.ai."
   },
   {
     "slug": "skyscraper-puzzle",
@@ -7140,6 +9813,17 @@
     "status": "remembered"
   },
   {
+    "slug": "slot-filling",
+    "domain": "Slot Filling (NLU)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~25K from ATIS/SNIPS",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Extract slots (entity values) from utterances. ATIS/SNIPS benchmarks."
+  },
+  {
     "slug": "smart-contract-verification",
     "domain": "Smart Contract Verification",
     "category": "Code & Software",
@@ -7170,6 +9854,17 @@
     "status": "remembered"
   },
   {
+    "slug": "socialiqa-extended",
+    "domain": "Social IQA (Extended)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~45K",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Extended Social IQA from Allen AI. Emotional/social intelligence questions."
+  },
+  {
     "slug": "soil-bearing-capacity",
     "domain": "Soil / Geotechnical Computation",
     "category": "Science",
@@ -7190,6 +9885,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "something-something-v2",
+    "domain": "Something-Something V2 (Video)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~220K clips",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Qualcomm/20bn. 174 action classes. Requires understanding of physics."
+  },
+  {
+    "slug": "space-invaders-atari",
+    "domain": "Space Invaders (Atari)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 game",
+    "difficulty_range": "medium",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ALE/Gymnasium. Atari Space Invaders."
+  },
+  {
     "slug": "spatial-reasoning",
     "domain": "spatial-reasoning",
     "category": "vision/reasoning",
@@ -7208,6 +9925,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "special-relativity",
+    "domain": "Special Relativity Computation",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Lorentz transformations, time dilation, length contraction, relativistic momentum. Verify with formulas."
   },
   {
     "slug": "spectral-analysis-chemistry",
@@ -7320,6 +10048,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "sql-injection-fix",
+    "domain": "SQL Injection Vulnerability Fix",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "~5K from OWASP",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Fix SQL injection vulnerabilities. Verify patched code is safe via parameterized query check + SAST."
+  },
+  {
     "slug": "sql-schema-reverse-engineering",
     "domain": "SQL Schema Reverse Engineering",
     "category": "Code",
@@ -7330,6 +10069,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "squad-adversarial",
+    "domain": "SQuAD Adversarial",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~11K adversarial",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Adversarial SQuAD from Jia & Liang. Adds distracting sentences. Tests robustness."
+  },
+  {
     "slug": "ssl-certificate-validation",
     "domain": "SSL Certificate Chain Validation",
     "category": "Security",
@@ -7338,6 +10088,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "stance-detection",
+    "domain": "Stance Detection",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from SemEval",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "SemEval-2016 Task 6. Detect stance (favor/against/neutral) toward targets."
   },
   {
     "slug": "star-battle",
@@ -7490,6 +10251,28 @@
     "tags": "[summarization, rouge, extractive, cnn-dailymail]"
   },
   {
+    "slug": "sun-rgbd",
+    "domain": "SUN RGB-D (Indoor 3D)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~10K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "rgbd.cs.princeton.edu. Indoor scene understanding with depth."
+  },
+  {
+    "slug": "superb-speech-benchmark",
+    "domain": "SUPERB (Speech Benchmark)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~12 tasks",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Speech processing Universal PERformance Benchmark. From NTU. ASR, SID, SD, etc."
+  },
+  {
     "slug": "superconductor-tc",
     "domain": "Superconductor Tc Prediction",
     "category": "Science",
@@ -7518,6 +10301,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "surface-energy-prediction",
+    "domain": "Surface Energy Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from MP surface data",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Materials Project surface module. Predict surface energies of crystal facets."
   },
   {
     "slug": "surveying-computation",
@@ -7560,6 +10354,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "swag-grounded-commonsense",
+    "domain": "SWAG (Grounded Commonsense)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~113K",
+    "difficulty_range": "medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Situations With Adversarial Generations. Video-caption-based commonsense."
+  },
+  {
     "slug": "swebench-lite",
     "domain": "SWE-bench Lite",
     "category": "Code",
@@ -7578,6 +10383,28 @@
     "difficulty_range": "hard",
     "modality": "code",
     "status": "remembered"
+  },
+  {
+    "slug": "swimmer-locomotion",
+    "domain": "Swimmer (MuJoCo)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "medium",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Gymnasium MuJoCo. 3-link snake swimming. gym.make('Swimmer-v4'). Apache."
+  },
+  {
+    "slug": "switchboard",
+    "domain": "Switchboard (Conversational ASR)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~260 hours",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "LDC. Telephone conversations. Classic ASR benchmark. PROPRIETARY (LDC)."
   },
   {
     "slug": "syllabification",
@@ -7600,6 +10427,17 @@
     "status": "verified"
   },
   {
+    "slug": "synergy-prediction",
+    "domain": "Drug Synergy Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~39K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC Drug Combo. O'Neil et al. NCI-ALMANAC data. tdcommons.ai."
+  },
+  {
     "slug": "synthetic-grammar-induction",
     "domain": "Synthetic Grammar Induction (Dyck/PCFG/Hidden Markov)",
     "category": "synthetic-rule-learning",
@@ -7608,6 +10446,28 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "system-of-equations",
+    "domain": "System of Linear Equations",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Solve Ax=b. Verify by substitution. Generate with NumPy."
+  },
+  {
+    "slug": "table-fact-checking",
+    "domain": "Table-Based Fact Checking",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~118K from TabFact",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TabFact from Tsinghua. Verify statements against tables. CC-BY-SA."
   },
   {
     "slug": "table-understanding",
@@ -7680,6 +10540,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "tedlium",
+    "domain": "TED-LIUM (TED Talk ASR)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~452 hours",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "openslr.org/51. CC-BY-NC-ND. TED talk transcriptions."
+  },
+  {
+    "slug": "temporal-action-detection",
+    "domain": "Temporal Action Detection",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~20K from ActivityNet",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ActivityNet Temporal Action Detection. Localize actions in untrimmed video."
+  },
+  {
     "slug": "temporal-logic-model-checking",
     "domain": "Temporal Logic Model Checking",
     "category": "Logic",
@@ -7698,6 +10580,17 @@
     "scalability": "medium",
     "maturity": "medium",
     "tags": "[temporal, time, ordering, duration, timeline]"
+  },
+  {
+    "slug": "temporal-relation-extraction",
+    "domain": "Temporal Relation Extraction",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~36K from TempEval/TB-Dense",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TempEval-3, TimeBank-Dense. Temporal ordering of events."
   },
   {
     "slug": "tensor-computation",
@@ -7758,6 +10651,17 @@
     "scalability": "very-high",
     "maturity": "very-high",
     "tags": "[classification, sentiment, topic, nli]"
+  },
+  {
+    "slug": "text-detection-wild",
+    "domain": "Text Detection in the Wild",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~10K from ICDAR/Total-Text",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "ICDAR MLT, Total-Text, CTW1500. Detect text regions in natural images."
   },
   {
     "slug": "text-normalization",
@@ -7880,6 +10784,17 @@
     "status": "remembered"
   },
   {
+    "slug": "thermal-conductivity-prediction",
+    "domain": "Thermal Conductivity Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from AFLOW/MP",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "AFLOW database (aflow.org). Materials Project (materialsproject.org). Compute thermal conductivity from structure."
+  },
+  {
     "slug": "thermodynamic-cycle-analysis",
     "domain": "Thermodynamic Cycle Analysis",
     "category": "Science",
@@ -7888,6 +10803,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "thermoelectric-figure-of-merit",
+    "domain": "Thermoelectric ZT Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1K from literature/AFLOW",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Thermoelectric materials. Predict Seebeck coefficient, electrical/thermal conductivity."
+  },
+  {
+    "slug": "tic-tac-toe-variants",
+    "domain": "Tic-Tac-Toe Variants (Ultimate, 3D)",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Standard (solved), Ultimate (9 boards), 3D (4x4x4). Verify win conditions."
   },
   {
     "slug": "tide-prediction",
@@ -7928,6 +10865,17 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "titanic-survival",
+    "domain": "Titanic Survival Prediction",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "~891 from Kaggle",
+    "difficulty_range": "easy",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Kaggle's intro dataset. Predict survival from passenger features. kaggle.com/c/titanic."
   },
   {
     "slug": "titration-calculation",
@@ -7980,6 +10928,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "touchdown-navigation",
+    "domain": "Touchdown (Street-level Navigation)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~9K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Navigate Google Street View to find target. From Cornell. Language-grounded urban navigation."
+  },
+  {
     "slug": "tower-of-hanoi-variants",
     "domain": "Tower of Hanoi Variants",
     "category": "Games",
@@ -7998,6 +10957,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "toxicity-detection",
+    "domain": "Toxicity Detection (Jigsaw)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~160K from Jigsaw/Google",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Jigsaw Toxic Comment Classification. kaggle.com/c/jigsaw-toxic-comment-classification-challenge."
   },
   {
     "slug": "traffic-flow",
@@ -8028,6 +10998,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "transcription-factor-binding",
+    "domain": "Transcription Factor Binding Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~100K from ENCODE ChIP-seq",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ENCODE ChIP-seq data. Predict TF binding sites. JASPAR database for motifs."
+  },
+  {
+    "slug": "transistor-biasing",
+    "domain": "Transistor Biasing Design",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Design BJT/MOSFET biasing circuits. Verify Q-point via DC analysis."
   },
   {
     "slug": "translation-reference",
@@ -8078,6 +11070,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "tydiqa-diverse-languages",
+    "domain": "TyDiQA (Typologically Diverse QA)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~204K from Google",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Information-seeking QA in 11 typologically diverse languages. Google."
+  },
+  {
+    "slug": "type-annotation-python",
+    "domain": "Python Type Annotation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "unlimited from GitHub",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Add type annotations to Python code. Verify with mypy --strict. Tests must still pass."
   },
   {
     "slug": "type-checking-implementation",
@@ -8170,6 +11184,39 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "variant-effect-prediction",
+    "domain": "Genetic Variant Effect Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~50K from ClinVar/gnomAD",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ClinVar (ncbi.nlm.nih.gov/clinvar). gnomAD (gnomad.broadinstitute.org). Classify pathogenic vs benign."
+  },
+  {
+    "slug": "vdss-prediction",
+    "domain": "Volume of Distribution Prediction",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.1K",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "TDC ADME. Lombardo & Jing dataset. tdcommons.ai."
+  },
+  {
+    "slug": "vector-calculus",
+    "domain": "Vector Calculus (Div, Grad, Curl)",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute gradient, divergence, curl, line/surface integrals. Verify with SymPy vector module."
+  },
+  {
     "slug": "vehicle-routing",
     "domain": "Vehicle Routing Problem",
     "category": "Math",
@@ -8178,6 +11225,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "veterinary-dosage",
+    "domain": "Veterinary Dosage Calculation",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute veterinary drug dosages by species/weight. Verify against veterinary formulary."
   },
   {
     "slug": "video-temporal-reasoning",
@@ -8220,6 +11278,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "visual-dialog",
+    "domain": "Visual Dialog (VisDial)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~130K from VisDial",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "visualdialog.org. Multi-turn dialogue about images."
+  },
+  {
     "slug": "visual-entailment",
     "domain": "Visual Entailment",
     "category": "Vision",
@@ -8240,6 +11309,17 @@
     "status": "verified"
   },
   {
+    "slug": "visual-navigation-r2r",
+    "domain": "Room-to-Room Navigation (R2R)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "~22K from R2R",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision-and-language navigation. Follow instructions in Matterport3D. bringmeaspoon.org."
+  },
+  {
     "slug": "visual-question-answering",
     "domain": "visual-question-answering",
     "category": "vision/vqa",
@@ -8250,6 +11330,17 @@
     "status": "verified"
   },
   {
+    "slug": "visual-relationship-detection",
+    "domain": "Visual Relationship Detection",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~5K from VRD",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Visual Relationship Detection. Lu et al. Detect subject-predicate-object in images."
+  },
+  {
     "slug": "visualwebarena",
     "domain": "VisualWebArena",
     "category": "Agent",
@@ -8258,6 +11349,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "vizwiz-blind-vqa",
+    "domain": "VizWiz (Blind User VQA)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "~31K",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "vizwiz.org. Questions from blind users about their photos. Real-world difficulty."
   },
   {
     "slug": "voice-activity-detection",
@@ -8290,6 +11392,17 @@
     "status": "verified"
   },
   {
+    "slug": "voxpopuli",
+    "domain": "VoxPopuli (EU Parliament Speech)",
+    "category": "Audio",
+    "verification_type": "exact_match",
+    "dataset_scale": "~400K hours",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "European Parliament recordings. 23 languages. github.com/facebookresearch/voxpopuli."
+  },
+  {
     "slug": "vqa-rad",
     "domain": "VQA-RAD (Radiology VQA)",
     "category": "Vision",
@@ -8298,6 +11411,39 @@
     "difficulty_range": "hard",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "walker2d",
+    "domain": "Walker2D (MuJoCo)",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Gymnasium MuJoCo. 2D bipedal walking. gym.make('Walker2d-v4'). Apache."
+  },
+  {
+    "slug": "water-jug-problem",
+    "domain": "Water Jug Problem (Die Hard)",
+    "category": "Games",
+    "verification_type": "simulation",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Measure exact amount of water using jugs. Verify each pour step is legal and final amount is correct."
+  },
+  {
+    "slug": "waymo-open",
+    "domain": "Waymo Open Dataset (3D)",
+    "category": "Vision",
+    "verification_type": "diff",
+    "dataset_scale": "~12M 3D boxes",
+    "difficulty_range": "hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "waymo.com/open. Custom license. High-quality LiDAR. Requires agreement."
   },
   {
     "slug": "weatherbench",
@@ -8370,6 +11516,17 @@
     "status": "remembered"
   },
   {
+    "slug": "wine-food-pairing",
+    "domain": "Wine & Food Pairing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "~5K from sommelier databases",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Match wines to dishes based on acidity, tannin, body rules. Verify against pairing databases. Somewhat subjective."
+  },
+  {
     "slug": "wine-quality-prediction",
     "domain": "Wine / Food Quality Prediction",
     "category": "Expert",
@@ -8388,6 +11545,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "winogrande-debiased",
+    "domain": "WinoGrande (Debiased)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~44K",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Winograd-style commonsense. From AI2. winogrande.allenai.org."
   },
   {
     "slug": "wizard-of-wikipedia",
@@ -8450,6 +11618,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "wsc273",
+    "domain": "WSC273 (Winograd Schema 273)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~273",
+    "difficulty_range": "hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Original 273 Winograd Schema Challenge instances. Levesque et al."
+  },
+  {
+    "slug": "xcopa-crosslingual",
+    "domain": "XCOPA (Cross-lingual COPA)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1K x 11 langs",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Cross-lingual Choice of Plausible Alternatives. 11 languages. Ponti et al."
+  },
+  {
     "slug": "xml-dtd-validation",
     "domain": "XML Schema/DTD Validation",
     "category": "Code",
@@ -8468,6 +11658,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "xnli-15-languages",
+    "domain": "XNLI (15 Languages)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~7.5K x 15 langs",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Cross-lingual NLI in 15 languages. From Conneau et al. EMNLP 2018. facebook/xnli on HuggingFace."
+  },
+  {
+    "slug": "xquad-crosslingual",
+    "domain": "XQuAD (Cross-lingual QA)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~1.2K x 11 langs",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Cross-lingual SQuAD-style QA in 11 languages. From Artetxe et al."
   },
   {
     "slug": "xss-detection",
@@ -8498,6 +11710,50 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "yelp-sentiment",
+    "domain": "Yelp Reviews (Sentiment/Stars)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "~700K reviews",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Yelp Dataset Challenge. yelp.com/dataset. Predict star rating from review."
+  },
+  {
+    "slug": "z-transform",
+    "domain": "Z-Transform Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Compute Z-transforms for discrete-time signals. Verify with SymPy."
+  },
+  {
+    "slug": "zebra-puzzle",
+    "domain": "Zebra Puzzle (Einstein's Riddle)",
+    "category": "Games",
+    "verification_type": "constraint",
+    "dataset_scale": "~100 variants",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Logic grid puzzles (who owns the fish?). Verify all clues are satisfied by solution."
+  },
+  {
+    "slug": "zinc-graph-regression",
+    "domain": "ZINC Graph Regression",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "~12K molecules",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ZINC subset for GNN benchmarking. Predict constrained solubility. Dwivedi et al."
   },
   {
     "slug": "zinc250k",
