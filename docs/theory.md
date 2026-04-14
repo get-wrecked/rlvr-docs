@@ -126,7 +126,7 @@ The ultimate form of this framework is an **inverse dynamics model** — a syste
 - **Stage 2** applies it to the major environments of civilization
 - **Stage 3** optimizes for specific objectives within those environments
 
-The 272 domains are 272 different "games," and the three-stage training teaches the agent to play them all.
+The 2,697 domains are 2,697 different "games," and the three-stage training teaches the agent to play them all.
 
 ## Why Breadth Matters for AGI
 

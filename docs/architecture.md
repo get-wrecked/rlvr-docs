@@ -6,7 +6,7 @@ The RLVR training system has four major components:
 
 1. **Policy (VLM)** — The vision-language model being trained
 2. **GRPO Trainer** — The reinforcement learning training loop (Python/TRL)
-3. **Verifier Server** — Rust HTTP service that scores responses (13 verifiers, 272 domains)
+3. **Verifier Server** — Rust HTTP service that scores responses (13 verifiers, 2,697 domains)
 4. **Curriculum Controller** — Manages difficulty and domain mixing across training
 
 ```
@@ -38,7 +38,7 @@ The RLVR training system has four major components:
            │  ┌────────▼────────┐  │
            │  │ Verifier Pool   │  │
            │  │ 13 verifiers    │  │
-           │  │ 272 domains     │  │
+           │  │ 2,697 domains     │  │
            │  └─────────────────┘  │
            │                       │
            │  ┌─────────────────┐  │

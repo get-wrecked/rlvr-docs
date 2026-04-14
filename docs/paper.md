@@ -4,13 +4,13 @@
 
 ## Abstract
 
-A framework for training general-purpose AI agents using Reinforcement Learning with Verifiable Rewards (RLVR) across 272 diverse domains. Organized around a three-stage theory of intelligence:
+A framework for training general-purpose AI agents using Reinforcement Learning with Verifiable Rewards (RLVR) across 2,697 diverse domains. Organized around a three-stage theory of intelligence:
 
 1. **Rule Recognition** — learning to infer latent structure from synthetic and formal environments
 2. **System Mastery** — applying rule recognition to language, code, mathematics, science, and strategic reasoning
 3. **Capability Climbing** — hill-climbing performance on specific, high-value applications
 
-Each stage uses programmatically verifiable rewards requiring no human judgment. The framework includes 272 environments, 13 Rust-based verifiers (227 tests, validated against 6M real problems), and a curriculum controller managing difficulty across all domains.
+Each stage uses programmatically verifiable rewards requiring no human judgment. The framework includes 2,697 environments, 13 Rust-based verifiers (227 tests, validated against 6M real problems), and a curriculum controller managing difficulty across all domains.
 
 ## Key Contributions
 
@@ -32,7 +32,7 @@ Each stage uses programmatically verifiable rewards requiring no human judgment.
 
 ### Compute to AGI
 
-~250,000 H100-hours (~$750K at cloud pricing) for initial AGI-level breadth across 272 domains.
+~250,000 H100-hours (~$750K at cloud pricing) for initial AGI-level breadth across 2,697 domains.
 
 ## Key References
 
@@ -59,4 +59,4 @@ The NCA paper's key insight: with no semantic shortcuts (zero linguistic content
 | Synthetic data develops attention-layer rule inference | Stage 1: ~55 synthetic/formal domains | Train rule recognition first |
 | Transfer to language, code, math | Stage 2: ~110 applied domains | Rule recognition accelerates system mastery |
 | Complexity matching varies by target | Difficulty curriculum per domain | Different domains benefit from different rule complexities |
-| 1.4-1.6x convergence acceleration | Multiplied across 272 domains | Compounding returns from breadth |
+| 1.4-1.6x convergence acceleration | Multiplied across 2,697 domains | Compounding returns from breadth |

@@ -195,6 +195,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "add-type-hints-full",
+    "domain": "Full Type Hint Addition",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Add complete type hints to untyped Python. Verify with mypy."
+  },
+  {
     "slug": "ade20k-segmentation",
     "domain": "ADE20K Semantic Segmentation",
     "category": "Vision",
@@ -1222,6 +1233,17 @@
     "status": "remembered"
   },
   {
+    "slug": "api-endpoint-generation",
+    "domain": "REST API Endpoint Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Flask/FastAPI/Express endpoints. Verify with HTTP tests."
+  },
+  {
     "slug": "api-mocking",
     "domain": "API Mock Generation",
     "category": "Code",
@@ -1338,6 +1360,17 @@
     "reconstruction": "Physics computation. Buoyancy force, floating/sinking. Verify with \u03c1Vg."
   },
   {
+    "slug": "argo-workflow",
+    "domain": "Argo Workflow Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Argo Workflow specs. Verify DAG structure."
+  },
+  {
     "slug": "argocd-app",
     "domain": "ArgoCD Application Manifest",
     "category": "Systems",
@@ -1429,6 +1462,50 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "assemblyeval-arm",
+    "domain": "ARM Assembly Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "ARM assembly coding with QEMU execution."
+  },
+  {
+    "slug": "assemblyeval-riscv",
+    "domain": "RISC-V Assembly Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "RISC-V assembly with QEMU/spike verification."
+  },
+  {
+    "slug": "assemblyeval-x86",
+    "domain": "x86-64 Assembly Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "x86-64 assembly with execution verification."
+  },
+  {
+    "slug": "ast-manipulation",
+    "domain": "AST Manipulation/Transformation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Transform code via AST. Verify semantics preserved. Use ast module."
   },
   {
     "slug": "astronomical-twilight",
@@ -2486,6 +2563,17 @@
     "reconstruction": "Board game. Pattern-building. Verify tile placement, scoring, wall completion."
   },
   {
+    "slug": "azure-pipelines",
+    "domain": "Azure Pipelines Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate azure-pipelines.yml. Verify schema."
+  },
+  {
     "slug": "b-tree",
     "domain": "B-Tree Operations",
     "category": "Code",
@@ -2495,6 +2583,17 @@
     "modality": "code",
     "status": "remembered",
     "reconstruction": "Data structure task. B-tree insert/delete. Verify B-tree properties. Verify invariants after each operation."
+  },
+  {
+    "slug": "babel-config",
+    "domain": "Babel Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate babel.config.json. Verify transpilation."
   },
   {
     "slug": "babyai-boss-level",
@@ -2625,6 +2724,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "backup-restore-script",
+    "domain": "Backup/Restore Script Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write backup scripts. Verify restore produces identical state."
   },
   {
     "slug": "baking-ratio",
@@ -3242,6 +3352,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "bicep-template",
+    "domain": "Azure Bicep Template",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Bicep templates. Verify with bicep build."
   },
   {
     "slug": "big-two",
@@ -5191,6 +5312,17 @@
     "status": "remembered"
   },
   {
+    "slug": "bird-sql",
+    "domain": "BIRD SQL Benchmark",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "BIRD-SQL. 12.7K text-to-SQL. Requires registration. bird-bench.github.io."
+  },
+  {
     "slug": "birthday-problem",
     "domain": "Birthday Problem Variants",
     "category": "Math",
@@ -5200,6 +5332,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Math computation topic. Compute collision probabilities. Verify via exact formula or simulation. Generate procedurally, verify with CAS."
+  },
+  {
+    "slug": "bitbucket-pipelines",
+    "domain": "Bitbucket Pipelines Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate bitbucket-pipelines.yml. Verify schema."
   },
   {
     "slug": "blokus",
@@ -5383,6 +5526,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "bugsinpy",
+    "domain": "BugsInPy (Real Python Bugs)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "493 real Python bugs. 17 projects. github.com/soarsmu/BugsInPy."
+  },
+  {
     "slug": "build-configuration",
     "domain": "Build Configuration",
     "category": "Code & Software",
@@ -5520,6 +5674,17 @@
     "reconstruction": "sklearn.datasets.fetch_california_housing. StatLib. Predict median house value."
   },
   {
+    "slug": "callback-to-promise",
+    "domain": "Callback to Promise/Async",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert callback-based JS to async/await. Verify behavior."
+  },
+  {
     "slug": "calorimetry-computation",
     "domain": "Calorimetry Computation",
     "category": "Science",
@@ -5614,6 +5779,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "cargo-toml-generation",
+    "domain": "Cargo.toml Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Rust Cargo.toml. Verify with cargo check."
   },
   {
     "slug": "cartography",
@@ -5720,6 +5896,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "cdk-code",
+    "domain": "AWS CDK Code Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate CDK constructs. Verify with cdk synth."
+  },
+  {
     "slug": "celeba-attributes",
     "domain": "CelebA (Face Attributes)",
     "category": "Vision",
@@ -5792,6 +5979,28 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Formal language theory task. Parse strings with given CFG. Verify parse tree."
+  },
+  {
+    "slug": "changelog-generation",
+    "domain": "Changelog Generation from Git",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate CHANGELOG from commits. Verify version entries."
+  },
+  {
+    "slug": "chaos-engineering",
+    "domain": "Chaos Engineering Script",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write chaos tests (network partition, kill process). Verify recovery."
   },
   {
     "slug": "chart-understanding",
@@ -6077,6 +6286,17 @@
     "reconstruction": "Same source as CIFAR-10. 100 classes grouped into 20 superclasses."
   },
   {
+    "slug": "circleci-config",
+    "domain": "CircleCI Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .circleci/config.yml. Verify schema."
+  },
+  {
     "slug": "circuit-analysis-dc",
     "domain": "DC Circuit Analysis",
     "category": "Science",
@@ -6170,6 +6390,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "class-to-functional",
+    "domain": "Class to Functional Refactor",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert OOP to FP style. Verify behavior preservation."
+  },
+  {
     "slug": "clearance-prediction",
     "domain": "Drug Clearance Prediction",
     "category": "Science",
@@ -6190,6 +6421,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "cs.stanford.edu/people/jcjohns/clevr. CC-BY. Synthetic scenes, compositional reasoning."
+  },
+  {
+    "slug": "cli-tool-generation",
+    "domain": "CLI Tool Generation (argparse/click)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate CLI tools. Verify argument parsing and output."
   },
   {
     "slug": "climate-science",
@@ -6254,6 +6496,28 @@
     "reconstruction": "Scientific database. ~2M variant interpretations. ncbi.nlm.nih.gov/clinvar. Public."
   },
   {
+    "slug": "clojureeval",
+    "domain": "Clojure Evaluation (clojure.test)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Clojure coding problems with clojure.test."
+  },
+  {
+    "slug": "cloudformation-template",
+    "domain": "AWS CloudFormation Template",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate CFN templates. Verify with cfn-lint + deploy to localstack."
+  },
+  {
     "slug": "cloze-completion",
     "domain": "cloze-completion",
     "category": "language",
@@ -6294,6 +6558,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Chinese Massive Multitask Language Understanding. From SJTU. 67 subjects."
+  },
+  {
+    "slug": "coboleval",
+    "domain": "COBOL Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "COBOL coding problems. Legacy system modernization."
   },
   {
     "slug": "cocktail-recipe-construction",
@@ -6369,6 +6644,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "code-formatting",
+    "domain": "Code Formatting (Black/Prettier)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Format code per style guide. Verify output matches formatter."
+  },
+  {
     "slug": "code-generation",
     "domain": "Code Generation",
     "category": "Code & Software",
@@ -6439,6 +6725,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "code-to-flowchart",
+    "domain": "Code to Flowchart Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Mermaid/PlantUML flowchart from code. Verify by parsing."
+  },
+  {
     "slug": "code-translation",
     "domain": "Code Translation",
     "category": "Code & Software",
@@ -6468,6 +6765,28 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "codecontests-full",
+    "domain": "CodeContests Full (13K)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Full CodeContests from DeepMind. 13.3K problems. Apache 2.0."
+  },
+  {
+    "slug": "codeflaws",
+    "domain": "CodeFlaws (C Competitive Bugs)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "3.9K C bugs from Codeforces submissions."
   },
   {
     "slug": "codeforces-archive",
@@ -6705,6 +7024,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "concode",
+    "domain": "CoNaLa / CONCODE (Code Generation from NL)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "NL intent to code. Iyer et al. From StackOverflow."
+  },
+  {
     "slug": "concrete-mix-design",
     "domain": "Concrete Mix Design (ACI)",
     "category": "Expert",
@@ -6744,6 +7074,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text | code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "config-parser-generation",
+    "domain": "Config Parser Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write parsers for custom config formats. Verify parsing."
   },
   {
     "slug": "conll-2012-coref",
@@ -6806,6 +7147,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "content-security-policy",
+    "domain": "Content Security Policy",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate CSP headers. Verify with CSP evaluator."
   },
   {
     "slug": "continent-membership",
@@ -6912,6 +7264,17 @@
     "status": "verified"
   },
   {
+    "slug": "cors-configuration",
+    "domain": "CORS Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Configure CORS headers. Verify access from allowed/blocked origins."
+  },
+  {
     "slug": "cosmic-mutation",
     "domain": "COSMIC Cancer Mutations",
     "category": "Science",
@@ -6931,6 +7294,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "cosqa",
+    "domain": "CoSQA (Code Search QA)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "20K web queries \u2192 code. MS CodeXGLUE. Code search benchmark."
   },
   {
     "slug": "coulombs-law",
@@ -7051,6 +7425,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "cppeval",
+    "domain": "C++ Evaluation (catch2/gtest)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "C++ coding problems with unit test suites."
+  },
+  {
     "slug": "cpt-procedure-coding",
     "domain": "CPT Procedure Coding",
     "category": "Expert",
@@ -7114,6 +7499,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "cron-job-script",
+    "domain": "Cron Job Script Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write scripts for scheduled tasks. Verify execution and output."
+  },
+  {
     "slug": "crontab-parsing",
     "domain": "Crontab Schedule Parsing",
     "category": "Misc",
@@ -7133,6 +7529,28 @@
     "modality": "code",
     "status": "remembered",
     "reconstruction": "DevOps config. Validate crontab entries. Verify against cron syntax rules."
+  },
+  {
+    "slug": "crosscodeeval",
+    "domain": "CrossCodeEval (Cross-file Completion)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Code completion requiring cross-file context. 2023."
+  },
+  {
+    "slug": "crossplane-manifest",
+    "domain": "Crossplane Manifest",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Crossplane XRDs. Verify against schema."
   },
   {
     "slug": "crossword-construction",
@@ -7248,6 +7666,17 @@
     "reconstruction": "CommonsenseQA 2.0 from Tel Aviv U. Yes/no commonsense questions. Gamification-based collection."
   },
   {
+    "slug": "csrf-protection",
+    "domain": "CSRF Protection Implementation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Add CSRF tokens. Verify token validation on form submission."
+  },
+  {
     "slug": "css-animation",
     "domain": "CSS Animation/Transition",
     "category": "Code",
@@ -7320,6 +7749,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "Vision dataset. 11.8K images, 200 bird species. Caltech. Fine-grained."
+  },
+  {
+    "slug": "cuda-eval",
+    "domain": "CUDA Kernel Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "CUDA kernel correctness + performance vs CPU baseline."
   },
   {
     "slug": "currency-by-country",
@@ -8413,6 +8853,17 @@
     "reconstruction": "Point defect databases. Freysoldt et al. corrections. Very challenging DFT benchmark."
   },
   {
+    "slug": "defects4j-v2",
+    "domain": "Defects4J v2.0 (Java Bugs)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "835 real Java bugs. 17 projects. MIT. github.com/rjust/defects4j."
+  },
+  {
     "slug": "definite-integral",
     "domain": "Definite Integral Computation",
     "category": "Math",
@@ -8475,6 +8926,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Math computation topic. Vandermonde, circulant, block determinants. Verify with numpy. Generate procedurally, verify with CAS."
+  },
+  {
+    "slug": "devbench",
+    "domain": "DevBench (Multi-file Development)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Multi-file project development. Beyond single-function. 2024."
   },
   {
     "slug": "dexterous-manipulation",
@@ -9014,6 +9476,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "docstring-google-style",
+    "domain": "Google-Style Docstring Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Google-format docstrings. Verify format."
+  },
+  {
+    "slug": "docstring-numpy-style",
+    "domain": "NumPy-Style Docstring Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate NumPy-format docstrings. Verify format with numpydoc."
+  },
+  {
     "slug": "document-layout-analysis",
     "domain": "Document Layout Analysis",
     "category": "Vision",
@@ -9318,6 +9802,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "editorconfig-generation",
+    "domain": ".editorconfig Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .editorconfig. Verify against editorconfig spec."
+  },
+  {
     "slug": "educational-content",
     "domain": "Educational Content Generation with Assessment",
     "category": "education",
@@ -9455,6 +9950,17 @@
     "reconstruction": "Engineering calculation. Traffic analysis, round-trip time. Verify against ASME A17.1."
   },
   {
+    "slug": "elixireval",
+    "domain": "Elixir Evaluation (ExUnit)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Elixir coding problems with ExUnit test suites."
+  },
+  {
     "slug": "email-address-validation",
     "domain": "Email Address Validation",
     "category": "Misc",
@@ -9535,6 +10041,17 @@
     "difficulty_range": "medium",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "encryption-at-rest",
+    "domain": "Encryption at Rest Implementation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Encrypt/decrypt data with AES. Verify round-trip + key management."
   },
   {
     "slug": "encryption-decryption",
@@ -9682,6 +10199,17 @@
     "reconstruction": "Engineering calculation. Handling capacity from speed and width. Verify against EN 115."
   },
   {
+    "slug": "eslint-config",
+    "domain": "ESLint Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .eslintrc. Verify with eslint on sample code."
+  },
+  {
     "slug": "esol-solubility",
     "domain": "ESOL (Aqueous Solubility)",
     "category": "Science",
@@ -9711,6 +10239,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Test ethical reasoning: justice, deontology, virtue, utilitarianism, commonsense. github.com/hendrycks/ethics."
+  },
+  {
+    "slug": "etl-pipeline-code",
+    "domain": "ETL Pipeline Code Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write ETL code (extract, transform, load). Verify data output."
   },
   {
     "slug": "euchre",
@@ -9746,6 +10285,17 @@
     "reconstruction": "Find Euler circuit/path in graph. Verify each edge used exactly once."
   },
   {
+    "slug": "event-driven-handler",
+    "domain": "Event-Driven Handler",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write event handlers (AWS Lambda, Azure Functions). Verify invocation."
+  },
+  {
     "slug": "event-extraction",
     "domain": "Event Extraction (ACE)",
     "category": "Language",
@@ -9755,6 +10305,28 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "ACE 2005 event extraction. LDC. Triggers + arguments. PROPRIETARY base but annotations discussed in papers."
+  },
+  {
+    "slug": "evocodebench",
+    "domain": "EvoCodeBench (Evolving Code)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Code generation with evolving requirements. 2024 benchmark."
+  },
+  {
+    "slug": "exec-eval",
+    "domain": "ExecEval (Execution-Based Eval)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Multi-language execution evaluation. 14 languages."
   },
   {
     "slug": "exercism-bash",
@@ -10351,6 +10923,17 @@
     "reconstruction": "Exercism zig track. exercism.org/tracks/zig. MIT. ~100 exercises with test suites per language."
   },
   {
+    "slug": "extract-method-refactor",
+    "domain": "Extract Method Refactoring",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Extract code into new method. Verify behavior preservation."
+  },
+  {
     "slug": "fabric-unit-conversion",
     "domain": "Fabric/Textile Unit Conversion",
     "category": "Misc",
@@ -10663,6 +11246,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "fixeval",
+    "domain": "FixEval (Code Repair Evaluation)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Evaluate code repair quality. Hossain et al."
   },
   {
     "slug": "flag-identification",
@@ -11371,6 +11965,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "fortraneval",
+    "domain": "Fortran Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Fortran coding problems. Scientific/HPC computing."
+  },
+  {
     "slug": "forward-reaction-prediction",
     "domain": "Forward Reaction Prediction",
     "category": "science-chemistry",
@@ -11462,6 +12067,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Audio/music benchmark. 51K audio clips, 200 classes. Freesound. CC-BY."
+  },
+  {
+    "slug": "fsharpeval",
+    "domain": "F# Evaluation (NUnit)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "F# coding problems with NUnit test suites."
   },
   {
     "slug": "functional-programming",
@@ -11753,6 +12369,17 @@
     "reconstruction": "Resolve conflicts during git rebase. Verify result compiles and tests pass."
   },
   {
+    "slug": "gitbugjava",
+    "domain": "GitBug-Java (Real Java Bugs)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "~1K reproducible Java bugs from GitHub. 2024."
+  },
+  {
     "slug": "github-actions-generation",
     "domain": "GitHub Actions Workflow Generation",
     "category": "Code",
@@ -11761,6 +12388,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "gitignore-generation",
+    "domain": ".gitignore Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .gitignore for project type. Verify against gitignore.io."
+  },
+  {
+    "slug": "gitlab-ci",
+    "domain": "GitLab CI Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .gitlab-ci.yml. Verify with gitlab-ci-lint."
   },
   {
     "slug": "glue-cola",
@@ -11902,6 +12551,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Go life-and-death problems. Verify with KataGo/Leela Zero."
+  },
+  {
+    "slug": "goeval",
+    "domain": "Go Evaluation (go test)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Go coding problems with go test. Multiple community benchmarks."
   },
   {
     "slug": "golden-ratio",
@@ -12050,6 +12710,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "graphql-resolver",
+    "domain": "GraphQL Resolver Implementation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write resolvers for GraphQL schema. Verify query results."
+  },
+  {
+    "slug": "graphql-schema-generation",
+    "domain": "GraphQL Schema from Database",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate GraphQL schema from DB schema. Verify introspection."
+  },
+  {
     "slug": "gre-quantitative",
     "domain": "GRE Quantitative Reasoning",
     "category": "Math",
@@ -12079,6 +12761,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "grpc-service",
+    "domain": "gRPC Service Implementation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Implement gRPC service from proto definition. Verify with client calls."
   },
   {
     "slug": "gsm8k-hard",
@@ -12335,6 +13028,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "haskelleval",
+    "domain": "Haskell Evaluation (HSpec)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Haskell coding problems with HSpec/QuickCheck."
   },
   {
     "slug": "hate-speech-detection",
@@ -12840,6 +13544,17 @@
     "reconstruction": "3DPW (outdoor), Human3.6M (indoor). Recover 3D SMPL body mesh from image."
   },
   {
+    "slug": "humaneval-infilling",
+    "domain": "HumanEval Infilling",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Fill-in-the-middle code completion. From Bavarian et al."
+  },
+  {
     "slug": "humaneval-plus",
     "domain": "HumanEval+",
     "category": "Code",
@@ -12848,6 +13563,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "remembered"
+  },
+  {
+    "slug": "humaneval-x",
+    "domain": "HumanEval-X (Cross-Language)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "HumanEval in C++/Java/JS/Go/Rust. THUDM/CodeGeeX. Apache 2.0."
   },
   {
     "slug": "humanity-last-exam",
@@ -13199,6 +13925,28 @@
     "reconstruction": "Math competition archive. ~2K+ shortlisted problems. imo-official.org. Public archives."
   },
   {
+    "slug": "imperative-to-declarative",
+    "domain": "Imperative to Declarative SQL",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert procedural logic to declarative SQL. Verify results."
+  },
+  {
+    "slug": "import-sorting",
+    "domain": "Import Sorting (isort)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Sort imports per convention. Verify against isort output."
+  },
+  {
     "slug": "inaturalist",
     "domain": "iNaturalist (Fine-grained Species)",
     "category": "Vision",
@@ -13280,6 +14028,28 @@
     "difficulty_range": "single-resource definitions \u2192 multi-service architectures with networking and IAM",
     "modality": "text-to-config (Terraform, Docker, Kubernetes, Ansible)",
     "status": "early-stage"
+  },
+  {
+    "slug": "inline-method-refactor",
+    "domain": "Inline Method Refactoring",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Inline a method. Verify behavior preservation."
+  },
+  {
+    "slug": "input-validation",
+    "domain": "Input Validation Implementation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write input validation/sanitization. Verify against malicious inputs."
   },
   {
     "slug": "instruction-following",
@@ -13364,6 +14134,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "introclass",
+    "domain": "IntroClass (Student Code Bugs)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "998 student program bugs. 6 assignments. Easy APR benchmark."
+  },
+  {
     "slug": "intuitionistic-logic",
     "domain": "Intuitionistic / Constructive Logic",
     "category": "Logic",
@@ -13446,6 +14227,39 @@
     "reconstruction": "Compute Hijri dates. Verify against tabular calendar."
   },
   {
+    "slug": "javaeval",
+    "domain": "Java Evaluation (JUnit)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Java coding problems with JUnit test suites."
+  },
+  {
+    "slug": "jenkins-pipeline",
+    "domain": "Jenkinsfile Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate declarative Jenkinsfile. Verify syntax with jenkins-pipeline-linter."
+  },
+  {
+    "slug": "jest-config",
+    "domain": "Jest Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate jest.config.js. Verify tests run."
+  },
+  {
     "slug": "jglue-japanese",
     "domain": "JGLUE (Japanese GLUE)",
     "category": "Language",
@@ -13476,6 +14290,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "juice-code",
+    "domain": "JuICe (Code Generation from Notebooks)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Jupyter notebook code generation. ~1.5K problems."
+  },
+  {
+    "slug": "juliaeval",
+    "domain": "Julia Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Julia coding problems. SciMLBenchmarks for scientific Julia."
   },
   {
     "slug": "julian-day-number",
@@ -14119,6 +14955,17 @@
     "tags": "[knowledge-graph, link-prediction, triples, wikidata, freebase]"
   },
   {
+    "slug": "kotlineval",
+    "domain": "Kotlin Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Kotlin coding problems. JVM-based, Android-relevant."
+  },
+  {
     "slug": "kropki-dots",
     "domain": "Kropki Dots Puzzle",
     "category": "Games",
@@ -14138,6 +14985,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "kustomize-overlay",
+    "domain": "Kustomize Overlay Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate kustomization.yaml overlays. Verify with kustomize build."
   },
   {
     "slug": "lalr-parse-table",
@@ -14369,6 +15227,17 @@
     "reconstruction": "openslr.org/12. CC-BY. English read speech. The standard ASR benchmark."
   },
   {
+    "slug": "license-header-insertion",
+    "domain": "License Header Insertion",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Add license headers to source files. Verify header format."
+  },
+  {
     "slug": "lightning-protection",
     "domain": "Lightning Protection Design",
     "category": "Expert",
@@ -14515,6 +15384,17 @@
     "reconstruction": "Formal language theory task. Build LL(1) parse table. Verify FIRST/FOLLOW sets."
   },
   {
+    "slug": "load-balancer-config",
+    "domain": "Load Balancer Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write HAProxy/Nginx LB configs. Verify request distribution."
+  },
+  {
     "slug": "load-testing-script",
     "domain": "Load Testing Script Generation",
     "category": "Code",
@@ -14533,6 +15413,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "log-parser-generation",
+    "domain": "Log Parser Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write log parsers (Apache, nginx, syslog). Verify field extraction."
   },
   {
     "slug": "logging-query-generation",
@@ -14680,6 +15571,17 @@
     "reconstruction": "Data structure task. Get, put with capacity. Verify eviction order. Verify invariants after each operation."
   },
   {
+    "slug": "luaeval",
+    "domain": "Lua Evaluation (busted)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Lua coding problems with busted test framework."
+  },
+  {
     "slug": "lunar-lander",
     "domain": "Lunar Lander",
     "category": "Games",
@@ -14787,6 +15689,17 @@
     "reconstruction": "Materials Project magnetic data. Predict FM/AFM/NM ordering."
   },
   {
+    "slug": "makefile-from-project",
+    "domain": "Makefile from Project Structure",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Infer Makefile from source files. Verify build succeeds."
+  },
+  {
     "slug": "makefile-generation",
     "domain": "Makefile / Build Rule Generation",
     "category": "Code",
@@ -14826,6 +15739,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "manybugs",
+    "domain": "ManyBugs (C Bugs)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "185 C bugs from 9 large programs. repairbenchmarks.cs.umass.edu."
   },
   {
     "slug": "map-navigation",
@@ -15185,6 +16109,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "mbpp-plus",
+    "domain": "MBPP+ (Augmented Tests)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "MBPP with augmented test cases from EvalPlus. evalplus.github.io."
+  },
+  {
     "slug": "meat-cooking-temp",
     "domain": "Meat Cooking Temperature",
     "category": "Expert",
@@ -15285,6 +16220,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "message-queue-consumer",
+    "domain": "Message Queue Consumer",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write Kafka/RabbitMQ/SQS consumers. Verify message processing."
   },
   {
     "slug": "meta-world-robotic-manipulation",
@@ -15854,6 +16800,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "middleware-generation",
+    "domain": "HTTP Middleware Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write Express/Django/Flask middleware. Verify request transformation."
+  },
+  {
+    "slug": "migration-script",
+    "domain": "Database Migration Script Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write up/down migrations. Verify schema changes."
   },
   {
     "slug": "military-time",
@@ -16954,6 +17922,17 @@
     "reconstruction": "Database query task. Write MongoDB find/aggregate pipelines. Verify against test collection."
   },
   {
+    "slug": "monitoring-alert",
+    "domain": "Monitoring Alert Rule Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write alert rules (Prometheus/Datadog). Verify trigger conditions."
+  },
+  {
     "slug": "monocular-depth-estimation",
     "domain": "Monocular Depth Estimation",
     "category": "Vision",
@@ -16963,6 +17942,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "NYU Depth V2, KITTI Depth, MiDaS benchmark. Predict depth from single image."
+  },
+  {
+    "slug": "monolith-to-microservice",
+    "domain": "Monolith to Microservice Decomposition",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Decompose code into services. Verify API contracts."
   },
   {
     "slug": "montezuma-revenge",
@@ -17047,6 +18037,28 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Gymnasium. Push car up hill. gym.make('MountainCar-v0'). MIT."
+  },
+  {
+    "slug": "move-class-refactor",
+    "domain": "Move Class to New File",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Restructure code files. Verify imports and tests."
+  },
+  {
+    "slug": "mpi-eval",
+    "domain": "MPI Distributed Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "MPI programs. Verify correctness across ranks."
   },
   {
     "slug": "msmarco-passage",
@@ -17148,6 +18160,17 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "multipl-e",
+    "domain": "MultiPL-E (Multilingual HumanEval)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "HumanEval translated to 18 languages. nuprl/MultiPL-E on GitHub. Apache 2.0."
   },
   {
     "slug": "multirc",
@@ -17811,6 +18834,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "nox-config",
+    "domain": "Nox Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate noxfile.py. Verify nox run succeeds."
+  },
+  {
     "slug": "nsynth-instruments",
     "domain": "NSynth Instrument Classification",
     "category": "Audio",
@@ -17924,6 +18958,17 @@
     "status": "remembered"
   },
   {
+    "slug": "numpy-eval",
+    "domain": "NumPy Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "NumPy array operations. Verify numerical results."
+  },
+  {
     "slug": "nurikabe",
     "domain": "Nurikabe Puzzle",
     "category": "Games",
@@ -18028,6 +19073,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "OpenBookQA from Allen AI. Science QA requiring external knowledge. Already in datasets but this is the retrieval variant."
+  },
+  {
+    "slug": "ocamleval",
+    "domain": "OCaml Evaluation (OUnit)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "OCaml coding problems with OUnit test suites."
   },
   {
     "slug": "ocrbench",
@@ -18221,6 +19277,28 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "storage.googleapis.com/openimages. CC-BY. Google. 600 classes."
+  },
+  {
+    "slug": "openapi-from-code",
+    "domain": "OpenAPI Spec from Code",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate OpenAPI spec from existing endpoints. Verify with swagger-ui."
+  },
+  {
+    "slug": "openmp-eval",
+    "domain": "OpenMP Parallelization Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Parallelize with OpenMP. Verify correctness + speedup."
   },
   {
     "slug": "openspiel-backgammon",
@@ -18876,6 +19954,17 @@
     "reconstruction": "Generate fold sequences for origami models. Verify flat-foldability and final shape via computational origami."
   },
   {
+    "slug": "orm-model-generation",
+    "domain": "ORM Model Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate SQLAlchemy/Django/Prisma models from schema. Verify migration."
+  },
+  {
     "slug": "orm-query-generation",
     "domain": "ORM Query Generation",
     "category": "Code",
@@ -18884,6 +19973,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "orm-to-sql",
+    "domain": "ORM to Raw SQL Translation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert ORM queries to raw SQL. Verify equivalent results."
   },
   {
     "slug": "othello-reversi",
@@ -18928,6 +20028,17 @@
     "reconstruction": "Vision dataset. 7.4K images, 37 pet breeds. CC-BY-SA. Oxford VGG."
   },
   {
+    "slug": "package-json-generation",
+    "domain": "package.json Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Node.js package.json. Verify with npm install."
+  },
+  {
     "slug": "palindrome-generation",
     "domain": "Palindrome Generation",
     "category": "Creative",
@@ -18936,6 +20047,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "pandas-eval",
+    "domain": "Pandas Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Pandas data manipulation. Verify output against expected."
   },
   {
     "slug": "pandemic-cooperative",
@@ -19031,6 +20153,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "PASCAL Visual Object Classes. host.robots.ox.ac.uk/pascal/VOC. Classic benchmark."
+  },
+  {
+    "slug": "password-hashing",
+    "domain": "Password Hashing Implementation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Implement bcrypt/argon2 hashing. Verify hash + verification round-trip."
   },
   {
     "slug": "password-strength-estimation",
@@ -19353,6 +20486,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "perleval",
+    "domain": "Perl Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Perl coding problems with Test::More."
+  },
+  {
     "slug": "permutation-group-operations",
     "domain": "Permutation & Group Operations",
     "category": "Math",
@@ -19465,6 +20609,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Physics computation. Compute KE from frequency, work function. Verify Einstein's equation."
+  },
+  {
+    "slug": "phpeval",
+    "domain": "PHP Evaluation (PHPUnit)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "PHP coding problems with PHPUnit test suites."
   },
   {
     "slug": "phylogenetics",
@@ -19788,6 +20943,17 @@
     "reconstruction": "TDC ADME. AstraZeneca dataset. tdcommons.ai."
   },
   {
+    "slug": "pre-commit-config",
+    "domain": "pre-commit Config Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .pre-commit-config.yaml. Verify with pre-commit run."
+  },
+  {
     "slug": "president-card-game",
     "domain": "President / Asshole",
     "category": "Games",
@@ -19797,6 +20963,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Card game. Climbing card game. Verify legal plays, revolution rules."
+  },
+  {
+    "slug": "prettier-config",
+    "domain": "Prettier Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .prettierrc. Verify formatting output."
   },
   {
     "slug": "prime-counting-function",
@@ -20325,6 +21502,17 @@
     "reconstruction": "Mega-scale protein stability dataset (Tsuboyama et al. 2023). ProThermDB for historical data. Verify ProThermDB hosting."
   },
   {
+    "slug": "protobuf-service",
+    "domain": "Protobuf Service Definition",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write .proto files. Verify with protoc compilation."
+  },
+  {
     "slug": "protocol-compliance",
     "domain": "protocol-compliance",
     "category": "format-constrained",
@@ -20364,6 +21552,17 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "pulumi-code",
+    "domain": "Pulumi IaC Code",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Pulumi programs. Verify with pulumi preview."
   },
   {
     "slug": "pump-selection",
@@ -20417,6 +21616,50 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "pyproject-toml",
+    "domain": "pyproject.toml Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate pyproject.toml. Verify with pip install -e . in isolation."
+  },
+  {
+    "slug": "pyspark-eval",
+    "domain": "PySpark Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "PySpark data processing. Verify output DataFrame."
+  },
+  {
+    "slug": "pytest-config",
+    "domain": "Pytest Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate pytest.ini/pyproject.toml. Verify test discovery."
+  },
+  {
+    "slug": "pytorch-eval",
+    "domain": "PyTorch Model Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write PyTorch models/training code. Verify loss decreases."
   },
   {
     "slug": "pz-chess",
@@ -20742,6 +21985,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "quixbugs",
+    "domain": "QuixBugs (One-Line Bug Fixes)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "40 programs in Python+Java, each with 1-line bug. quixbugs.com."
+  },
+  {
     "slug": "race-reading",
     "domain": "RACE (Reading Comprehension)",
     "category": "Language",
@@ -20784,6 +22038,17 @@
     "modality": "code",
     "status": "remembered",
     "reconstruction": "Web development task. Sliding window/token bucket. Verify rate limiting behavior."
+  },
+  {
+    "slug": "rbac-implementation",
+    "domain": "RBAC Implementation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Implement role-based access. Verify permission checks."
   },
   {
     "slug": "reacher",
@@ -20837,6 +22102,17 @@
     "scalability": "high",
     "maturity": "high",
     "tags": "[multi-hop, reasoning, hotpotqa, comprehension]"
+  },
+  {
+    "slug": "readme-generation",
+    "domain": "README.md Generation from Code",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate README from codebase analysis. Verify sections present."
   },
   {
     "slug": "real-estate-valuation",
@@ -21058,6 +22334,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "regex-to-code",
+    "domain": "Regex to Imperative Code",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert regex to equivalent Python code. Verify on test strings."
+  },
+  {
     "slug": "regression-analysis",
     "domain": "Linear/Logistic Regression Analysis",
     "category": "Math",
@@ -21120,6 +22407,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "renovate-config",
+    "domain": "Renovate/Dependabot Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate dependency update configs. Verify schema."
+  },
+  {
     "slug": "repobench",
     "domain": "RepoBench (Repo-Level Completion)",
     "category": "Code",
@@ -21128,6 +22426,17 @@
     "difficulty_range": "hard",
     "modality": "code",
     "status": "remembered"
+  },
+  {
+    "slug": "repoeval-completion",
+    "domain": "RepoEval Line Completion",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Repository-level line completion. Different from function generation."
   },
   {
     "slug": "repository-level-coding",
@@ -21210,6 +22519,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "reval",
+    "domain": "R Evaluation (testthat)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "R coding problems with testthat suites. Statistical computing."
   },
   {
     "slug": "reverie-remote-grounding",
@@ -22160,6 +23480,17 @@
     "status": "remembered"
   },
   {
+    "slug": "rusteval",
+    "domain": "Rust Evaluation (Cargo Test)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Rust coding problems with cargo test suites. Community benchmarks."
+  },
+  {
     "slug": "rvl-cdip",
     "domain": "RVL-CDIP (Document Classification)",
     "category": "Vision",
@@ -22769,6 +24100,17 @@
     "status": "verified"
   },
   {
+    "slug": "scalaeval",
+    "domain": "Scala Evaluation (ScalaTest)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Scala coding problems with ScalaTest suites. FP+OOP."
+  },
+  {
     "slug": "scannet-3d-indoor",
     "domain": "ScanNet (3D Indoor)",
     "category": "Vision",
@@ -23068,6 +24410,28 @@
     "reconstruction": "ALE/Gymnasium. Atari Seaquest. Requires oxygen management."
   },
   {
+    "slug": "secrets-management",
+    "domain": "Secrets Management (Vault/SOPS)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Configure secret storage. Verify encryption + access control."
+  },
+  {
+    "slug": "secure-cookie-config",
+    "domain": "Secure Cookie Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Set cookie flags (Secure, HttpOnly, SameSite). Verify browser behavior."
+  },
+  {
     "slug": "seed-bench",
     "domain": "SEED-Bench",
     "category": "Vision",
@@ -23076,6 +24440,17 @@
     "difficulty_range": "medium/hard",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "seed-data-script",
+    "domain": "Database Seed Script Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Write seed scripts. Verify data integrity after seeding."
   },
   {
     "slug": "segment-tree",
@@ -23413,6 +24788,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "skaffold-config",
+    "domain": "Skaffold Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate skaffold.yaml for K8s dev. Verify with skaffold diagnose."
+  },
+  {
     "slug": "skat",
     "domain": "Skat",
     "category": "Games",
@@ -23707,6 +25093,17 @@
     "tags": "[gec, spelling, grammar, error-correction, writing]"
   },
   {
+    "slug": "spider-dev",
+    "domain": "Spider Dev (Complex SQL)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Spider development set. 1,034 complex SQL queries. CC-BY-SA."
+  },
+  {
     "slug": "splendor-scoring",
     "domain": "Splendor (Gem Engine)",
     "category": "Games",
@@ -23883,6 +25280,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "sql-to-orm",
+    "domain": "SQL to ORM Code Translation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert raw SQL to SQLAlchemy/Django ORM. Verify equivalent results."
   },
   {
     "slug": "sql-window-functions",
@@ -24454,6 +25862,17 @@
     "status": "remembered"
   },
   {
+    "slug": "swifteval",
+    "domain": "Swift Evaluation (XCTest)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Swift coding problems with XCTest. Apple ecosystem."
+  },
+  {
     "slug": "swimmer-locomotion",
     "domain": "Swimmer (MuJoCo)",
     "category": "Agent",
@@ -24494,6 +25913,17 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "sync-to-async",
+    "domain": "Synchronous to Async Conversion",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Convert sync code to async/await. Verify same behavior."
   },
   {
     "slug": "synergy-prediction",
@@ -24972,6 +26402,17 @@
     "reconstruction": "openslr.org/51. CC-BY-NC-ND. TED talk transcriptions."
   },
   {
+    "slug": "tekton-pipeline",
+    "domain": "Tekton Pipeline Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate Tekton CI/CD pipelines. Verify YAML schema."
+  },
+  {
     "slug": "temporal-action-detection",
     "domain": "Temporal Action Detection",
     "category": "Vision",
@@ -25033,6 +26474,17 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "tensorflow-eval",
+    "domain": "TensorFlow Model Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "TF model code. Verify training convergence."
   },
   {
     "slug": "tent-puzzle",
@@ -25397,6 +26849,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "tls-certificate-config",
+    "domain": "TLS Certificate Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Configure TLS in nginx/Apache. Verify with openssl s_client."
+  },
+  {
     "slug": "tokenization-segmentation",
     "domain": "Tokenization & Word Segmentation",
     "category": "Language",
@@ -25557,6 +27020,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "tox-config",
+    "domain": "Tox Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate tox.ini. Verify tox run succeeds."
+  },
+  {
     "slug": "tox21",
     "domain": "Tox21 (Toxicity Prediction)",
     "category": "Science",
@@ -25671,6 +27145,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "travis-ci",
+    "domain": "Travis CI Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate .travis.yml. Verify against Travis schema."
+  },
+  {
     "slug": "trie-operations",
     "domain": "Trie Operations",
     "category": "Code",
@@ -25700,6 +27185,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "tsconfig-generation",
+    "domain": "tsconfig.json Generation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate TypeScript config. Verify with tsc --noEmit."
   },
   {
     "slug": "turing-machine-simulation",
@@ -26168,6 +27664,17 @@
     "reconstruction": "Card game. Verify special card effects, scoring rules. Simple but exact."
   },
   {
+    "slug": "unused-import-removal",
+    "domain": "Unused Import Removal",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Remove unused imports. Verify code still works. autoflake-style."
+  },
+  {
     "slug": "urbansound8k",
     "domain": "UrbanSound8K",
     "category": "Audio",
@@ -26219,6 +27726,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Math competition archive. ~500+ from USAMO. aops.com. Public."
+  },
+  {
+    "slug": "variable-renaming",
+    "domain": "Variable Renaming (Refactor)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Rename variables consistently. Verify all references updated, tests pass."
   },
   {
     "slug": "variant-effect-prediction",
@@ -26275,6 +27793,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "verilog-eval",
+    "domain": "Verilog Coding Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Verilog design + testbench execution. VerilogEval benchmark."
+  },
+  {
     "slug": "veterinary-dosage",
     "domain": "Veterinary Dosage Calculation",
     "category": "Expert",
@@ -26295,6 +27824,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "Vision dataset. 3.3M images of 9.1K identities. CC-BY-SA. Oxford VGG group."
+  },
+  {
+    "slug": "vhdl-eval",
+    "domain": "VHDL Coding Evaluation",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "VHDL design + GHDL simulation."
   },
   {
     "slug": "video-temporal-reasoning",
@@ -26408,6 +27948,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "vite-config",
+    "domain": "Vite Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate vite.config.ts. Verify dev server starts."
   },
   {
     "slug": "vizwiz-blind-vqa",
@@ -26575,6 +28126,28 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "webpack-config",
+    "domain": "Webpack Configuration",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate webpack.config.js. Verify build succeeds."
+  },
+  {
+    "slug": "webscraper-generation",
+    "domain": "Web Scraper Generation (Specific Sites)",
+    "category": "Code",
+    "verification_type": "execution",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "code",
+    "status": "remembered",
+    "reconstruction": "Generate scrapers for target sites. Verify extracted data structure."
   },
   {
     "slug": "websocket-handler",

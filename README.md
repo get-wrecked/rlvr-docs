@@ -1,6 +1,6 @@
 # RLVR: Reinforcement Learning with Verifiable Rewards
 
-A comprehensive framework for training general-purpose AI agents using programmatically verifiable rewards across **272 diverse domains**. This project provides the taxonomy, verification infrastructure, dataset registry, and training protocol for scaling from current frontier models toward AGI-level breadth and depth.
+A comprehensive framework for training general-purpose AI agents using programmatically verifiable rewards across **2,697 diverse domains**. This project provides the taxonomy, verification infrastructure, dataset registry, and training protocol for scaling from current frontier models toward AGI-level breadth and depth.
 
 ## The Core Idea
 
@@ -14,9 +14,9 @@ We organize training around a universal pattern of skill acquisition:
 
 | Stage | Phase | What It Develops | Domains |
 |-------|-------|-----------------|---------|
-| **Stage 1** | Rule Recognition | Pattern inference, structural reasoning, formal logic | ~55 synthetic & formal domains |
-| **Stage 2** | System Mastery | Language, code, math, science, vision, agency | ~110 applied domains |
-| **Stage 3** | Capability Climbing | Expert performance in specialized applications | ~80 expert domains |
+| **Stage 1** | Rule Recognition | Pattern inference, structural reasoning, formal logic | ~200 synthetic & formal domains |
+| **Stage 2** | System Mastery | Language, code, math, science, vision, agency | ~1,500 applied domains |
+| **Stage 3** | Capability Climbing | Expert performance in specialized applications | ~1,000 expert domains |
 
 This is validated by research on Neural Cellular Automata (NCA) pre-training (Lee et al., 2025), which showed that purely synthetic data containing zero linguistic content outperformed 10x more Common Crawl data at preparing models for language, code, and math.
 
@@ -42,21 +42,22 @@ Production-quality verifiers that are deterministic, fast, and validated against
 | `sql_execution` | SQLite execution | 11 | In-memory DB, result set comparison, order-insensitive |
 | `graph_properties` | Graph algorithms | 10 | Dijkstra, connected components, topological sort, coloring |
 
-### 272 Domain Environments
+### 2,697 Domain Environments
 
-Every domain has a concrete verification mechanism, dataset sources, task format, difficulty curriculum, and risk analysis. Organized across 11 categories:
+Every domain has a concrete verification mechanism, dataset sources, and reconstruction notes. Organized across major categories:
 
-- **Mathematics** (29 domains): Competition math, formal proofs, symbolic algebra, olympiad geometry, number theory, topology, category theory
-- **Logic & Formal Methods** (12 domains): SAT/SMT solving, first-order logic, theorem proving, type theory
-- **Code & Software** (26 domains): Code generation/repair/translation, SQL, compilers, APIs, infrastructure-as-code
-- **Science & Engineering** (27 domains): Physics simulation, chemistry, biology, materials science, quantum computing, robotics
-- **Language & Knowledge** (27 domains): QA, NLI, information extraction, fact verification, commonsense reasoning
-- **Games & Interactive** (14 domains): Chess, Go, board games, puzzle games, cellular automata
-- **Agent & Tool Use** (12 domains): Web navigation, computer use, GUI interaction, workflow automation
-- **Vision & Multimodal** (14 domains): VQA, chart understanding, document extraction, 3D scene understanding
-- **Format-Constrained & Creative** (20 domains): Constrained writing, music theory, crossword construction, LaTeX
-- **Security** (5 domains): CTF challenges, reverse engineering, cryptanalysis
-- **Domain Expert** (5 domains): Medical diagnosis, legal reasoning, economic modeling
+- **Code & Software** (~680 domains): Code generation/repair/translation in 50+ languages, SQL (window functions through DuckDB), every major algorithm (Dijkstra through FFT), design patterns, 54 Exercism tracks, 15 Rosetta Code tasks, SWE-bench variants, HumanEval/MBPP/APPS/CodeContests, DevOps configs (Terraform/K8s/Docker/Helm/ArgoCD/Jenkins/GitLab CI), web development (React/Vue components, OAuth, WebSockets), security (CSRF/XSS/input validation), data structures (BST through Bloom filters), all 10 Advent of Code years
+- **Mathematics** (~180 domains): Competition math (AIME/AMC/Putnam/IMO), formal proofs (Lean 4/Coq/Isabelle), symbolic algebra, every calculus topic (limits through surface integrals), number theory, combinatorics, probability, statistics (hypothesis testing through ANOVA), game theory (Nash equilibria), Markov chains, SDEs, 57 MMLU subjects
+- **Logic & Formal Methods** (~50 domains): SAT/SMT/ATP/ITP, modal/temporal logic, BDDs, Petri nets, automata construction, Datalog, resolution refutation, 8 formal grammar tasks (CFG through LALR)
+- **Science & Engineering** (~350 domains): Physics (projectile motion through Maxwell's equations), chemistry (all organic reaction types, TDC drug discovery, 11 MoleculeNet tasks), biology (protein fitness/stability/solubility, genomics, CAFA), materials science (band gap through defect formation), engineering (HVAC through lightning protection), astronomy (Kepler through eclipse prediction)
+- **Language & Knowledge** (~450 domains): GLUE/SuperGLUE/XTREME individual tasks, 152 BIG-Bench tasks, 50 FLORES translation pairs, 20 WMT language pairs, QA (DROP/CosmosQA/StrategyQA), NLI, NER, relation extraction, clinical NLP (15 n2c2/BioCreative tasks), retrieval (MS MARCO/BEIR/MTEB), financial QA (FinQA/TAT-QA), legal (CUAD/LexGLUE)
+- **Games & Interactive** (~500 domains): 80+ Atari games, 16 Procgen games, 49 OpenSpiel games, 49 Meta-World tasks, 28 DM Control tasks, 50 RLBench tasks, 16 PettingZoo environments, chess/Go/Shogi, 30+ logic puzzles (Sudoku through Masyu), board games (Mancala through Terraforming Mars), card games (Poker through Skat)
+- **Agent & Tool Use** (~100 domains): ALFRED/BEHAVIOR household tasks, WebArena/VisualWebArena, OSWorld, BabyAI levels, MiniHack levels, GAIA multi-tool, autonomous driving (nuPlan/Waymo), drone navigation, dexterous manipulation, D4RL offline RL tasks, Safety-Gymnasium constrained RL
+- **Vision & Multimodal** (~200 domains): MMMU/MM-Vet/SEED-Bench, ImageNet variants (V2/R/A/Sketch), COCO detection/panoptic, fine-grained recognition (birds/flowers/cars/aircraft), medical imaging (CheXpert/ISIC/retinal), 3D (ScanNet/ShapeNet/ModelNet), video understanding (Kinetics/Something-Something/DAVIS)
+- **Audio & Speech** (~80 domains): LibriSpeech/CommonVoice in 50 languages, SUPERB benchmark, MusicCaps, beat tracking, chord recognition, speaker identification, source separation (MUSDB18)
+- **ML & Data Science** (~100 domains): 25+ Kaggle competitions, M4/M5 forecasting, NAS-Bench, fairness/bias (BBQ/WinoBias/CrowS), adversarial robustness, calibration, 30+ UCI datasets, safety benchmarks (HarmBench/XSTest/ETHICS)
+- **Expert & Professional** (~150 domains): Medical (MedQA/PubMedQA/PathVQA/CheXpert), legal (CUAD/CaseHOLD/LexGLUE), financial (FinQA/options pricing/portfolio optimization), engineering calculations (pipe sizing through sprinkler design), sports scoring (14 sports), nutrition, construction, clinical trials
+- **Miscellaneous** (~50 domains): Geographic knowledge, unit conversions, calendar systems (Hebrew/Islamic/Mayan), encoding (Braille/Morse/semaphore), checksums, number theory curiosities (Collatz/happy numbers)
 
 ### Dataset Registry (~6M problems + unlimited procedural generation)
 
@@ -90,7 +91,7 @@ Every domain has a concrete verification mechanism, dataset sources, task format
                     │ Verifier Server  │
                     │ (Rust, HTTP)     │
                     │ 13 verifiers     │
-                    │ 272 domains      │
+                    │ 2,697 domains      │
                     └────────┬─────────┘
                              │ returns score ∈ [0,1]
                     ┌────────▼─────────┐
@@ -128,8 +129,8 @@ src/
     registry.rs              # Dataset registry
 wiki/
   overview.md                # High-level thesis and taxonomy
-  index.md                   # Master index of all 272 domains
-  domains/                   # One page per domain (272 files)
+  index.md                   # Master index of all 2,697 domains
+  domains/                   # One page per domain (2,697 files)
   concepts/                  # Cross-cutting concepts
     verification-types.md    # Taxonomy of verification mechanisms
     reward-shaping.md        # Reward design principles

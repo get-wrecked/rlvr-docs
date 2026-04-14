@@ -1,24 +1,24 @@
 # Domain Taxonomy
 
-**272 domains** organized across 11 categories, mapped to the three-stage training framework.
+**2,697 domains** organized across 11 categories, mapped to the three-stage training framework.
 
 ## Summary Statistics
 
 | Category | Domains | Primary Verification | Stage |
 |----------|---------|---------------------|-------|
-| Mathematics | 29 | exact_match, execution | 1-3 |
-| Logic & Formal Methods | 12 | execution, rule | 1 |
-| Code & Software | 26 | execution | 1-3 |
-| Science & Engineering | 27 | execution, simulation | 2-3 |
-| Language & Knowledge | 27 | exact_match | 2 |
-| Games & Interactive | 14 | rule, outcome | 1-2 |
-| Agent & Tool Use | 12 | outcome, constraint | 2-3 |
-| Vision & Multimodal | 14 | exact_match, execution | 2 |
-| Format-Constrained & Creative | 20 | constraint, rule | 2-3 |
-| Security | 6 | exact_match, execution | 3 |
-| Domain Expert | 5 | exact_match, execution | 3 |
-| Machine Learning | 2 | execution | 3 |
-| Systems | 4 | simulation, constraint | 2-3 |
+| Code & Software | ~680 | execution | 1-3 |
+| Games & Interactive | ~500 | outcome, rule, constraint | 1-3 |
+| Language & Knowledge | ~450 | exact_match | 2-3 |
+| Science & Engineering | ~350 | exact_match, simulation | 2-3 |
+| Vision & Multimodal | ~200 | exact_match, diff | 2-3 |
+| Mathematics | ~180 | exact_match, rule | 1-3 |
+| Expert & Professional | ~150 | exact_match, constraint | 3 |
+| Agent & Tool Use | ~100 | outcome | 2-3 |
+| ML & Data Science | ~100 | execution | 2-3 |
+| Audio & Speech | ~80 | exact_match, diff | 2-3 |
+| Logic & Formal Methods | ~50 | execution, rule | 1 |
+| Creative | ~50 | constraint, rule | 2-3 |
+| Miscellaneous | ~50 | exact_match | varies |
 
 ### By Verification Type
 
