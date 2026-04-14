@@ -271,6 +271,17 @@
     "reconstruction": "QA benchmark for African languages. From Masakhane community."
   },
   {
+    "slug": "ag-news-classification",
+    "domain": "AG News (Topic Classification)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 120K news articles, 4 classes. From AG corpus."
+  },
+  {
     "slug": "agentbench",
     "domain": "AgentBench",
     "category": "Agent",
@@ -455,6 +466,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "anova-computation",
+    "domain": "ANOVA Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute F-statistic, p-value. Verify with scipy.stats.f_oneway. Generate procedurally, verify with CAS."
   },
   {
     "slug": "ansible-playbook-generation",
@@ -1546,6 +1568,39 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "baseball-scoring",
+    "domain": "Baseball Scoring & Statistics",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Compute ERA, batting average, OPS, WAR. Verify against box score data."
+  },
+  {
+    "slug": "basketball-efficiency",
+    "domain": "Basketball PER/Efficiency",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Compute PER, true shooting %. Verify against NBA formula."
+  },
+  {
+    "slug": "battery-sizing",
+    "domain": "Battery Bank Sizing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Depth of discharge, autonomy days. Verify with battery curves."
+  },
+  {
     "slug": "battleship",
     "domain": "Battleship",
     "category": "Games",
@@ -1554,6 +1609,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "bayes-theorem-computation",
+    "domain": "Bayes' Theorem Application",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute posteriors from priors and likelihoods. Verify via formula. Generate procedurally, verify with CAS."
   },
   {
     "slug": "bayesian-network-reasoning",
@@ -1725,6 +1791,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "bell-numbers",
+    "domain": "Bell Number Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute B_n. Verify Bell triangle or Dobinski's formula. Generate procedurally, verify with CAS."
+  },
+  {
+    "slug": "bernoulli-numbers",
+    "domain": "Bernoulli Number Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute B_n. Verify Faulhaber's formula for sum of powers. Generate procedurally, verify with CAS."
   },
   {
     "slug": "bgp-routing",
@@ -1917,6 +2005,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "binomial-coefficient",
+    "domain": "Binomial Coefficient Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute C(n,k). Verify Pascal's identity. Handle large values. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "bioasq",
     "domain": "BioASQ (Biomedical QA)",
     "category": "Language",
@@ -1968,6 +2067,17 @@
     "status": "remembered"
   },
   {
+    "slug": "birthday-problem",
+    "domain": "Birthday Problem Variants",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute collision probabilities. Verify via exact formula or simulation. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "blood-type-compatibility",
     "domain": "Blood Type Compatibility",
     "category": "Expert",
@@ -1996,6 +2106,17 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "boiler-sizing",
+    "domain": "Boiler Sizing Calculation",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. BTU calculation from heating load. Verify against ASHRAE methods."
   },
   {
     "slug": "bold-bias",
@@ -2049,6 +2170,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Classic regression dataset. NOTE: ethical concerns about racial variable. Consider Ames Housing instead."
+  },
+  {
+    "slug": "bowling-scoring",
+    "domain": "Bowling Scoring",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Frame-by-frame scoring with strikes/spares. Verify sum equals computed total."
   },
   {
     "slug": "breakout-atari",
@@ -2113,6 +2245,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Number guessing game. Like Mastermind but with digits. Verify feedback accuracy."
+  },
+  {
+    "slug": "cable-sizing",
+    "domain": "Electrical Cable Sizing (Ampacity)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. NEC ampacity tables, voltage drop. Verify against NEC 310.16."
   },
   {
     "slug": "caco2-permeability",
@@ -2209,6 +2352,28 @@
     "reconstruction": "Heat transfer, specific heat, phase changes. q=mc\u0394T, latent heat. Verify energy conservation."
   },
   {
+    "slug": "caltech-101",
+    "domain": "Caltech-101 (Object Categories)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 9.1K images, 101 categories. Classic benchmark. CC-BY."
+  },
+  {
+    "slug": "caltech-256",
+    "domain": "Caltech-256 (Object Categories)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 30.6K images, 256 categories. Extension of Caltech-101."
+  },
+  {
     "slug": "calvin-robot",
     "domain": "CALVIN (Long-horizon Robot)",
     "category": "Agent",
@@ -2281,6 +2446,17 @@
     "status": "remembered"
   },
   {
+    "slug": "catalan-numbers",
+    "domain": "Catalan Number Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute C_n via various formulas. Verify C_n = C(2n,n)/(n+1). Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "catalyst-design",
     "domain": "Catalyst Design (OC20/OC22)",
     "category": "Science",
@@ -2319,6 +2495,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "celeba-attributes",
+    "domain": "CelebA (Face Attributes)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 202K celebrity face images. 40 binary attributes. Non-commercial."
   },
   {
     "slug": "cellular-automata-generation",
@@ -2403,6 +2590,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "chembl-bioactivity",
+    "domain": "ChEMBL Bioactivity Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. 2M+ bioactivity records. chembl.gitbook.io. CC-BY-SA from EMBL-EBI."
+  },
+  {
     "slug": "chemical-equation-balancing",
     "domain": "Chemical Equation Balancing",
     "category": "science-chemistry",
@@ -2453,6 +2651,17 @@
     "status": "Partially verifiable \u2014 single-step verification is solid; multi-step route quality is harder to assess"
   },
   {
+    "slug": "chess-elo-computation",
+    "domain": "Chess ELO Rating Computation",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Compute new ELO from game results. Verify with Elo formula."
+  },
+  {
     "slug": "chess-endgame-tablebase",
     "domain": "Chess Endgame Tablebase Queries",
     "category": "Games",
@@ -2494,6 +2703,17 @@
     "status": "remembered"
   },
   {
+    "slug": "chi-squared-test",
+    "domain": "Chi-Squared Test",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute chi-squared statistic for independence/goodness-of-fit. Verify with scipy. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "china-tst",
     "domain": "Chinese TST / CMO Problems",
     "category": "Math",
@@ -2514,6 +2734,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Xiangqi game databases. River rules, palace restrictions. Verify move legality."
+  },
+  {
+    "slug": "chinese-remainder-theorem",
+    "domain": "Chinese Remainder Theorem",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Solve systems of congruences. Verify by substitution into all congruences. Generate procedurally, verify with CAS."
   },
   {
     "slug": "chip-design-rtl",
@@ -2732,6 +2963,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "clinvar-variants",
+    "domain": "ClinVar Variant Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~2M variant interpretations. ncbi.nlm.nih.gov/clinvar. Public."
   },
   {
     "slug": "cloze-completion",
@@ -3142,6 +3384,17 @@
     "status": "verified"
   },
   {
+    "slug": "compressor-design",
+    "domain": "Compressor Selection & Sizing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Polytropic/isentropic compression. Verify with thermodynamic relations."
+  },
+  {
     "slug": "computer-use",
     "domain": "computer-use",
     "category": "agent/desktop",
@@ -3172,6 +3425,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "confidence-interval",
+    "domain": "Confidence Interval Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute CIs for means, proportions. Verify with scipy.stats. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "config-generation",
     "domain": "config-generation",
     "category": "format-constrained",
@@ -3180,6 +3444,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text | code",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "conll-2012-coref",
+    "domain": "CoNLL-2012 Coreference",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. Coreference resolution. OntoNotes-based. LDC required for text."
   },
   {
     "slug": "connect-four-7x6",
@@ -3315,6 +3590,17 @@
     "status": "verified"
   },
   {
+    "slug": "cosmic-mutation",
+    "domain": "COSMIC Cancer Mutations",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~7M mutations. cancer.sanger.ac.uk. Free for academic."
+  },
+  {
     "slug": "cosmosqa",
     "domain": "CosmosQA",
     "category": "Language",
@@ -3354,6 +3640,17 @@
     "difficulty_range": "easy",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "coupon-collector",
+    "domain": "Coupon Collector Problem",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute expected time to collect all coupons. Verify via harmonic series. Generate procedurally, verify with CAS."
   },
   {
     "slug": "covertype-classification",
@@ -3428,6 +3725,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "cricket-scoring",
+    "domain": "Cricket Scoring & Statistics",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Compute batting/bowling averages, Duckworth-Lewis. Verify against scorecards."
   },
   {
     "slug": "cron-expression-synthesis",
@@ -3580,6 +3888,17 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "cub-200-birds",
+    "domain": "CUB-200-2011 (Bird Species)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 11.8K images, 200 bird species. Caltech. Fine-grained."
   },
   {
     "slug": "cybersecurity-ctf",
@@ -3811,6 +4130,17 @@
     "reconstruction": "D4RL offline RL dataset. walker2d-medium task variant. github.com/Farama-Foundation/D4RL. Apache 2.0."
   },
   {
+    "slug": "darts-scoring",
+    "domain": "Darts Scoring (501/301)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Score subtraction, doubles to finish. Verify checkout routes."
+  },
+  {
     "slug": "data-augmentation-design",
     "domain": "Data Augmentation Strategy Design",
     "category": "ML",
@@ -3992,6 +4322,17 @@
     "reconstruction": "davischallenge.org. Dense video segmentation annotations."
   },
   {
+    "slug": "dbpedia-classification",
+    "domain": "DBpedia (Ontology Classification)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 630K from DBpedia. 14 non-overlapping classes. Zhang et al."
+  },
+  {
     "slug": "dcase-audio-scene",
     "domain": "DCASE (Audio Scene Classification)",
     "category": "Audio",
@@ -4036,6 +4377,17 @@
     "reconstruction": "FaceForensics++ (requires agreement). Google DFD dataset. Detect face manipulation."
   },
   {
+    "slug": "deepfashion",
+    "domain": "DeepFashion (Clothing)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 800K images. Attribute prediction, retrieval, category. Non-commercial."
+  },
+  {
     "slug": "deepmind-math",
     "domain": "DeepMind Mathematics Dataset",
     "category": "Math",
@@ -4055,6 +4407,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Point defect databases. Freysoldt et al. corrections. Very challenging DFT benchmark."
+  },
+  {
+    "slug": "definite-integral",
+    "domain": "Definite Integral Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute definite integrals. Verify with scipy.integrate.quad. Generate procedurally, verify with CAS."
   },
   {
     "slug": "dental-charting",
@@ -4086,6 +4449,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "derivative-computation",
+    "domain": "Derivative Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute derivatives. Verify with SymPy.diff(). Generate procedurally, verify with CAS."
+  },
+  {
+    "slug": "determinant-tricks",
+    "domain": "Matrix Determinant Special Cases",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Vandermonde, circulant, block determinants. Verify with numpy. Generate procedurally, verify with CAS."
   },
   {
     "slug": "dexterous-manipulation",
@@ -4200,6 +4585,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "text",
     "status": "needs_validation"
+  },
+  {
+    "slug": "diving-scoring",
+    "domain": "Diving Scoring",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Degree of difficulty \u00d7 execution \u00d7 judge scores. Verify formula."
   },
   {
     "slug": "dm-control-suite",
@@ -4664,6 +5060,17 @@
     "reconstruction": "Classic children's game with deep strategy. Count completed boxes. Verify move legality."
   },
   {
+    "slug": "double-integral",
+    "domain": "Double/Triple Integral Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute multiple integrals. Verify with SymPy/SciPy. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "dream-dialogue-comprehension",
     "domain": "DREAM (Dialogue Reading Comprehension)",
     "category": "Language",
@@ -4705,6 +5112,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "drugbank-full",
+    "domain": "DrugBank Drug Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. 14K+ drugs with targets, interactions. drugbank.com. CC-BY-NC 4.0."
+  },
+  {
     "slug": "ds1000",
     "domain": "DS-1000 (Data Science Code)",
     "category": "Code",
@@ -4713,6 +5131,17 @@
     "difficulty_range": "medium/hard",
     "modality": "code",
     "status": "remembered"
+  },
+  {
+    "slug": "dtd-texture",
+    "domain": "DTD (Describable Textures)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 5.6K images, 47 texture categories. CC-BY-NC-SA. Oxford."
   },
   {
     "slug": "dti-binding-prediction",
@@ -4912,6 +5341,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "elevator-sizing",
+    "domain": "Elevator Selection & Sizing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Traffic analysis, round-trip time. Verify against ASME A17.1."
+  },
+  {
     "slug": "email-address-validation",
     "domain": "Email Address Validation",
     "category": "Misc",
@@ -4961,6 +5401,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "Navigate 3D environment to answer questions. embodiedqa.org."
+  },
+  {
+    "slug": "emo-sentiment",
+    "domain": "Emotion Recognition in Text",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. ~20K from SemEval-2018 Task 1. Joy, anger, sadness, fear."
   },
   {
     "slug": "emotion-recognition",
@@ -5106,6 +5557,17 @@
     "reconstruction": "Compute BER for various modulation schemes over AWGN/fading channels. Verify with known formulas."
   },
   {
+    "slug": "escalator-design",
+    "domain": "Escalator Capacity Calculation",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Handling capacity from speed and width. Verify against EN 115."
+  },
+  {
     "slug": "esol-solubility",
     "domain": "ESOL (Aqueous Solubility)",
     "category": "Science",
@@ -5135,6 +5597,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Test ethical reasoning: justice, deontology, virtue, utilitarianism, commonsense. github.com/hendrycks/ethics."
+  },
+  {
+    "slug": "euclidean-algorithm",
+    "domain": "Euclidean Algorithm (GCD)",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute GCD via Euclidean algorithm. Verify gcd(a,b)*lcm(a,b)=a*b. Generate procedurally, verify with CAS."
   },
   {
     "slug": "euler-circuit",
@@ -5200,6 +5673,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "fan-selection",
+    "domain": "Fan Selection & Ductwork Design",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Static pressure, CFM. Verify with ASHRAE duct fitting database."
+  },
+  {
     "slug": "fashion-classification",
     "domain": "Fashion Classification",
     "category": "Vision",
@@ -5208,6 +5692,17 @@
     "difficulty_range": "easy/medium",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "fddb-face-detection",
+    "domain": "FDDB (Face Detection)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 2.8K images, 5K faces. University of Massachusetts. Public."
   },
   {
     "slug": "fe-exam",
@@ -5230,6 +5725,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "fermats-little-theorem",
+    "domain": "Fermat's Little Theorem Applications",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute modular powers. Verify a^(p-1) \u2261 1 mod p. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "few-shot-ner",
     "domain": "Few-Shot NER",
     "category": "Language",
@@ -5241,6 +5747,39 @@
     "reconstruction": "Few-NERD from THU. 66 fine-grained entity types. MIT license."
   },
   {
+    "slug": "fewrel-relation",
+    "domain": "FewRel (Few-shot Relation)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 70K from Wikipedia. 100 relations. MIT. han-x@few-rel."
+  },
+  {
+    "slug": "fgvc-aircraft",
+    "domain": "FGVC Aircraft (100 Models)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 10K images, 100 aircraft model variants. Fine-grained."
+  },
+  {
+    "slug": "fibonacci-computation",
+    "domain": "Fibonacci/Lucas Number Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute F_n, L_n. Verify F_n = F_{n-1}+F_{n-2}. Matrix method. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "fifteen-puzzle",
     "domain": "15-Puzzle / Sliding Tile",
     "category": "Games",
@@ -5249,6 +5788,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "figure-skating-scoring",
+    "domain": "Figure Skating Scoring (IJS)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Technical element score + program component. Verify against ISU rules."
   },
   {
     "slug": "file-format-identification",
@@ -5414,6 +5964,17 @@
     "status": "Feasible but expensive \u2014 verification requires running CFD solvers, limiting scale"
   },
   {
+    "slug": "fmd-materials",
+    "domain": "FMD (Flickr Material Database)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 1K images, 10 material categories. CC-BY-NC."
+  },
+  {
     "slug": "folio-logic-nli",
     "domain": "FOLIO (First-Order Logic NLI)",
     "category": "Language",
@@ -5432,6 +5993,17 @@
     "difficulty_range": "medium",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "football-passer-rating",
+    "domain": "NFL Passer Rating",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Compute passer rating from stats. Verify against NFL formula."
   },
   {
     "slug": "formal-grammar",
@@ -5586,6 +6158,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "gamblers-ruin",
+    "domain": "Gambler's Ruin Problem",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute ruin probability. Verify via difference equations. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "game-design-level-generation",
     "domain": "Game Level / Puzzle Generation",
     "category": "creative-constrained",
@@ -5666,6 +6249,28 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "generating-function",
+    "domain": "Generating Function Problems",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Set up and extract coefficients. Verify against OEIS. Generate procedurally, verify with CAS."
+  },
+  {
+    "slug": "generator-sizing",
+    "domain": "Generator Sizing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Running vs starting watts. Verify with load analysis."
   },
   {
     "slug": "genomics-bioinformatics",
@@ -5909,6 +6514,17 @@
     "status": "verified"
   },
   {
+    "slug": "go-ontology",
+    "domain": "Gene Ontology Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~45K terms. geneontology.org. CC-BY 4.0."
+  },
+  {
     "slug": "go-tsumego",
     "domain": "Go Tsumego (Life & Death Problems)",
     "category": "Games",
@@ -5918,6 +6534,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Go life-and-death problems. Verify with KataGo/Leela Zero."
+  },
+  {
+    "slug": "golf-scoring",
+    "domain": "Golf Scoring & Handicap",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Stroke play, Stableford, handicap index. Verify against USGA formula."
   },
   {
     "slug": "google-code-jam",
@@ -6032,6 +6659,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "grounding-design",
+    "domain": "Electrical Grounding System Design",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Grounding electrode resistance. Verify with IEEE 80."
+  },
+  {
     "slug": "group-theory-computation",
     "domain": "Group Theory Computation",
     "category": "Math",
@@ -6060,6 +6698,83 @@
     "difficulty_range": "easy/medium/hard/superhuman",
     "modality": "multimodal",
     "status": "verified"
+  },
+  {
+    "slug": "gwas-catalog",
+    "domain": "GWAS Catalog",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~400K variant-trait associations. ebi.ac.uk/gwas. Open."
+  },
+  {
+    "slug": "gym-blackjack",
+    "domain": "Gymnasium: Blackjack",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium environment. Play blackjack against dealer. Simple probability task. gymnasium.farama.org. MIT license."
+  },
+  {
+    "slug": "gym-car-racing",
+    "domain": "Gymnasium: CarRacing",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium environment. 2D top-down car racing. Continuous control. Box2D physics. gymnasium.farama.org. MIT license."
+  },
+  {
+    "slug": "gym-cliff-walking",
+    "domain": "Gymnasium: CliffWalking",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium environment. Grid world with cliff edge. Classic RL exploration/exploitation. gymnasium.farama.org. MIT license."
+  },
+  {
+    "slug": "gym-frozen-lake",
+    "domain": "Gymnasium: FrozenLake",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium environment. Navigate frozen lake grid without falling in holes. gymnasium.farama.org. MIT license."
+  },
+  {
+    "slug": "gym-taxi",
+    "domain": "Gymnasium: Taxi-v3",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "1 environment",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Gymnasium environment. Navigate taxi to pick up and drop off passenger. Discrete state/action. gymnasium.farama.org. MIT license."
+  },
+  {
+    "slug": "gymnastics-scoring",
+    "domain": "Gymnastics Scoring",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Difficulty + execution scores. Verify against FIG code of points."
   },
   {
     "slug": "habitat-embodied",
@@ -6146,6 +6861,17 @@
     "status": "remembered"
   },
   {
+    "slug": "harmonic-numbers",
+    "domain": "Harmonic Number Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute H_n = 1 + 1/2 + ... + 1/n. Verify partial sums. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "hash-collision-finding",
     "domain": "Hash Collision Finding",
     "category": "Security",
@@ -6185,6 +6911,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "heat-exchanger-design",
+    "domain": "Heat Exchanger Design",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. LMTD and NTU methods. Verify energy balance."
   },
   {
     "slug": "heat-transfer-computation",
@@ -6631,6 +7368,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "hypothesis-testing",
+    "domain": "Statistical Hypothesis Testing",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute p-values, test statistics. Verify with scipy.stats. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "ical-vcf-generation",
     "domain": "iCal/vCard Generation & Parsing",
     "category": "Code",
@@ -6842,6 +7590,17 @@
     "reconstruction": "ai.stanford.edu/~amaas/data/sentiment. Classic binary sentiment. Open."
   },
   {
+    "slug": "imdb-spoiler",
+    "domain": "IMDB Spoiler Detection",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. ~500K reviews with spoiler labels. Misra & Grover 2019."
+  },
+  {
     "slug": "imo-algebra-focused",
     "domain": "IMO Algebra Problems Only",
     "category": "Math",
@@ -6916,6 +7675,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "github.com/visipedia/inat_comp. 10K species. Fine-grained recognition."
+  },
+  {
+    "slug": "indefinite-integral",
+    "domain": "Indefinite Integral Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute antiderivatives. Verify by differentiating result. Generate procedurally, verify with CAS."
   },
   {
     "slug": "indicnlp-suite",
@@ -7328,6 +8098,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "kegg-pathway",
+    "domain": "KEGG Pathway Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~500 pathways. kegg.jp. Academic free. Kanehisa Labs."
+  },
+  {
     "slug": "kenken-puzzles",
     "domain": "KenKen Puzzles",
     "category": "Games",
@@ -7649,6 +8430,17 @@
     "status": "remembered"
   },
   {
+    "slug": "lfw-face-verification",
+    "domain": "LFW (Face Verification Pairs)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 13K face images. 6K verification pairs. Public."
+  },
+  {
     "slug": "library-cataloging",
     "domain": "Library Cataloging (Dewey/LoC)",
     "category": "Expert",
@@ -7670,6 +8462,17 @@
     "reconstruction": "openslr.org/12. CC-BY. English read speech. The standard ASR benchmark."
   },
   {
+    "slug": "lightning-protection",
+    "domain": "Lightning Protection Design",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Rolling sphere method. Verify against NFPA 780 / IEC 62305."
+  },
+  {
     "slug": "lights-out-puzzle",
     "domain": "Lights Out Puzzle",
     "category": "Games",
@@ -7688,6 +8491,28 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "limit-computation",
+    "domain": "Limit Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute limits (L'H\u00f4pital, squeeze). Verify with SymPy.limit(). Generate procedurally, verify with CAS."
+  },
+  {
+    "slug": "line-integral",
+    "domain": "Line Integral Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute line integrals. Verify with parameterization. Generate procedurally, verify with CAS."
   },
   {
     "slug": "linear-algebra-computation",
@@ -8014,6 +8839,17 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "verified"
+  },
+  {
+    "slug": "markov-chain-absorbing",
+    "domain": "Absorbing Markov Chains",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute absorption probabilities, expected times. Verify fundamental matrix. Generate procedurally, verify with CAS."
   },
   {
     "slug": "markov-chain-computation",
@@ -9841,6 +10677,17 @@
     "reconstruction": "HANS diagnostic dataset for NLI. McCoy et al. Tests lexical overlap, subsequence, constituent heuristics."
   },
   {
+    "slug": "mobius-function",
+    "domain": "M\u00f6bius Function & Inversion",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute M\u00f6bius function values, apply M\u00f6bius inversion. Verify against OEIS. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "modal-logic",
     "domain": "Modal Logic",
     "category": "Logic",
@@ -10013,6 +10860,17 @@
     "reconstruction": "12 geometric, energetic, electronic properties. Ramakrishnan et al."
   },
   {
+    "slug": "mondo-disease-ontology",
+    "domain": "MONDO Disease Ontology",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~30K diseases. mondo.monarchinitiative.org. CC-BY 4.0."
+  },
+  {
     "slug": "monocular-depth-estimation",
     "domain": "Monocular Depth Estimation",
     "category": "Vision",
@@ -10062,6 +10920,17 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "motor-sizing",
+    "domain": "Electric Motor Selection",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. HP/kW from torque and speed. Verify with motor curves."
   },
   {
     "slug": "mountain-car",
@@ -10133,6 +11002,17 @@
     "difficulty_range": "hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "multi30k-translation",
+    "domain": "Multi30k (Image-guided Translation)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 31K image descriptions in EN, DE, FR, CS."
   },
   {
     "slug": "multilingual-tasks",
@@ -10327,6 +11207,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "mvtec-anomaly",
+    "domain": "MVTec AD (Industrial Anomaly Detection)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 5K images, 15 categories. MVTec. CC-BY-NC-SA."
+  },
+  {
     "slug": "n-queens",
     "domain": "N-Queens Problem",
     "category": "Games",
@@ -10335,6 +11226,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "nabirds",
+    "domain": "NABirds (North American Birds)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 48K images, 555 species. Cornell. Requires agreement."
   },
   {
     "slug": "named-entity-recognition",
@@ -10845,6 +11747,17 @@
     "reconstruction": "Requires external knowledge to answer visual questions. Marino et al."
   },
   {
+    "slug": "omim-genetic-disorders",
+    "domain": "OMIM Genetic Disorders",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~16K genetic conditions. omim.org. Registration required."
+  },
+  {
     "slug": "omni-math",
     "domain": "Omni-MATH",
     "category": "Math",
@@ -10863,6 +11776,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "ontonotes-ner",
+    "domain": "OntoNotes NER (18 types)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 18 entity types. LDC for full data. Use WikiANN for open alternative."
   },
   {
     "slug": "ood-detection",
@@ -10906,6 +11830,545 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "storage.googleapis.com/openimages. CC-BY. Google. 600 classes."
+  },
+  {
+    "slug": "openspiel-backgammon",
+    "domain": "OpenSpiel: Backgammon",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: backgammon. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-bargaining",
+    "domain": "OpenSpiel: Bargaining",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: bargaining. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-battleship",
+    "domain": "OpenSpiel: Battleship",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: battleship. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-bridge-uncontested",
+    "domain": "OpenSpiel: Bridge Uncontested",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: bridge-uncontested. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-catch",
+    "domain": "OpenSpiel: Catch",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: catch. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-chess",
+    "domain": "OpenSpiel: Chess",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: chess. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-cliff-walking",
+    "domain": "OpenSpiel: Cliff Walking",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: cliff-walking. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-coin-game",
+    "domain": "OpenSpiel: Coin Game",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: coin-game. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-connect-four",
+    "domain": "OpenSpiel: Connect Four",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: connect-four. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-coop-box-pushing",
+    "domain": "OpenSpiel: Coop Box Pushing",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: coop-box-pushing. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-coordinated-mp",
+    "domain": "OpenSpiel: Coordinated Mp",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: coordinated-mp. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-cursor-go",
+    "domain": "OpenSpiel: Cursor Go",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: cursor-go. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-dark-chess",
+    "domain": "OpenSpiel: Dark Chess",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: dark-chess. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-deep-sea",
+    "domain": "OpenSpiel: Deep Sea",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: deep-sea. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-dots-and-boxes",
+    "domain": "OpenSpiel: Dots And Boxes",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: dots-and-boxes. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-first-sealed-auction",
+    "domain": "OpenSpiel: First Sealed Auction",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: first-sealed-auction. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-go",
+    "domain": "OpenSpiel: Go",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: go. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-goofspiel",
+    "domain": "OpenSpiel: Goofspiel",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: goofspiel. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-havannah",
+    "domain": "OpenSpiel: Havannah",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: havannah. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-hex",
+    "domain": "OpenSpiel: Hex",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: hex. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-kuhn-poker",
+    "domain": "OpenSpiel: Kuhn Poker",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: kuhn-poker. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-laser-tag",
+    "domain": "OpenSpiel: Laser Tag",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: laser-tag. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-leduc-poker",
+    "domain": "OpenSpiel: Leduc Poker",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: leduc-poker. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-lewis-signaling",
+    "domain": "OpenSpiel: Lewis Signaling",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: lewis-signaling. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-liar-dice",
+    "domain": "OpenSpiel: Liar Dice",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: liar-dice. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-markov-soccer",
+    "domain": "OpenSpiel: Markov Soccer",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: markov-soccer. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-matching-pennies",
+    "domain": "OpenSpiel: Matching Pennies",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: matching-pennies. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-matrix-bos",
+    "domain": "OpenSpiel: Matrix Bos",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: matrix-bos. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-matrix-mp",
+    "domain": "OpenSpiel: Matrix Mp",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: matrix-mp. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-matrix-pd",
+    "domain": "OpenSpiel: Matrix Pd",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: matrix-pd. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-matrix-rps",
+    "domain": "OpenSpiel: Matrix Rps",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: matrix-rps. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-matrix-sh",
+    "domain": "OpenSpiel: Matrix Sh",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: matrix-sh. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-mean-field",
+    "domain": "OpenSpiel: Mean Field",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: mean-field. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-nim",
+    "domain": "OpenSpiel: Nim",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: nim. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-oh-hell",
+    "domain": "OpenSpiel: Oh Hell",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: oh-hell. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-othello",
+    "domain": "OpenSpiel: Othello",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: othello. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-oware",
+    "domain": "OpenSpiel: Oware",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: oware. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-pentago",
+    "domain": "OpenSpiel: Pentago",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: pentago. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-phantom-ttt",
+    "domain": "OpenSpiel: Phantom Ttt",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: phantom-ttt. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-pig",
+    "domain": "OpenSpiel: Pig",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: pig. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-quoridor",
+    "domain": "OpenSpiel: Quoridor",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: quoridor. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-sheriff",
+    "domain": "OpenSpiel: Sheriff",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: sheriff. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-skat",
+    "domain": "OpenSpiel: Skat",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: skat. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-stones-and-gems",
+    "domain": "OpenSpiel: Stones And Gems",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: stones-and-gems. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-tic-tac-toe",
+    "domain": "OpenSpiel: Tic Tac Toe",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: tic-tac-toe. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-tiny-bridge",
+    "domain": "OpenSpiel: Tiny Bridge",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: tiny-bridge. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-tiny-hanabi",
+    "domain": "OpenSpiel: Tiny Hanabi",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: tiny-hanabi. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-trade-comm",
+    "domain": "OpenSpiel: Trade Comm",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: trade-comm. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
+  },
+  {
+    "slug": "openspiel-y-game",
+    "domain": "OpenSpiel: Y Game",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "OpenSpiel game: y-game. github.com/google-deepmind/open_spiel. Apache 2.0. DeepMind."
   },
   {
     "slug": "operating-system-concepts",
@@ -10990,6 +12453,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "opus-books",
+    "domain": "OPUS Books (Parallel Translation)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. Aligned book translations from OPUS. opus.nlpl.eu. Open."
+  },
+  {
     "slug": "orbital-mechanics",
     "domain": "Orbital Mechanics",
     "category": "Science",
@@ -11041,6 +12515,28 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "oxford-flowers-102",
+    "domain": "Oxford Flowers 102",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 8K images, 102 flower species. CC-BY-NC-SA. Oxford VGG."
+  },
+  {
+    "slug": "oxford-pets",
+    "domain": "Oxford-IIIT Pets",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 7.4K images, 37 pet breeds. CC-BY-SA. Oxford VGG."
+  },
+  {
     "slug": "palindrome-generation",
     "domain": "Palindrome Generation",
     "category": "Creative",
@@ -11089,6 +12585,28 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "partial-fractions",
+    "domain": "Partial Fraction Decomposition",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Decompose rational functions. Verify by recombining. Generate procedurally, verify with CAS."
+  },
+  {
+    "slug": "partition-function",
+    "domain": "Integer Partition Function",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute p(n). Verify against known values in OEIS (A000041). Generate procedurally, verify with CAS."
   },
   {
     "slug": "pascal-voc",
@@ -11172,6 +12690,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "OGB-LSC quantum chemistry. HOMO-LUMO gap prediction. ogb.stanford.edu."
+  },
+  {
+    "slug": "pdb-structures",
+    "domain": "PDB Structural Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. 200K+ structures. rcsb.org. Public domain."
   },
   {
     "slug": "pdbbind",
@@ -11613,6 +13142,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "power-series",
+    "domain": "Power Series Problems",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Find radius of convergence, sum. Verify with ratio test + SymPy. Generate procedurally, verify with CAS."
   },
   {
     "slug": "ppbr-prediction",
@@ -12129,6 +13669,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "pubchem-bioassay",
+    "domain": "PubChem BioAssay Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. 1.3M+ assays. pubchem.ncbi.nlm.nih.gov. Public (NIH)."
+  },
+  {
     "slug": "pubhealth",
     "domain": "PubHealth (Health Claim Verification)",
     "category": "Expert",
@@ -12147,6 +13698,17 @@
     "difficulty_range": "hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "pump-selection",
+    "domain": "Pump Selection & Sizing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. System curve, NPSH, operating point. Verify with affinity laws."
   },
   {
     "slug": "push-t-manipulation",
@@ -12191,6 +13753,182 @@
     "status": "verified"
   },
   {
+    "slug": "pz-chess",
+    "domain": "PettingZoo: Chess",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Two-player chess in PettingZoo AEC API. Uses python-chess. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-connect-four",
+    "domain": "PettingZoo: Connect Four",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Two-player Connect Four. PettingZoo. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-cooperative-pong",
+    "domain": "PettingZoo: Cooperative Pong",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Two agents cooperate at pong. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-gin-rummy",
+    "domain": "PettingZoo: Gin Rummy",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Two-player card game. PettingZoo. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-go",
+    "domain": "PettingZoo: Go",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Two-player Go (9x9, 19x19). PettingZoo AEC API. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-hanabi",
+    "domain": "PettingZoo: Hanabi",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Cooperative Hanabi. PettingZoo. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-knights-archers-zombies",
+    "domain": "PettingZoo: Knights Archers Zombies",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Multi-agent zombie defense game. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-mahjong",
+    "domain": "PettingZoo: Mahjong",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Four-player Mahjong. PettingZoo. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-pistonball",
+    "domain": "PettingZoo: Pistonball",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Cooperative ball-pushing with pistons. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-prison-dilemma",
+    "domain": "PettingZoo: Iterated Prisoner's Dilemma",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Classic game theory. Repeated PD. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-simple-adversary",
+    "domain": "PettingZoo: MPE Simple Adversary",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Adversary tries to reach target. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-simple-spread",
+    "domain": "PettingZoo: MPE Simple Spread",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Multi-agent particle environment. Cooperative coverage. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-simple-tag",
+    "domain": "PettingZoo: MPE Simple Tag",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Predator-prey in continuous space. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-texas-holdem",
+    "domain": "PettingZoo: Texas Hold'em Poker",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Multi-player poker. PettingZoo. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-tictactoe",
+    "domain": "PettingZoo: Tic-Tac-Toe",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Two-player TTT. PettingZoo. pettingzoo.farama.org. MIT license."
+  },
+  {
+    "slug": "pz-waterworld",
+    "domain": "PettingZoo: Waterworld",
+    "category": "Games",
+    "verification_type": "outcome",
+    "dataset_scale": "unlimited self-play",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "PettingZoo multi-agent environment. Continuous multi-agent pursuit. pettingzoo.farama.org. MIT license."
+  },
+  {
     "slug": "qasc-multi-hop",
     "domain": "QASC (Multi-hop Science QA)",
     "category": "Language",
@@ -12231,6 +13969,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Quora Question Pairs + adversarial test sets. Zhang et al. PAWS probes."
+  },
+  {
+    "slug": "quadratic-residues",
+    "domain": "Quadratic Residues & Legendre Symbol",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Determine QRs, compute Legendre/Jacobi symbols. Verify by squaring. Generate procedurally, verify with CAS."
   },
   {
     "slug": "quail-text-comprehension",
@@ -12327,6 +14076,17 @@
     "reconstruction": "RACE dataset from CMU. Middle/high school English exams. race-benchmark on GitHub."
   },
   {
+    "slug": "random-walk",
+    "domain": "Random Walk Problems",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute hitting times, return probabilities. Verify via simulation. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "reacher",
     "domain": "Reacher (MuJoCo)",
     "category": "Agent",
@@ -12357,6 +14117,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "High-throughput experimentation datasets. Ahneman et al. Science 2018. Doyle et al. datasets on GitHub."
+  },
+  {
+    "slug": "reactome-pathway",
+    "domain": "Reactome Pathway Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~2.5K pathways. reactome.org. CC-BY 4.0."
   },
   {
     "slug": "reading-comprehension",
@@ -12460,6 +14231,17 @@
     "status": "verified"
   },
   {
+    "slug": "recurrence-solving",
+    "domain": "Recurrence Relation Solving",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Solve linear recurrences. Verify by substitution. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "redox-half-reactions",
     "domain": "Redox Half-Reaction Balancing",
     "category": "Science",
@@ -12531,6 +14313,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "regression-analysis",
+    "domain": "Linear/Logistic Regression Analysis",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Fit regression, compute R\u00b2, coefficients. Verify with sklearn. Generate procedurally, verify with CAS."
   },
   {
     "slug": "regular-expression-explanation",
@@ -12697,6 +14490,424 @@
     "reconstruction": "Wolf-goat-cabbage type puzzles. Verify each crossing is legal, no constraint violations."
   },
   {
+    "slug": "rlbench-change-channel",
+    "domain": "RLBench: Change Channel",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: change-channel. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-change-clock",
+    "domain": "RLBench: Change Clock",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: change-clock. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-close-box",
+    "domain": "RLBench: Close Box",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: close-box. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-close-jar",
+    "domain": "RLBench: Close Jar",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: close-jar. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-close-laptop-lid",
+    "domain": "RLBench: Close Laptop Lid",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: close-laptop-lid. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-hang-frame-on-hanger",
+    "domain": "RLBench: Hang Frame On Hanger",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: hang-frame-on-hanger. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-insert-onto-square-peg",
+    "domain": "RLBench: Insert Onto Square Peg",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: insert-onto-square-peg. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-lamp-off",
+    "domain": "RLBench: Lamp Off",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: lamp-off. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-lamp-on",
+    "domain": "RLBench: Lamp On",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: lamp-on. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-light-bulb-in",
+    "domain": "RLBench: Light Bulb In",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: light-bulb-in. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-meat-off-grill",
+    "domain": "RLBench: Meat Off Grill",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: meat-off-grill. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-box",
+    "domain": "RLBench: Open Box",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-box. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-door",
+    "domain": "RLBench: Open Door",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-door. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-drawer",
+    "domain": "RLBench: Open Drawer",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-drawer. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-fridge",
+    "domain": "RLBench: Open Fridge",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-fridge. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-grill",
+    "domain": "RLBench: Open Grill",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-grill. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-microwave",
+    "domain": "RLBench: Open Microwave",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-microwave. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-oven",
+    "domain": "RLBench: Open Oven",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-oven. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-window",
+    "domain": "RLBench: Open Window",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-window. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-open-wine-bottle",
+    "domain": "RLBench: Open Wine Bottle",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: open-wine-bottle. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-phone-on-base",
+    "domain": "RLBench: Phone On Base",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: phone-on-base. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-pick-and-lift",
+    "domain": "RLBench: Pick And Lift",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: pick-and-lift. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-pick-up-cup",
+    "domain": "RLBench: Pick Up Cup",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: pick-up-cup. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-place-cups",
+    "domain": "RLBench: Place Cups",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: place-cups. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-place-hanger-on-rack",
+    "domain": "RLBench: Place Hanger On Rack",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: place-hanger-on-rack. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-place-shape-in-shape-sorter",
+    "domain": "RLBench: Place Shape In Shape Sorter",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: place-shape-in-shape-sorter. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-place-wine-at-rack-location",
+    "domain": "RLBench: Place Wine At Rack Location",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: place-wine-at-rack-location. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-play-jenga",
+    "domain": "RLBench: Play Jenga",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: play-jenga. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-plug-charger-in-power-supply",
+    "domain": "RLBench: Plug Charger In Power Supply",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: plug-charger-in-power-supply. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-press-switch",
+    "domain": "RLBench: Press Switch",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: press-switch. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-push-button",
+    "domain": "RLBench: Push Button",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: push-button. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-push-buttons",
+    "domain": "RLBench: Push Buttons",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: push-buttons. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-put-books-on-bookshelf",
+    "domain": "RLBench: Put Books On Bookshelf",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: put-books-on-bookshelf. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-put-groceries-in-cupboard",
+    "domain": "RLBench: Put Groceries In Cupboard",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: put-groceries-in-cupboard. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-put-item-in-drawer",
+    "domain": "RLBench: Put Item In Drawer",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: put-item-in-drawer. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-put-knife-on-chopping-board",
+    "domain": "RLBench: Put Knife On Chopping Board",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: put-knife-on-chopping-board. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-put-money-in-safe",
+    "domain": "RLBench: Put Money In Safe",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: put-money-in-safe. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-reach-target",
+    "domain": "RLBench: Reach Target",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: reach-target. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
     "slug": "rlbench-robot",
     "domain": "RLBench (Robot Learning)",
     "category": "Agent",
@@ -12705,6 +14916,149 @@
     "difficulty_range": "hard/superhuman",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "rlbench-scoop-with-spatula",
+    "domain": "RLBench: Scoop With Spatula",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: scoop-with-spatula. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-setup-checkers",
+    "domain": "RLBench: Setup Checkers",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: setup-checkers. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-slide-block-to-target",
+    "domain": "RLBench: Slide Block To Target",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: slide-block-to-target. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-stack-blocks",
+    "domain": "RLBench: Stack Blocks",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: stack-blocks. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-stack-cups",
+    "domain": "RLBench: Stack Cups",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: stack-cups. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-sweep-to-dustpan",
+    "domain": "RLBench: Sweep To Dustpan",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: sweep-to-dustpan. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-take-lid-off-saucepan",
+    "domain": "RLBench: Take Lid Off Saucepan",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: take-lid-off-saucepan. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-take-money-out-safe",
+    "domain": "RLBench: Take Money Out Safe",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: take-money-out-safe. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-take-umbrella-out-of-umbrella-stand",
+    "domain": "RLBench: Take Umbrella Out Of Umbrella Stand",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: take-umbrella-out-of-umbrella-stand. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-toilet-seat-down",
+    "domain": "RLBench: Toilet Seat Down",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: toilet-seat-down. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-toilet-seat-up",
+    "domain": "RLBench: Toilet Seat Up",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: toilet-seat-up. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-turn-oven-on",
+    "domain": "RLBench: Turn Oven On",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: turn-oven-on. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
+  },
+  {
+    "slug": "rlbench-turn-tap",
+    "domain": "RLBench: Turn Tap",
+    "category": "Agent",
+    "verification_type": "outcome",
+    "dataset_scale": "1 robotic task",
+    "difficulty_range": "hard/superhuman",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "RLBench task: turn-tap. github.com/stepjam/RLBench. CoppeliaSim-based. Verify task success from sim state."
   },
   {
     "slug": "rna-3d-structure",
@@ -12829,6 +15183,17 @@
     "difficulty_range": "medium",
     "modality": "multimodal",
     "status": "remembered"
+  },
+  {
+    "slug": "rxnorm-drugs",
+    "domain": "RxNorm Drug Nomenclature",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~115K drug names. NLM. Free via UMLS."
   },
   {
     "slug": "safety-gymnasium",
@@ -13004,6 +15369,171 @@
     "status": "remembered"
   },
   {
+    "slug": "sciworld-animal-diet",
+    "domain": "ScienceWorld: Animal Diet Classification",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Classify animals as herbivore/carnivore/omnivore. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-boil-water",
+    "domain": "ScienceWorld: Boil Water",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Boil water using available equipment. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-change-state",
+    "domain": "ScienceWorld: Change State of Matter",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Identify state changes of various substances. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-chemistry-mix",
+    "domain": "ScienceWorld: Chemistry Mixing",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Mix chemicals and observe reactions. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-electrical-conductivity",
+    "domain": "ScienceWorld: Electrical Conductivity",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Test which materials conduct electricity. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-find-living",
+    "domain": "ScienceWorld: Find Living Thing",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Identify which objects are living vs non-living. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-freeze-water",
+    "domain": "ScienceWorld: Freeze Water",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Freeze water in freezer. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-friction",
+    "domain": "ScienceWorld: Friction Experiment",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Test friction on different surfaces. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-genetics",
+    "domain": "ScienceWorld: Genetics (Mendel)",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Cross plants and observe trait inheritance. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-grow-plant",
+    "domain": "ScienceWorld: Grow Plant",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Grow plant with correct conditions (light, water, soil). github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-inclined-plane",
+    "domain": "ScienceWorld: Inclined Plane",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Measure force required on inclined planes. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-life-stages",
+    "domain": "ScienceWorld: Life Stages",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Identify life stages of organisms. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-melt-ice",
+    "domain": "ScienceWorld: Melt Ice",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Melt ice and measure temperature change. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-rock-types",
+    "domain": "ScienceWorld: Rock Classification",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Classify rocks as igneous, sedimentary, metamorphic. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
+    "slug": "sciworld-thermometer-use",
+    "domain": "ScienceWorld: Use Thermometer",
+    "category": "Science",
+    "verification_type": "outcome",
+    "dataset_scale": "1 science task",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "ScienceWorld task. Measure temperature of objects. github.com/allenai/ScienceWorld. Apache 2.0. Verify via simulator state."
+  },
+  {
     "slug": "scrabble-scoring",
     "domain": "Scrabble Scoring",
     "category": "Games",
@@ -13085,6 +15615,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "sentiment-140",
+    "domain": "Sentiment140 (Twitter Sentiment)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 1.6M tweets. Go et al. Distant supervision via emoticons."
+  },
+  {
     "slug": "sentiment-aspect-triplet",
     "domain": "Aspect Sentiment Triplet Extraction",
     "category": "Language",
@@ -13094,6 +15635,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "SemEval ASTE. Extract (aspect, opinion, sentiment) triplets. Recent NLP subtask."
+  },
+  {
+    "slug": "septic-system-design",
+    "domain": "Septic System Design",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Soil percolation test to system sizing. Verify against health department codes."
   },
   {
     "slug": "sequence-prediction",
@@ -13364,6 +15916,39 @@
     "status": "verified"
   },
   {
+    "slug": "snomed-ct-ontology",
+    "domain": "SNOMED CT Clinical Terms",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. ~350K concepts. Free via NLM. Requires UMLS license."
+  },
+  {
+    "slug": "snooker-scoring",
+    "domain": "Snooker Scoring",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Point values, maximum break (147). Verify frame/match scoring."
+  },
+  {
+    "slug": "soccer-expected-goals",
+    "domain": "Soccer Expected Goals (xG)",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Compute xG from shot location/type. Verify against xG model."
+  },
+  {
     "slug": "social-iqa",
     "domain": "Social IQA",
     "category": "Language",
@@ -13385,6 +15970,17 @@
     "reconstruction": "Extended Social IQA from Allen AI. Emotional/social intelligence questions."
   },
   {
+    "slug": "sogou-news",
+    "domain": "Sogou News (Chinese Classification)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 450K Chinese news articles. 5 categories."
+  },
+  {
     "slug": "soil-bearing-capacity",
     "domain": "Soil / Geotechnical Computation",
     "category": "Science",
@@ -13403,6 +15999,17 @@
     "difficulty_range": "medium/hard/superhuman",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "solar-panel-sizing",
+    "domain": "Solar Panel System Sizing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. kWh needs, peak sun hours, panel wattage. Verify with PVWatts."
   },
   {
     "slug": "something-something-v2",
@@ -13538,6 +16145,17 @@
     "status": "strong_hypothesis"
   },
   {
+    "slug": "sprinkler-design",
+    "domain": "Fire Sprinkler System Design",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Hydraulic calculation, pipe sizing. Verify against NFPA 13."
+  },
+  {
     "slug": "sql-ddl-generation",
     "domain": "SQL DDL Schema Generation",
     "category": "Code",
@@ -13621,6 +16239,39 @@
     "reconstruction": "SemEval-2016 Task 6. Detect stance (favor/against/neutral) toward targets."
   },
   {
+    "slug": "stanford-cars",
+    "domain": "Stanford Cars (196 Classes)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 16K images, 196 car models. Stanford. CC-BY."
+  },
+  {
+    "slug": "stanford-dogs",
+    "domain": "Stanford Dogs (120 Breeds)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 20K images, 120 dog breeds. ImageNet subset. Stanford."
+  },
+  {
+    "slug": "stanford-online-products",
+    "domain": "Stanford Online Products (Retrieval)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 120K product images. 22.6K classes. Metric learning."
+  },
+  {
     "slug": "star-battle",
     "domain": "Star Battle Puzzle",
     "category": "Games",
@@ -13682,6 +16333,17 @@
     "reconstruction": "Measure stereotypical associations. Nadeem et al. stereoset.mit.edu."
   },
   {
+    "slug": "stirling-numbers",
+    "domain": "Stirling Numbers (1st & 2nd kind)",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute Stirling numbers. Verify recurrence relations. Generate procedurally, verify with CAS."
+  },
+  {
     "slug": "stochastic-differential-equations",
     "domain": "Stochastic Differential Equations",
     "category": "Math",
@@ -13700,6 +16362,17 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "stormwater-design",
+    "domain": "Stormwater Drainage Design",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. Rational method Q=CiA. Verify flow rates and pipe sizing against design manuals."
   },
   {
     "slug": "story-cloze",
@@ -13791,6 +16464,17 @@
     "modality": "multimodal",
     "status": "remembered",
     "reconstruction": "rgbd.cs.princeton.edu. Indoor scene understanding with depth."
+  },
+  {
+    "slug": "sun397-scene",
+    "domain": "SUN397 (Scene Classification)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 108K images, 397 scene categories. MIT CSAIL."
   },
   {
     "slug": "superb-speech-benchmark",
@@ -13953,6 +16637,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Materials Project surface module. Predict surface energies of crystal facets."
+  },
+  {
+    "slug": "surface-integral",
+    "domain": "Surface Integral Computation",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute surface integrals. Verify via Stokes'/Gauss' theorem. Generate procedurally, verify with CAS."
   },
   {
     "slug": "surveying-computation",
@@ -14131,6 +16826,17 @@
     "status": "remembered"
   },
   {
+    "slug": "tacred-relation",
+    "domain": "TACRED Relation Extraction",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 106K from TAC KBP. 42 relations. LDC required. Use DocRED instead."
+  },
+  {
     "slug": "takuzu-binary",
     "domain": "Takuzu / Binary Puzzle",
     "category": "Games",
@@ -14179,6 +16885,17 @@
     "difficulty_range": "easy/medium/hard",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "taylor-series-expansion",
+    "domain": "Taylor/Maclaurin Series",
+    "category": "Math",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Math computation topic. Compute Taylor series. Verify with SymPy.series(). Generate procedurally, verify with CAS."
   },
   {
     "slug": "tedlium",
@@ -14232,6 +16949,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "TempEval-3, TimeBank-Dense. Temporal ordering of events."
+  },
+  {
+    "slug": "tennis-scoring",
+    "domain": "Tennis Scoring & Statistics",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited from sports data",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Sports computation. Game/set/match scoring logic. Tiebreak rules. Ace/double-fault counts."
   },
   {
     "slug": "tensor-computation",
@@ -14740,6 +17468,17 @@
     "reconstruction": "ENCODE ChIP-seq data. Predict TF binding sites. JASPAR database for motifs."
   },
   {
+    "slug": "transformer-sizing",
+    "domain": "Electrical Transformer Sizing",
+    "category": "Expert",
+    "verification_type": "exact_match",
+    "dataset_scale": "unlimited procedural",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Engineering calculation. kVA calculation from load analysis. Verify with NEC requirements."
+  },
+  {
     "slug": "transistor-biasing",
     "domain": "Transistor Biasing Design",
     "category": "Science",
@@ -14799,6 +17538,17 @@
     "difficulty_range": "medium/hard",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "tweetnlp-suite",
+    "domain": "TweetNLP Suite",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. Multiple Twitter NLP tasks: NER, sentiment, topic, irony. TweetEval."
   },
   {
     "slug": "tydiqa-diverse-languages",
@@ -14863,6 +17613,336 @@
     "status": "needs_validation"
   },
   {
+    "slug": "uci-abalone",
+    "domain": "UCI: Abalone Age Prediction",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Predict abalone age from physical measurements. 4177 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-balance-scale",
+    "domain": "UCI: Balance Scale",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify balance scale states. 625 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-car-evaluation",
+    "domain": "UCI: Car Evaluation",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Rate cars (unacceptable to very good). 1728 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-congressional-voting",
+    "domain": "UCI: Congressional Voting",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Predict party from voting records. 435 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-connect-4",
+    "domain": "UCI: Connect-4 Endgame",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify Connect-4 endgame positions. 67557 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-dermatology",
+    "domain": "UCI: Dermatology",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Diagnose 6 erythemato-squamous diseases. 366 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-ecoli",
+    "domain": "UCI: E.coli Protein Localization",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Protein localization sites in E. coli. 336 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-glass",
+    "domain": "UCI: Glass Identification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. 6 types of glass from oxide content. 214 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-heart-disease",
+    "domain": "UCI: Heart Disease",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Predict heart disease presence. 303 samples. Cleveland data. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-hepatitis",
+    "domain": "UCI: Hepatitis",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Predict survival of hepatitis patients. 155 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-ionosphere",
+    "domain": "UCI: Ionosphere",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify radar returns from ionosphere. 351 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-letter-recognition",
+    "domain": "UCI: Letter Recognition",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify letters from image features. 20K samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-magic-gamma",
+    "domain": "UCI: MAGIC Gamma Telescope",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify gamma/hadron events. 19020 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-mushroom",
+    "domain": "UCI: Mushroom Classification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Edible vs poisonous mushrooms. 8124 samples. Missing values. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-nursery",
+    "domain": "UCI: Nursery Evaluation",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Evaluate nursery school applications. 12960 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-optical-digits",
+    "domain": "UCI: Optical Digits",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Handwritten digit recognition from 8x8 images. 5620 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-page-blocks",
+    "domain": "UCI: Page Blocks Classification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify document page blocks. 5473 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-pendigits",
+    "domain": "UCI: Pen Digits",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Pen-based handwritten digit recognition. 10992 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-segment",
+    "domain": "UCI: Image Segmentation",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify image regions. 2310 samples. 7 classes. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-sonar",
+    "domain": "UCI: Sonar (Mines vs Rocks)",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify sonar returns. 208 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-spambase",
+    "domain": "UCI: Spambase",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Email spam classification. 4601 samples. 57 features. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-statlog-shuttle",
+    "domain": "UCI: Statlog Shuttle",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify shuttle radiator sensor readings. 58000 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-steel-plates",
+    "domain": "UCI: Steel Plates Faults",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify steel plate surface defects. 1941 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-thyroid",
+    "domain": "UCI: Thyroid Disease",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. 3-class thyroid diagnosis. 7200 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-tic-tac-toe",
+    "domain": "UCI: Tic-Tac-Toe Endgame",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify TTT endgame positions. 958 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-vehicle",
+    "domain": "UCI: Vehicle Silhouette",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify vehicle types from silhouettes. 846 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-vowel",
+    "domain": "UCI: Vowel Recognition",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify vowels from speech features. 990 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-waveform",
+    "domain": "UCI: Waveform Classification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Classify 3 types of waveforms. 5000 samples. 40 attributes. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-wine",
+    "domain": "UCI: Wine Classification",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. 3 classes of Italian wines from chemical analysis. 178 samples. CC-BY. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
+    "slug": "uci-yeast",
+    "domain": "UCI: Yeast Protein Localization",
+    "category": "ML",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "UCI Machine Learning Repository. Predict protein localization sites. 1484 samples. archive.ics.uci.edu/ml. CC-BY 4.0 (post-2023 relicense)."
+  },
+  {
     "slug": "unicode-codepoint",
     "domain": "Unicode Codepoint Lookup",
     "category": "Misc",
@@ -14881,6 +17961,17 @@
     "difficulty_range": "easy/medium",
     "modality": "text",
     "status": "strong_hypothesis"
+  },
+  {
+    "slug": "uniprot-protein",
+    "domain": "UniProt Protein Database",
+    "category": "Science",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "Scientific database. 250M+ protein sequences. uniprot.org. CC-BY 4.0."
   },
   {
     "slug": "unit-conversion",
@@ -14976,6 +18067,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "Compute veterinary drug dosages by species/weight. Verify against veterinary formulary."
+  },
+  {
+    "slug": "vggface2",
+    "domain": "VGGFace2 (Face Recognition)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 3.3M images of 9.1K identities. CC-BY-SA. Oxford VGG group."
   },
   {
     "slug": "video-temporal-reasoning",
@@ -15244,6 +18346,17 @@
     "difficulty_range": "medium",
     "modality": "text",
     "status": "remembered"
+  },
+  {
+    "slug": "wider-face-detection",
+    "domain": "WIDER FACE (Face Detection)",
+    "category": "Vision",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "medium/hard",
+    "modality": "multimodal",
+    "status": "remembered",
+    "reconstruction": "Vision dataset. 32K images with 394K faces. CC-BY-NC. WIDER challenge."
   },
   {
     "slug": "wikihow-summarization",
@@ -15539,6 +18652,17 @@
     "reconstruction": "WMT (Conference on Machine Translation) English-Ukrainian test sets. statmt.org. Public. BLEU/chrF evaluation."
   },
   {
+    "slug": "wnut-emerging-ner",
+    "domain": "WNUT Emerging Entity NER",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. ~5K tweets with novel entities. W-NUT shared task."
+  },
+  {
     "slug": "word-ladder",
     "domain": "Word Ladder Puzzles",
     "category": "Games",
@@ -15770,6 +18894,17 @@
     "modality": "text",
     "status": "remembered",
     "reconstruction": "XTREME multilingual benchmark. Cross-lingual extractive QA. github.com/google-research/xtreme. Apache 2.0."
+  },
+  {
+    "slug": "yahoo-answers",
+    "domain": "Yahoo Answers (Topic Classification)",
+    "category": "Language",
+    "verification_type": "exact_match",
+    "dataset_scale": "varies",
+    "difficulty_range": "easy/medium/hard",
+    "modality": "text",
+    "status": "remembered",
+    "reconstruction": "NLP dataset. 1.4M questions. 10 topic categories."
   },
   {
     "slug": "yaml-schema-validation",
