@@ -1,0 +1,16 @@
+---
+domain: MMLU: Business Ethics
+category: Expert
+verification_type: exact_match
+dataset_scale: ~100-1K per subject
+difficulty_range: medium/hard
+modality: text
+status: remembered
+---
+# MMLU: Business Ethics
+## Overview
+MMLU: Business Ethics.
+## Verification Mechanism
+exact_match verification.
+## Dataset Sources & Reconstruction
+REMEMBERED: MMLU subject: business-ethics. From Hendrycks et al. HuggingFace: cais/mmlu. 4-choice multiple choice. MIT license.
