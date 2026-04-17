@@ -6,8 +6,8 @@
 //! Format: "2H2 + O2 -> 2H2O"
 //! Verification: count atoms of each element on LHS and RHS, must be equal.
 
-use std::collections::HashMap;
 use super::VerifyResult;
+use std::collections::HashMap;
 
 /// Parse a chemical formula like "H2O", "Ca(OH)2", "Fe2O3" into atom counts.
 pub fn parse_formula(formula: &str) -> Result<HashMap<String, i64>, String> {
@@ -64,7 +64,11 @@ fn parse_number(chars: &[char], pos: &mut usize) -> i64 {
         num_str.push(chars[*pos]);
         *pos += 1;
     }
-    if num_str.is_empty() { 1 } else { num_str.parse().unwrap_or(1) }
+    if num_str.is_empty() {
+        1
+    } else {
+        num_str.parse().unwrap_or(1)
+    }
 }
 
 /// Parse a term like "2H2O" or "Fe2O3" (coefficient + formula).
@@ -81,7 +85,11 @@ fn parse_term(term: &str) -> Result<HashMap<String, i64>, String> {
         i += 1;
     }
 
-    let coeff: i64 = if i == 0 { 1 } else { term[..i].parse().unwrap_or(1) };
+    let coeff: i64 = if i == 0 {
+        1
+    } else {
+        term[..i].parse().unwrap_or(1)
+    };
     let formula = &term[i..];
 
     let atoms = parse_formula(formula)?;
@@ -110,9 +118,12 @@ pub fn verify(equation: &str) -> VerifyResult {
     // Split on arrow/equals
     let (lhs_str, rhs_str) = if let Some(pos) = equation.find("->") {
         (&equation[..pos], &equation[pos + 2..])
-    } else if let Some(pos) = equation.find('→') {
+    } else if equation.find('→').is_some() {
         let byte_pos = equation.find('→').unwrap();
-        (&equation[..byte_pos], &equation[byte_pos + '→'.len_utf8()..])
+        (
+            &equation[..byte_pos],
+            &equation[byte_pos + '→'.len_utf8()..],
+        )
     } else if let Some(pos) = equation.find('=') {
         (&equation[..pos], &equation[pos + 1..])
     } else {
@@ -160,7 +171,7 @@ pub fn verify(equation: &str) -> VerifyResult {
 
 /// Verify that a student's balanced equation matches the expected equation.
 /// Both sides must have the same atoms.
-pub fn verify_balancing(unbalanced: &str, proposed_balanced: &str) -> VerifyResult {
+pub fn verify_balancing(_unbalanced: &str, proposed_balanced: &str) -> VerifyResult {
     // First check the balanced equation is actually balanced
     let balance_result = verify(proposed_balanced);
     if balance_result.score < 1.0 {
@@ -303,7 +314,10 @@ mod tests {
     fn adversarial_close_but_wrong() {
         // 3H2 + O2 -> 2H2O — H is 6 vs 4, must fail
         let result = verify("3H2 + O2 -> 2H2O");
-        assert!(result.score < 1.0, "3H2 gives H=6 on left, 2H2O gives H=4 on right");
+        assert!(
+            result.score < 1.0,
+            "3H2 gives H=6 on left, 2H2O gives H=4 on right"
+        );
     }
 
     #[test]

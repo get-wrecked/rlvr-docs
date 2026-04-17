@@ -157,6 +157,14 @@ cargo test
 # Run a specific verifier's tests
 cargo test math_numerical
 cargo test sudoku
+
+# Start the verifier server
+cargo run -- --addr 127.0.0.1:8080
+
+# Verify one response
+curl -sS http://127.0.0.1:8080/verify \
+  -H 'content-type: application/json' \
+  -d '{"domain":"gsm8k","verifier":"math_numerical","task":{"gold":"#### 42"},"response":"The answer is 42"}'
 ```
 
 ## Verification Principles

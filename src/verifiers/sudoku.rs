@@ -34,7 +34,7 @@ pub fn is_valid_solution(grid: &Grid) -> bool {
     // Check all cells are 1-9
     for row in grid {
         for &cell in row {
-            if cell < 1 || cell > 9 {
+            if !(1..=9).contains(&cell) {
                 return false;
             }
         }
@@ -49,7 +49,7 @@ pub fn is_valid_solution(grid: &Grid) -> bool {
 
     // Check columns
     for col in 0..9 {
-        if !has_all_digits((0..9).map(|row| grid[row][col])) {
+        if !has_all_digits(grid.iter().map(|row| row[col])) {
             return false;
         }
     }
@@ -57,9 +57,8 @@ pub fn is_valid_solution(grid: &Grid) -> bool {
     // Check 3x3 boxes
     for box_row in 0..3 {
         for box_col in 0..3 {
-            let iter = (0..3).flat_map(|r| {
-                (0..3).map(move |c| grid[box_row * 3 + r][box_col * 3 + c])
-            });
+            let iter =
+                (0..3).flat_map(|r| (0..3).map(move |c| grid[box_row * 3 + r][box_col * 3 + c]));
             if !has_all_digits(iter) {
                 return false;
             }
@@ -84,7 +83,7 @@ pub fn respects_givens(puzzle: &Grid, solution: &Grid) -> bool {
 fn has_all_digits(iter: impl Iterator<Item = u8>) -> bool {
     let mut seen = [false; 10]; // index 0 unused
     for d in iter {
-        if d < 1 || d > 9 {
+        if !(1..=9).contains(&d) {
             return false;
         }
         if seen[d as usize] {
@@ -116,8 +115,12 @@ pub fn verify(puzzle_str: &str, solution_str: &str) -> VerifyResult {
 
     if !is_valid_solution(&solution) {
         // Count how many constraints are satisfied for partial credit
-        let row_ok = (0..9).filter(|&r| has_all_digits(solution[r].iter().copied())).count();
-        let col_ok = (0..9).filter(|&c| has_all_digits((0..9).map(|r| solution[r][c]))).count();
+        let row_ok = (0..9)
+            .filter(|&r| has_all_digits(solution[r].iter().copied()))
+            .count();
+        let col_ok = (0..9)
+            .filter(|&c| has_all_digits((0..9).map(|r| solution[r][c])))
+            .count();
         let box_ok = (0..3)
             .flat_map(|br| (0..3).map(move |bc| (br, bc)))
             .filter(|&(br, bc)| {
@@ -285,9 +288,15 @@ mod tests {
         let identity = "123456789".repeat(9);
         let empty_puzzle = "0".repeat(81);
         let result = verify(&empty_puzzle, &identity);
-        assert!(result.score < 1.0, "Identity grid should not be valid (col duplicates)");
+        assert!(
+            result.score < 1.0,
+            "Identity grid should not be valid (col duplicates)"
+        );
         // But it should get partial credit for rows
-        assert!(result.score > 0.0, "Should get partial credit for correct rows");
+        assert!(
+            result.score > 0.0,
+            "Should get partial credit for correct rows"
+        );
     }
 
     #[test]

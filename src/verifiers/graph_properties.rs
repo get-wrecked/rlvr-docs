@@ -6,9 +6,9 @@
 //!
 //! Uses adjacency list representation. No external graph library needed.
 
-use std::collections::{HashMap, HashSet, VecDeque, BinaryHeap};
-use std::cmp::Reverse;
 use super::VerifyResult;
+use std::cmp::Reverse;
+use std::collections::{BinaryHeap, HashMap, HashSet, VecDeque};
 
 /// A simple weighted graph (adjacency list).
 #[derive(Debug, Clone, serde::Deserialize)]
@@ -106,7 +106,8 @@ impl Graph {
         if !self.directed {
             return false;
         }
-        let position: HashMap<&str, usize> = order.iter()
+        let position: HashMap<&str, usize> = order
+            .iter()
             .enumerate()
             .map(|(i, n)| (n.as_str(), i))
             .collect();
@@ -157,12 +158,14 @@ struct OrderedFloat(f64);
 impl Eq for OrderedFloat {}
 impl PartialOrd for OrderedFloat {
     fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
-        self.0.partial_cmp(&other.0)
+        Some(self.cmp(other))
     }
 }
 impl Ord for OrderedFloat {
     fn cmp(&self, other: &Self) -> std::cmp::Ordering {
-        self.partial_cmp(other).unwrap_or(std::cmp::Ordering::Equal)
+        self.0
+            .partial_cmp(&other.0)
+            .unwrap_or(std::cmp::Ordering::Equal)
     }
 }
 
@@ -206,8 +209,13 @@ pub fn verify(graph_json: &str, task: &str, answer_json: &str) -> VerifyResult {
             }
         }
         "topological_sort" => {
-            let order: Vec<String> = answer.as_array()
-                .map(|a| a.iter().filter_map(|v| v.as_str().map(String::from)).collect())
+            let order: Vec<String> = answer
+                .as_array()
+                .map(|a| {
+                    a.iter()
+                        .filter_map(|v| v.as_str().map(String::from))
+                        .collect()
+                })
                 .unwrap_or_default();
             if graph.is_valid_topo_sort(&order) {
                 VerifyResult::correct()
@@ -216,10 +224,13 @@ pub fn verify(graph_json: &str, task: &str, answer_json: &str) -> VerifyResult {
             }
         }
         "coloring" => {
-            let coloring: HashMap<String, usize> = answer.as_object()
-                .map(|o| o.iter()
-                    .filter_map(|(k, v)| v.as_u64().map(|c| (k.clone(), c as usize)))
-                    .collect())
+            let coloring: HashMap<String, usize> = answer
+                .as_object()
+                .map(|o| {
+                    o.iter()
+                        .filter_map(|(k, v)| v.as_u64().map(|c| (k.clone(), c as usize)))
+                        .collect()
+                })
                 .unwrap_or_default();
 
             if graph.is_valid_coloring(&coloring) {
@@ -242,7 +253,8 @@ mod tests {
             "directed": false,
             "nodes": ["A", "B", "C", "D"],
             "edges": [["A", "B", 1.0], ["B", "C", 2.0], ["A", "C", 4.0], ["C", "D", 1.0]]
-        }).to_string()
+        })
+        .to_string()
     }
 
     fn dag() -> String {
@@ -250,7 +262,8 @@ mod tests {
             "directed": true,
             "nodes": ["A", "B", "C", "D"],
             "edges": [["A", "B", 1.0], ["A", "C", 1.0], ["B", "D", 1.0], ["C", "D", 1.0]]
-        }).to_string()
+        })
+        .to_string()
     }
 
     fn disconnected_graph() -> String {
@@ -258,7 +271,8 @@ mod tests {
             "directed": false,
             "nodes": ["A", "B", "C", "D"],
             "edges": [["A", "B", 1.0], ["C", "D", 1.0]]
-        }).to_string()
+        })
+        .to_string()
     }
 
     // ========== Shortest Path ==========
@@ -362,7 +376,8 @@ mod tests {
             "directed": false,
             "nodes": ["A", "B"],
             "edges": [["A", "A", 1.0], ["A", "B", 2.0]]
-        }).to_string();
+        })
+        .to_string();
         let coloring = r#"{"A": 0, "B": 1}"#;
         let result = verify(&g, "coloring", coloring);
         assert_eq!(result.score, 0.0, "Self-loop means A conflicts with itself");
@@ -374,10 +389,14 @@ mod tests {
             "directed": false,
             "nodes": ["A", "B", "C", "D"],
             "edges": [["A", "B", 1.0], ["C", "D", 1.0]]
-        }).to_string();
+        })
+        .to_string();
         let answer = r#"{"source": "A", "target": "D", "length": 99.0}"#;
         let result = verify(&g, "shortest_path", answer);
-        assert_eq!(result.score, 0.0, "No path exists — any length claim is wrong");
+        assert_eq!(
+            result.score, 0.0,
+            "No path exists — any length claim is wrong"
+        );
     }
 
     #[test]
@@ -386,7 +405,8 @@ mod tests {
             "directed": false,
             "nodes": ["A", "B", "C"],
             "edges": []
-        }).to_string();
+        })
+        .to_string();
         assert_eq!(verify(&g, "num_components", "3").score, 1.0);
         assert_eq!(verify(&g, "num_components", "1").score, 0.0);
     }

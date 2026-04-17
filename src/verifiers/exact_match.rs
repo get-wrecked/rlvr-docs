@@ -18,10 +18,17 @@ pub fn normalize(text: &str) -> String {
     // Remove punctuation, collapse whitespace
     let cleaned: String = lower
         .chars()
-        .map(|c| if c.is_alphanumeric() || c.is_whitespace() { c } else { ' ' })
+        .map(|c| {
+            if c.is_alphanumeric() || c.is_whitespace() {
+                c
+            } else {
+                ' '
+            }
+        })
         .collect();
     // Split into tokens, remove articles, rejoin
-    let tokens: Vec<&str> = cleaned.split_whitespace()
+    let tokens: Vec<&str> = cleaned
+        .split_whitespace()
         .filter(|t| *t != "a" && *t != "an" && *t != "the")
         .collect();
     tokens.join(" ")
@@ -39,12 +46,6 @@ pub fn exact_match_any(prediction: &str, golds: &[&str]) -> bool {
 
 /// Compute token-level F1 score (SQuAD-style).
 pub fn token_f1(prediction: &str, gold: &str) -> f64 {
-    let pred_tokens: Vec<&str> = normalize(prediction).split_whitespace().collect::<Vec<_>>()
-        .into_iter().collect();
-    let gold_tokens: Vec<&str> = normalize(gold).split_whitespace().collect::<Vec<_>>()
-        .into_iter().collect();
-
-    // Need to re-normalize since we collected from normalized string
     let pred_norm = normalize(prediction);
     let gold_norm = normalize(gold);
     let pred_tokens: Vec<&str> = pred_norm.split_whitespace().collect();
@@ -66,7 +67,8 @@ pub fn token_f1(prediction: &str, gold: &str) -> f64 {
     for t in &pred_tokens {
         *pred_counts.entry(t).or_insert(0) += 1;
     }
-    let common: usize = gold_counts.iter()
+    let common: usize = gold_counts
+        .iter()
         .map(|(token, &gold_count)| {
             let pred_count = pred_counts.get(token).copied().unwrap_or(0);
             gold_count.min(pred_count)
@@ -84,7 +86,8 @@ pub fn token_f1(prediction: &str, gold: &str) -> f64 {
 
 /// Best F1 across multiple gold answers.
 pub fn best_f1(prediction: &str, golds: &[&str]) -> f64 {
-    golds.iter()
+    golds
+        .iter()
         .map(|g| token_f1(prediction, g))
         .fold(0.0f64, f64::max)
 }
@@ -111,7 +114,8 @@ pub fn extract_answer(text: &str) -> &str {
     }
 
     // Fall back to last non-empty line
-    trimmed.lines()
+    trimmed
+        .lines()
         .rev()
         .find(|l| !l.trim().is_empty())
         .unwrap_or(trimmed)
@@ -128,7 +132,10 @@ pub fn verify_exact(model_output: &str, gold_answers: &[&str]) -> VerifyResult {
         VerifyResult::wrong(format!(
             "predicted '{}', expected one of {:?}",
             truncate(prediction, 50),
-            gold_answers.iter().map(|g| truncate(g, 30)).collect::<Vec<_>>()
+            gold_answers
+                .iter()
+                .map(|g| truncate(g, 30))
+                .collect::<Vec<_>>()
         ))
     }
 }
@@ -143,7 +150,7 @@ pub fn verify_f1(model_output: &str, gold_answers: &[&str]) -> VerifyResult {
     } else if f1 > 0.0 {
         VerifyResult::partial(f1, format!("F1={f1:.3}"))
     } else {
-        VerifyResult::wrong(format!("no token overlap with gold"))
+        VerifyResult::wrong("no token overlap with gold")
     }
 }
 
@@ -158,7 +165,8 @@ pub fn verify_multiple_choice(model_output: &str, correct_label: &str) -> Verify
     }
 
     // Check if the first word/token is the answer letter
-    let first_word: String = prediction.chars()
+    let first_word: String = prediction
+        .chars()
         .take_while(|c| c.is_alphanumeric())
         .collect();
     if first_word == gold {
@@ -167,8 +175,10 @@ pub fn verify_multiple_choice(model_output: &str, correct_label: &str) -> Verify
 
     // Check for "(A)" style
     let parens = format!("({})", gold);
-    if prediction.starts_with(&parens) || prediction.starts_with(&format!("{gold}."))
-        || prediction.starts_with(&format!("{gold}:")) || prediction.starts_with(&format!("{gold})"))
+    if prediction.starts_with(&parens)
+        || prediction.starts_with(&format!("{gold}."))
+        || prediction.starts_with(&format!("{gold}:"))
+        || prediction.starts_with(&format!("{gold})"))
     {
         return VerifyResult::correct();
     }
@@ -182,7 +192,11 @@ pub fn verify_multiple_choice(model_output: &str, correct_label: &str) -> Verify
 }
 
 fn truncate(s: &str, max: usize) -> &str {
-    if s.len() <= max { s } else { &s[..max] }
+    if s.len() <= max {
+        s
+    } else {
+        &s[..max]
+    }
 }
 
 #[cfg(test)]
@@ -235,8 +249,14 @@ mod tests {
 
     #[test]
     fn exact_match_multiple_golds() {
-        assert!(exact_match_any("NYC", &["New York City", "NYC", "New York"]));
-        assert!(!exact_match_any("LA", &["New York City", "NYC", "New York"]));
+        assert!(exact_match_any(
+            "NYC",
+            &["New York City", "NYC", "New York"]
+        ));
+        assert!(!exact_match_any(
+            "LA",
+            &["New York City", "NYC", "New York"]
+        ));
     }
 
     // ========== Token F1 ==========
@@ -271,7 +291,10 @@ mod tests {
 
     #[test]
     fn extract_last_line() {
-        assert_eq!(extract_answer("Step 1: think\nStep 2: compute\nParis"), "Paris");
+        assert_eq!(
+            extract_answer("Step 1: think\nStep 2: compute\nParis"),
+            "Paris"
+        );
     }
 
     #[test]
@@ -315,12 +338,18 @@ mod tests {
 
     #[test]
     fn mc_with_explanation() {
-        assert_eq!(verify_multiple_choice("The answer is B because...", "B").score, 1.0);
+        assert_eq!(
+            verify_multiple_choice("The answer is B because...", "B").score,
+            1.0
+        );
     }
 
     #[test]
     fn mc_with_parentheses() {
-        assert_eq!(verify_multiple_choice("I choose (C) as my answer", "C").score, 1.0);
+        assert_eq!(
+            verify_multiple_choice("I choose (C) as my answer", "C").score,
+            1.0
+        );
     }
 
     #[test]
@@ -342,7 +371,8 @@ mod tests {
         ] {
             let result = verify_exact(pred, &[gold]);
             assert_eq!(
-                result.score == 1.0, *expected_pass,
+                result.score == 1.0,
+                *expected_pass,
                 "pred={pred}, gold={gold}"
             );
         }
@@ -369,10 +399,7 @@ mod tests {
     #[test]
     fn triviaqa_style() {
         // TriviaQA: "What is the capital of Australia?"
-        let result = verify_exact(
-            "The answer is Canberra",
-            &["Canberra"],
-        );
+        let result = verify_exact("The answer is Canberra", &["Canberra"]);
         assert_eq!(result.score, 1.0);
     }
 

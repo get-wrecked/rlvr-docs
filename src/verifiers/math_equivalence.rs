@@ -136,8 +136,8 @@ fn try_eval_number(s: &str) -> Option<f64> {
 
     // Simple multiples of pi: "2\\pi", "3pi", etc.
     for pi_str in &["\\pi", "pi", "π"] {
-        if s.ends_with(pi_str) {
-            let coeff = &s[..s.len() - pi_str.len()].trim();
+        if let Some(stripped) = s.strip_suffix(pi_str) {
+            let coeff = stripped.trim();
             if coeff.is_empty() {
                 return Some(std::f64::consts::PI);
             }
@@ -272,9 +272,7 @@ pub fn verify(model_output: &str, gold_answer: &str) -> VerifyResult {
     if math_equiv(&model_ans, &gold_ans) {
         VerifyResult::correct()
     } else {
-        VerifyResult::wrong(format!(
-            "'{model_ans}' not equivalent to '{gold_ans}'"
-        ))
+        VerifyResult::wrong(format!("'{model_ans}' not equivalent to '{gold_ans}'"))
     }
 }
 
@@ -391,19 +389,13 @@ mod tests {
 
     #[test]
     fn verify_boxed_answer() {
-        let result = verify(
-            "Therefore $x = \\boxed{7}$.",
-            "\\boxed{7}",
-        );
+        let result = verify("Therefore $x = \\boxed{7}$.", "\\boxed{7}");
         assert_eq!(result.score, 1.0);
     }
 
     #[test]
     fn verify_frac_vs_decimal_answer() {
-        let result = verify(
-            "The probability is \\boxed{\\frac{3}{4}}.",
-            "0.75",
-        );
+        let result = verify("The probability is \\boxed{\\frac{3}{4}}.", "0.75");
         assert_eq!(result.score, 1.0);
     }
 
@@ -466,7 +458,10 @@ mod tests {
     fn adversarial_sqrt_equivalence() {
         assert!(math_equiv("sqrt{2}", "1.41421356"));
         assert!(math_equiv("sqrt(2)", "1.41421356"));
-        assert!(!math_equiv("sqrt{2}", "1.41"), "1.41 is too far from sqrt(2)");
+        assert!(
+            !math_equiv("sqrt{2}", "1.41"),
+            "1.41 is too far from sqrt(2)"
+        );
     }
 
     #[test]
@@ -482,7 +477,11 @@ mod tests {
         // Model writes wrong answer in \boxed{} but correct one in text
         let gold = "\\boxed{7}";
         let model = "The answer is clearly 7, so \\boxed{5}"; // boxed 5, not 7
-        assert_eq!(verify(model, gold).score, 0.0, "Should use boxed value (5), not text value (7)");
+        assert_eq!(
+            verify(model, gold).score,
+            0.0,
+            "Should use boxed value (5), not text value (7)"
+        );
     }
 
     #[test]
@@ -493,7 +492,11 @@ mod tests {
         assert_eq!(verify(model, gold).score, 1.0, "Should use last boxed");
 
         let model2 = "First \\boxed{42}, then \\boxed{10}";
-        assert_eq!(verify(model2, gold).score, 0.0, "Should use last boxed (10)");
+        assert_eq!(
+            verify(model2, gold).score,
+            0.0,
+            "Should use last boxed (10)"
+        );
     }
 
     #[test]
@@ -517,7 +520,10 @@ mod tests {
         let val = try_eval_number(&result);
         // Even if we can't evaluate it, it should NOT incorrectly match something else
         if let Some(v) = val {
-            assert!((v - 1.0/6.0).abs() < 0.01, "Nested frac should be 1/6, got {v}");
+            assert!(
+                (v - 1.0 / 6.0).abs() < 0.01,
+                "Nested frac should be 1/6, got {v}"
+            );
         }
     }
 

@@ -18,7 +18,10 @@ use super::VerifyResult;
 pub enum Constraint {
     /// Output must contain between min and max words
     #[serde(rename = "word_count")]
-    WordCount { min: Option<usize>, max: Option<usize> },
+    WordCount {
+        min: Option<usize>,
+        max: Option<usize>,
+    },
 
     /// Output must contain this exact string (case-insensitive)
     #[serde(rename = "must_include")]
@@ -83,12 +86,15 @@ pub fn check_constraint(output: &str, constraint: &Constraint) -> (bool, String)
     match constraint {
         Constraint::WordCount { min, max } => {
             let wc = word_count(output);
-            let min_ok = min.map_or(true, |m| wc >= m);
-            let max_ok = max.map_or(true, |m| wc <= m);
+            let min_ok = min.is_none_or(|m| wc >= m);
+            let max_ok = max.is_none_or(|m| wc <= m);
             if min_ok && max_ok {
                 (true, format!("word count {wc} in range"))
             } else {
-                (false, format!("word count {wc}, expected {:?}-{:?}", min, max))
+                (
+                    false,
+                    format!("word count {wc}, expected {:?}-{:?}", min, max),
+                )
             }
         }
         Constraint::MustInclude { text } => {
@@ -170,7 +176,10 @@ pub fn check_constraint(output: &str, constraint: &Constraint) -> (bool, String)
             if items >= *min_items {
                 (true, format!("{items} numbered items >= {min_items}"))
             } else {
-                (false, format!("{items} numbered items < required {min_items}"))
+                (
+                    false,
+                    format!("{items} numbered items < required {min_items}"),
+                )
             }
         }
         Constraint::BulletList { min_items } => {
@@ -178,7 +187,10 @@ pub fn check_constraint(output: &str, constraint: &Constraint) -> (bool, String)
             if items >= *min_items {
                 (true, format!("{items} bullet items >= {min_items}"))
             } else {
-                (false, format!("{items} bullet items < required {min_items}"))
+                (
+                    false,
+                    format!("{items} bullet items < required {min_items}"),
+                )
             }
         }
         Constraint::ExactCount { text, count } => {
@@ -188,7 +200,10 @@ pub fn check_constraint(output: &str, constraint: &Constraint) -> (bool, String)
             if actual == *count {
                 (true, format!("'{text}' appears {actual} times"))
             } else {
-                (false, format!("'{text}' appears {actual} times, expected {count}"))
+                (
+                    false,
+                    format!("'{text}' appears {actual} times, expected {count}"),
+                )
             }
         }
         Constraint::MinLines { count } => {
@@ -221,9 +236,10 @@ fn sentence_count(s: &str) -> usize {
     let chars: Vec<char> = s.chars().collect();
 
     // Common abbreviations that end with a period but aren't sentence boundaries
-    let abbrevs = ["mr.", "mrs.", "ms.", "dr.", "prof.", "sr.", "jr.",
-                   "vs.", "etc.", "inc.", "ltd.", "st.", "ave.",
-                   "i.e.", "e.g.", "u.s.", "u.k.", "a.m.", "p.m."];
+    let abbrevs = [
+        "mr.", "mrs.", "ms.", "dr.", "prof.", "sr.", "jr.", "vs.", "etc.", "inc.", "ltd.", "st.",
+        "ave.", "i.e.", "e.g.", "u.s.", "u.k.", "a.m.", "p.m.",
+    ];
 
     for (i, &c) in chars.iter().enumerate() {
         if (c == '.' || c == '!' || c == '?')
@@ -267,7 +283,7 @@ fn count_numbered_list_items(s: &str) -> usize {
             let trimmed = line.trim();
             // Match "1.", "2.", "10.", "1)", "2)", etc.
             trimmed.len() >= 2
-                && trimmed.chars().next().map_or(false, |c| c.is_ascii_digit())
+                && trimmed.chars().next().is_some_and(|c| c.is_ascii_digit())
                 && (trimmed.contains(". ") || trimmed.contains(") "))
         })
         .count()
@@ -277,9 +293,7 @@ fn count_bullet_list_items(s: &str) -> usize {
     s.lines()
         .filter(|line| {
             let trimmed = line.trim();
-            trimmed.starts_with("- ")
-                || trimmed.starts_with("* ")
-                || trimmed.starts_with("• ")
+            trimmed.starts_with("- ") || trimmed.starts_with("* ") || trimmed.starts_with("• ")
         })
         .count()
 }
@@ -314,7 +328,10 @@ pub fn verify(model_output: &str, constraints_json: &str) -> VerifyResult {
     } else {
         VerifyResult::partial(
             passed as f64 / total as f64,
-            format!("{passed}/{total} constraints met. Failed: {}", failures.join("; ")),
+            format!(
+                "{passed}/{total} constraints met. Failed: {}",
+                failures.join("; ")
+            ),
         )
     }
 }
@@ -323,7 +340,9 @@ pub fn verify(model_output: &str, constraints_json: &str) -> VerifyResult {
 mod tests {
     use super::*;
 
-    fn c(json: &str) -> String { json.to_string() }
+    fn c(json: &str) -> String {
+        json.to_string()
+    }
 
     // ========== Word Count ==========
 
@@ -462,7 +481,10 @@ mod tests {
     #[test]
     fn exact_count_constraint() {
         let constraints = c(r#"[{"type": "exact_count", "text": "the", "count": 3}]"#);
-        assert_eq!(verify("the cat and the dog ate the food", &constraints).score, 1.0);
+        assert_eq!(
+            verify("the cat and the dog ate the food", &constraints).score,
+            1.0
+        );
         assert_eq!(verify("the cat ate food", &constraints).score, 0.0);
     }
 
@@ -509,10 +531,18 @@ mod tests {
         // "Dr. Smith went to Washington." should be ONE sentence, not two
         let constraints = c(r#"[{"type": "max_sentences", "count": 1}]"#);
         let text = "Dr. Smith went to Washington.";
-        assert_eq!(verify(text, &constraints).score, 1.0, "Dr. should not count as sentence end");
+        assert_eq!(
+            verify(text, &constraints).score,
+            1.0,
+            "Dr. should not count as sentence end"
+        );
 
         let text2 = "Mr. Jones and Mrs. Smith met at St. Paul's.";
-        assert_eq!(verify(text2, &constraints).score, 1.0, "Abbreviations should not count");
+        assert_eq!(
+            verify(text2, &constraints).score,
+            1.0,
+            "Abbreviations should not count"
+        );
     }
 
     #[test]
@@ -520,7 +550,11 @@ mod tests {
         // "In 2024. The economy..." should NOT count as a numbered list item
         let constraints = c(r#"[{"type": "numbered_list", "min_items": 2}]"#);
         let text = "In 2024. The economy grew by 3%.";
-        assert_eq!(verify(text, &constraints).score, 0.0, "Year references should not count as list items");
+        assert_eq!(
+            verify(text, &constraints).score,
+            0.0,
+            "Year references should not count as list items"
+        );
     }
 
     #[test]
@@ -538,8 +572,11 @@ mod tests {
         // Actually in our current design, substring matching IS the intended behavior.
         // This is a known limitation — document it but don't "fix" it.
         let constraints = c(r#"[{"type": "must_include", "text": "cat"}]"#);
-        assert_eq!(verify("I have a concatenation problem.", &constraints).score, 1.0,
-            "Substring matching is intentional — matching IFEval behavior");
+        assert_eq!(
+            verify("I have a concatenation problem.", &constraints).score,
+            1.0,
+            "Substring matching is intentional — matching IFEval behavior"
+        );
     }
 
     #[test]
@@ -550,14 +587,20 @@ mod tests {
             {"type": "all_uppercase"}
         ]"#);
         let result = verify("", &constraints);
-        assert_eq!(result.score, 0.0, "Empty output should fail all constraints");
+        assert_eq!(
+            result.score, 0.0,
+            "Empty output should fail all constraints"
+        );
     }
 
     #[test]
     fn adversarial_unicode_in_constraints() {
         let constraints = c(r#"[{"type": "must_include", "text": "café"}]"#);
         assert_eq!(verify("I went to the café.", &constraints).score, 1.0);
-        assert_eq!(verify("I went to the cafe.", &constraints).score, 0.0,
-            "café ≠ cafe (accent matters)");
+        assert_eq!(
+            verify("I went to the cafe.", &constraints).score,
+            0.0,
+            "café ≠ cafe (accent matters)"
+        );
     }
 }

@@ -6,8 +6,8 @@
 //! Contains a lookup table of common conversion factors.
 //! Verification: compute the correct answer and compare.
 
-use std::collections::HashMap;
 use super::VerifyResult;
+use std::collections::HashMap;
 
 /// Build the conversion factor table.
 /// Key: (from_unit, to_unit), Value: multiply by this factor.
@@ -155,7 +155,13 @@ pub fn convert(value: f64, from: &str, to: &str) -> Option<f64> {
 }
 
 /// Verify a unit conversion answer.
-pub fn verify(value: f64, from: &str, to: &str, proposed_answer: f64, rel_tol: f64) -> VerifyResult {
+pub fn verify(
+    value: f64,
+    from: &str,
+    to: &str,
+    proposed_answer: f64,
+    rel_tol: f64,
+) -> VerifyResult {
     match convert(value, from, to) {
         Some(correct) => {
             let diff = (proposed_answer - correct).abs();

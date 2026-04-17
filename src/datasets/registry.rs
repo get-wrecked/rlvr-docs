@@ -79,7 +79,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: false,
             stage: Stage::Pre,
         },
-
         // ===== CODE =====
         DatasetEntry {
             name: "HumanEval",
@@ -126,7 +125,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: false,
             stage: Stage::Post,
         },
-
         // ===== QA =====
         DatasetEntry {
             name: "SQuAD 2.0 train",
@@ -191,7 +189,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: true,
             stage: Stage::Mid,
         },
-
         // ===== FACT VERIFICATION =====
         DatasetEntry {
             name: "FEVER",
@@ -211,7 +208,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: true,
             stage: Stage::Mid,
         },
-
         // ===== NLI & CLASSIFICATION =====
         DatasetEntry {
             name: "SNLI",
@@ -258,7 +254,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: true,
             stage: Stage::Mid,
         },
-
         // ===== COMMONSENSE & SCIENCE =====
         DatasetEntry {
             name: "HellaSwag",
@@ -314,7 +309,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: true,
             stage: Stage::Mid,
         },
-
         // ===== MEDICAL =====
         DatasetEntry {
             name: "MedQA (USMLE)",
@@ -325,7 +319,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: true,
             stage: Stage::Post,
         },
-
         // ===== LOGIC & GAMES =====
         DatasetEntry {
             name: "Lichess Puzzles",
@@ -345,7 +338,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: true,
             stage: Stage::Pre,
         },
-
         // ===== INSTRUCTION FOLLOWING =====
         DatasetEntry {
             name: "IFEval",
@@ -356,7 +348,6 @@ pub fn all_datasets() -> Vec<DatasetEntry> {
             downloaded: true,
             stage: Stage::Mid,
         },
-
         // ===== PROCEDURAL (UNLIMITED) =====
         DatasetEntry {
             name: "Unit Conversion (generated)",
@@ -435,12 +426,18 @@ pub fn print_summary() {
     println!("Pending:    {} datasets", pending.len());
     println!();
 
-    let total_problems: usize = downloaded.iter().map(|d| match d.problems {
-        EstimatedSize::Exact(n) | EstimatedSize::Approximate(n) => n,
-        EstimatedSize::Unlimited => 0,
-    }).sum();
+    let total_problems: usize = downloaded
+        .iter()
+        .map(|d| match d.problems {
+            EstimatedSize::Exact(n) | EstimatedSize::Approximate(n) => n,
+            EstimatedSize::Unlimited => 0,
+        })
+        .sum();
 
-    let procedural: usize = downloaded.iter().filter(|d| matches!(d.problems, EstimatedSize::Unlimited)).count();
+    let procedural: usize = downloaded
+        .iter()
+        .filter(|d| matches!(d.problems, EstimatedSize::Unlimited))
+        .count();
 
     println!("Total downloaded problems: ~{}", total_problems);
     println!("Procedural generators:     {} (unlimited)", procedural);
@@ -461,20 +458,32 @@ mod tests {
     #[test]
     fn registry_has_entries() {
         let datasets = all_datasets();
-        assert!(datasets.len() >= 30, "Should have at least 30 dataset entries");
+        assert!(
+            datasets.len() >= 30,
+            "Should have at least 30 dataset entries"
+        );
     }
 
     #[test]
     fn all_verifiers_have_datasets() {
         let datasets = all_datasets();
-        let verifiers: std::collections::HashSet<&str> = datasets.iter().map(|d| d.verifier).collect();
+        let verifiers: std::collections::HashSet<&str> =
+            datasets.iter().map(|d| d.verifier).collect();
 
         // Every implemented verifier should have at least one dataset
         for expected in &[
-            "math_numerical", "math_equivalence", "exact_match",
-            "instruction_following", "code_execution", "sudoku",
-            "regex_synthesis", "json_schema", "unit_conversion",
-            "date_time", "chemical_equation", "sql_execution",
+            "math_numerical",
+            "math_equivalence",
+            "exact_match",
+            "instruction_following",
+            "code_execution",
+            "sudoku",
+            "regex_synthesis",
+            "json_schema",
+            "unit_conversion",
+            "date_time",
+            "chemical_equation",
+            "sql_execution",
             "graph_properties",
         ] {
             assert!(
@@ -494,7 +503,8 @@ mod tests {
                 assert!(
                     path.exists(),
                     "Dataset '{}' marked as downloaded but file missing: {}",
-                    d.name, d.path
+                    d.name,
+                    d.path
                 );
             }
         }

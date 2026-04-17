@@ -46,7 +46,11 @@ mod tests {
         }
 
         let problems = load(path).expect("failed to load GSM8K");
-        assert_eq!(problems.len(), 1319, "GSM8K test set should have 1319 problems");
+        assert_eq!(
+            problems.len(),
+            1319,
+            "GSM8K test set should have 1319 problems"
+        );
 
         // Verify we can extract gold answers from ALL problems
         let mut extract_failures = Vec::new();
@@ -92,7 +96,8 @@ mod tests {
             let model_output = format!("The answer is {gold}\n#### {gold}");
             let result = crate::verifiers::math_numerical::verify(&model_output, &problem.answer);
             assert_eq!(
-                result.score, 1.0,
+                result.score,
+                1.0,
                 "Correct answer should score 1.0 for: {}",
                 &problem.question[..50.min(problem.question.len())]
             );
@@ -130,7 +135,8 @@ mod tests {
         }
 
         let problems = load(path).unwrap();
-        let answers: Vec<f64> = problems.iter()
+        let answers: Vec<f64> = problems
+            .iter()
             .filter_map(|p| extract_gold_answer(&p.answer))
             .collect();
 
@@ -145,7 +151,13 @@ mod tests {
         // GSM8K answers range from small negatives to large positives
         assert!(min < 0.0 || min >= 0.0, "min should be a number"); // just not NaN
         assert!(max > 0.0, "max should be positive");
-        assert!(mean > 0.0, "mean should be positive (most answers are positive)");
-        eprintln!("GSM8K answer stats: min={min}, max={max}, mean={mean:.1}, n={}", answers.len());
+        assert!(
+            mean > 0.0,
+            "mean should be positive (most answers are positive)"
+        );
+        eprintln!(
+            "GSM8K answer stats: min={min}, max={max}, mean={mean:.1}, n={}",
+            answers.len()
+        );
     }
 }
