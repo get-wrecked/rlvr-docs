@@ -5,10 +5,11 @@
 //!
 //! This is a pure execution-based verifier: compile the regex, test against examples.
 
-use regex::Regex;
 use super::VerifyResult;
+use regex::Regex;
 
 /// A regex synthesis task: positive and negative examples.
+#[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
 pub struct RegexTask {
     pub positive: Vec<String>,
     pub negative: Vec<String>,
@@ -21,10 +22,9 @@ pub struct RegexTask {
 /// 3. NOT match ANY negative examples
 pub fn verify(task: &RegexTask, proposed_regex: &str) -> VerifyResult {
     // Compile the regex
-    let re = match Regex::new(proposed_regex) {
-        Ok(r) => r,
-        Err(e) => return VerifyResult::wrong(format!("regex compile error: {e}")),
-    };
+    if let Err(e) = Regex::new(proposed_regex) {
+        return VerifyResult::wrong(format!("regex compile error: {e}"));
+    }
 
     // Wrap in anchors for full-string matching if not already anchored
     let anchored_pattern = if proposed_regex.starts_with('^') && proposed_regex.ends_with('$') {
@@ -105,30 +105,24 @@ mod tests {
     #[test]
     fn email_regex_too_broad_catches_spaces() {
         // .+@.+\..+ matches "spaces here@x.c" — verifier correctly catches this
-        let t = task(
-            &["a@b.c"],
-            &["spaces here@x.c"],
-        );
+        let t = task(&["a@b.c"], &["spaces here@x.c"]);
         let result = verify(&t, r".+@.+\..+");
-        assert!(result.score < 1.0, "Regex that matches negative example should fail");
+        assert!(
+            result.score < 1.0,
+            "Regex that matches negative example should fail"
+        );
     }
 
     #[test]
     fn digit_pattern() {
-        let t = task(
-            &["123", "456", "789", "000"],
-            &["abc", "12", "1234", "12a"],
-        );
+        let t = task(&["123", "456", "789", "000"], &["abc", "12", "1234", "12a"]);
         let result = verify(&t, r"\d{3}");
         assert_eq!(result.score, 1.0);
     }
 
     #[test]
     fn wrong_regex_gets_zero() {
-        let t = task(
-            &["abc", "def"],
-            &["123", "456"],
-        );
+        let t = task(&["abc", "def"], &["123", "456"]);
         // This regex matches digits, not letters — should fail on all examples
         let result = verify(&t, r"\d+");
         assert_eq!(result.score, 0.0);
@@ -136,10 +130,7 @@ mod tests {
 
     #[test]
     fn partial_credit() {
-        let t = task(
-            &["cat", "car", "cap"],
-            &["dog", "bat"],
-        );
+        let t = task(&["cat", "car", "cap"], &["dog", "bat"]);
         // "ca." matches all positives but also matches "cab" etc — doesn't affect neg examples here
         // "cat" only matches "cat" out of positives
         let result = verify(&t, "cat");
@@ -176,10 +167,7 @@ mod tests {
 
     #[test]
     fn already_anchored_regex() {
-        let t = task(
-            &["hello"],
-            &["hello world"],
-        );
+        let t = task(&["hello"], &["hello world"]);
         let result = verify(&t, "^hello$");
         assert_eq!(result.score, 1.0);
     }
@@ -189,10 +177,7 @@ mod tests {
     #[test]
     fn antihardcode_different_tasks_different_regex() {
         // Task 1: match hex strings
-        let t1 = task(
-            &["0a", "ff", "1b", "00"],
-            &["gg", "zz", "0x", ""],
-        );
+        let t1 = task(&["0a", "ff", "1b", "00"], &["gg", "zz", "0x", ""]);
         assert_eq!(verify(&t1, "[0-9a-f]{2}").score, 1.0);
         assert!(verify(&t1, "[a-z]{2}").score < 1.0); // doesn't match "00"
 

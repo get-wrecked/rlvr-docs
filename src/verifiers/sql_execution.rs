@@ -9,8 +9,8 @@
 //! 3. Execute the model's query
 //! 4. Compare result sets (order-insensitive unless ORDER BY specified)
 
-use std::process::Command;
 use super::VerifyResult;
+use std::process::Command;
 
 /// Execute a SQL query against a SQLite database and return the output.
 fn execute_sqlite(db_setup: &str, query: &str) -> Result<String, String> {
@@ -73,7 +73,9 @@ fn compare_results(actual: &[Vec<String>], expected: &[Vec<String>]) -> (usize, 
     }
 
     let total = expected.len();
-    let matching = actual.iter().zip(expected.iter())
+    let matching = actual
+        .iter()
+        .zip(expected.iter())
         .filter(|(a, e)| a == e)
         .count();
 
@@ -198,7 +200,9 @@ mod tests {
 
     #[test]
     fn verify_correct_query() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let result = verify(
             SETUP,
             "SELECT name FROM employees WHERE dept = 'Engineering' ORDER BY name;",
@@ -209,7 +213,9 @@ mod tests {
 
     #[test]
     fn verify_equivalent_query() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         // Different SQL, same result
         let result = verify(
             SETUP,
@@ -221,7 +227,9 @@ mod tests {
 
     #[test]
     fn verify_wrong_query() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let result = verify(
             SETUP,
             "SELECT name FROM employees WHERE dept = 'Engineering';",
@@ -232,7 +240,9 @@ mod tests {
 
     #[test]
     fn verify_aggregate_query() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let result = verify(
             SETUP,
             "SELECT dept, AVG(salary) FROM employees GROUP BY dept;",
@@ -243,7 +253,9 @@ mod tests {
 
     #[test]
     fn verify_count_query() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let result = verify(
             SETUP,
             "SELECT COUNT(*) FROM employees;",
@@ -254,7 +266,9 @@ mod tests {
 
     #[test]
     fn verify_syntax_error_in_model() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let result = verify(
             SETUP,
             "SELECT * FROM employees;",
@@ -265,13 +279,11 @@ mod tests {
 
     #[test]
     fn verify_sql_in_markdown() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let model_output = "The answer is:\n```sql\nSELECT COUNT(*) FROM employees;\n```";
-        let result = verify(
-            SETUP,
-            "SELECT COUNT(*) FROM employees;",
-            model_output,
-        );
+        let result = verify(SETUP, "SELECT COUNT(*) FROM employees;", model_output);
         assert_eq!(result.score, 1.0);
     }
 
@@ -279,44 +291,67 @@ mod tests {
 
     #[test]
     fn antihardcode_different_queries() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
 
         // Correct query for "how many engineers?"
-        assert_eq!(verify(
-            SETUP,
-            "SELECT COUNT(*) FROM employees WHERE dept = 'Engineering';",
-            "SELECT COUNT(*) FROM employees WHERE dept = 'Engineering';",
-        ).score, 1.0);
+        assert_eq!(
+            verify(
+                SETUP,
+                "SELECT COUNT(*) FROM employees WHERE dept = 'Engineering';",
+                "SELECT COUNT(*) FROM employees WHERE dept = 'Engineering';",
+            )
+            .score,
+            1.0
+        );
 
         // Wrong query (counts Marketing=1 instead of Engineering=2)
-        assert!(verify(
-            SETUP,
-            "SELECT COUNT(*) FROM employees WHERE dept = 'Engineering';",
-            "SELECT COUNT(*) FROM employees WHERE dept = 'Marketing';",
-        ).score < 1.0);
+        assert!(
+            verify(
+                SETUP,
+                "SELECT COUNT(*) FROM employees WHERE dept = 'Engineering';",
+                "SELECT COUNT(*) FROM employees WHERE dept = 'Marketing';",
+            )
+            .score
+                < 1.0
+        );
     }
 
     // ========== ADVERSARIAL ==========
 
     #[test]
     fn adversarial_null_handling() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let setup = "CREATE TABLE t (x INT); INSERT INTO t VALUES (1), (NULL), (3);";
         let result = verify(setup, "SELECT COUNT(*) FROM t;", "SELECT COUNT(x) FROM t;");
-        assert!(result.score < 1.0, "COUNT(*) counts NULLs, COUNT(x) doesn't");
+        assert!(
+            result.score < 1.0,
+            "COUNT(*) counts NULLs, COUNT(x) doesn't"
+        );
     }
 
     #[test]
     fn adversarial_empty_result_match() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let setup = "CREATE TABLE t (x INT); INSERT INTO t VALUES (1), (2);";
-        let result = verify(setup, "SELECT x FROM t WHERE x > 10;", "SELECT x FROM t WHERE x > 10;");
+        let result = verify(
+            setup,
+            "SELECT x FROM t WHERE x > 10;",
+            "SELECT x FROM t WHERE x > 10;",
+        );
         assert_eq!(result.score, 1.0, "Both empty results should match");
     }
 
     #[test]
     fn adversarial_order_insensitive() {
-        if !has_sqlite() { return; }
+        if !has_sqlite() {
+            return;
+        }
         let setup = "CREATE TABLE t (x INT); INSERT INTO t VALUES (3), (1), (2);";
         // Same data, might come in different order — should match
         let result = verify(setup, "SELECT x FROM t;", "SELECT x FROM t;");

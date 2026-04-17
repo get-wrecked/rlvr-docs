@@ -3,8 +3,8 @@
 //! Verifies date/time calculations: days between dates, day of week,
 //! timezone conversions, date arithmetic.
 
-use chrono::{NaiveDate, Datelike, Weekday};
 use super::VerifyResult;
+use chrono::{Datelike, NaiveDate};
 
 /// Compute days between two dates.
 pub fn days_between(date1: &str, date2: &str) -> Option<i64> {
@@ -60,7 +60,7 @@ pub fn verify(task_type: &str, params: &serde_json::Value, proposed_answer: &str
                     let correct_lower = correct.to_lowercase();
                     // Accept full name or abbreviation
                     if proposed == correct_lower
-                        || proposed == &correct_lower[..3]
+                        || proposed == correct_lower[..3]
                         || proposed.starts_with(&correct_lower[..3])
                     {
                         VerifyResult::correct()
@@ -183,9 +183,18 @@ mod tests {
 
     #[test]
     fn verify_leap_year() {
-        assert_eq!(verify("leap_year", &json!({"year": 2024}), "true").score, 1.0);
-        assert_eq!(verify("leap_year", &json!({"year": 2023}), "false").score, 1.0);
-        assert_eq!(verify("leap_year", &json!({"year": 2024}), "false").score, 0.0);
+        assert_eq!(
+            verify("leap_year", &json!({"year": 2024}), "true").score,
+            1.0
+        );
+        assert_eq!(
+            verify("leap_year", &json!({"year": 2023}), "false").score,
+            1.0
+        );
+        assert_eq!(
+            verify("leap_year", &json!({"year": 2024}), "false").score,
+            0.0
+        );
     }
 
     // ========== Anti-Hardcoding ==========
@@ -205,7 +214,10 @@ mod tests {
 
     #[test]
     fn adversarial_century_leap_years() {
-        assert!(!is_leap_year(1900), "1900 is NOT leap (div by 100, not 400)");
+        assert!(
+            !is_leap_year(1900),
+            "1900 is NOT leap (div by 100, not 400)"
+        );
         assert!(is_leap_year(2000), "2000 IS leap (div by 400)");
         assert!(!is_leap_year(2100), "2100 is NOT leap");
     }
@@ -218,12 +230,20 @@ mod tests {
     #[test]
     fn adversarial_wrong_day_of_week() {
         let params = json!({"date": "2024-01-01"});
-        assert_eq!(verify("day_of_week", &params, "Tuesday").score, 0.0, "Jan 1 2024 was Monday");
+        assert_eq!(
+            verify("day_of_week", &params, "Tuesday").score,
+            0.0,
+            "Jan 1 2024 was Monday"
+        );
         assert_eq!(verify("day_of_week", &params, "Friday").score, 0.0);
     }
 
     #[test]
     fn adversarial_invalid_date() {
-        assert_eq!(days_between("2024-02-30", "2024-03-01"), None, "Feb 30 doesn't exist");
+        assert_eq!(
+            days_between("2024-02-30", "2024-03-01"),
+            None,
+            "Feb 30 doesn't exist"
+        );
     }
 }

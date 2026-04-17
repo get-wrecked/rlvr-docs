@@ -6,11 +6,11 @@
 //! Verification: compile/run the code, execute test cases, compare outputs.
 //! This covers: code-generation, code-repair, code-translation, data-wrangling, etc.
 
+use super::VerifyResult;
 use std::io::Write;
 use std::process::{Command, Stdio};
 use std::time::Duration;
 use wait_timeout::ChildExt;
-use super::VerifyResult;
 
 /// A single test case for code verification.
 #[derive(Debug, Clone, serde::Deserialize, serde::Serialize)]
@@ -101,7 +101,9 @@ pub fn execute_code(code: &str, stdin_input: &str, config: &ExecConfig) -> ExecR
     // Wait with timeout
     match child.wait_timeout(config.timeout) {
         Ok(Some(status)) => {
-            let stdout = child.stdout.take()
+            let stdout = child
+                .stdout
+                .take()
                 .and_then(|mut o| {
                     let mut buf = Vec::new();
                     std::io::Read::read_to_end(&mut o, &mut buf).ok()?;
@@ -110,7 +112,9 @@ pub fn execute_code(code: &str, stdin_input: &str, config: &ExecConfig) -> ExecR
                 })
                 .unwrap_or_default();
 
-            let stderr = child.stderr.take()
+            let stderr = child
+                .stderr
+                .take()
                 .and_then(|mut e| {
                     let mut buf = Vec::new();
                     std::io::Read::read_to_end(&mut e, &mut buf).ok()?;
@@ -207,12 +211,6 @@ fn build_python_harness(code: &str, function_name: &str, test_cases: &[TestCase]
     harness
 }
 
-/// Build a simpler harness: code reads from stdin, writes to stdout.
-/// Each test case is run separately.
-fn build_stdin_stdout_harness(code: &str) -> String {
-    code.to_string()
-}
-
 /// Verify model-generated code against test cases.
 ///
 /// `function_name`: if Some, wrap in a function-call harness.
@@ -255,7 +253,7 @@ fn verify_function_mode(
     // A non-zero exit code is okay if we still get valid JSON on stderr
 
     // Parse JSON results from stderr (where the harness writes them)
-    let results: Vec<serde_json::Value> = match serde_json::from_str(&result.stderr.trim()) {
+    let results: Vec<serde_json::Value> = match serde_json::from_str(result.stderr.trim()) {
         Ok(r) => r,
         Err(e) => {
             // If we can't parse stderr, check if it was a runtime error
@@ -266,14 +264,17 @@ fn verify_function_mode(
                     truncate(&result.stderr, 200)
                 ));
             }
-            return VerifyResult::wrong(format!("failed to parse test results: {e}. stderr: {}", truncate(&result.stderr, 200)));
+            return VerifyResult::wrong(format!(
+                "failed to parse test results: {e}. stderr: {}",
+                truncate(&result.stderr, 200)
+            ));
         }
     };
 
     let mut passed = 0;
     let total = test_cases.len();
 
-    for (i, (tc, res)) in test_cases.iter().zip(results.iter()).enumerate() {
+    for (tc, res) in test_cases.iter().zip(results.iter()) {
         let did_pass = res.get("pass").and_then(|v| v.as_bool()).unwrap_or(false);
         if did_pass {
             if let Some(output) = res.get("output").and_then(|v| v.as_str()) {
@@ -294,11 +295,7 @@ fn verify_function_mode(
     }
 }
 
-fn verify_stdio_mode(
-    code: &str,
-    test_cases: &[TestCase],
-    config: &ExecConfig,
-) -> VerifyResult {
+fn verify_stdio_mode(code: &str, test_cases: &[TestCase], config: &ExecConfig) -> VerifyResult {
     let mut passed = 0;
     let total = test_cases.len();
 
@@ -310,7 +307,7 @@ fn verify_stdio_mode(
         if result.exit_code != Some(0) {
             continue;
         }
-        if outputs_match(&result.stdout.trim(), &tc.expected_output.trim()) {
+        if outputs_match(result.stdout.trim(), tc.expected_output.trim()) {
             passed += 1;
         }
     }
@@ -351,7 +348,11 @@ fn outputs_match(actual: &str, expected: &str) -> bool {
 }
 
 fn truncate(s: &str, max: usize) -> &str {
-    if s.len() <= max { s } else { &s[..max] }
+    if s.len() <= max {
+        s
+    } else {
+        &s[..max]
+    }
 }
 
 #[cfg(test)]
@@ -370,7 +371,10 @@ mod tests {
     #[test]
     fn extract_from_python_block() {
         let output = "Here's the solution:\n```python\ndef add(a, b):\n    return a + b\n```";
-        assert_eq!(extract_code(output, Language::Python), "def add(a, b):\n    return a + b");
+        assert_eq!(
+            extract_code(output, Language::Python),
+            "def add(a, b):\n    return a + b"
+        );
     }
 
     #[test]
@@ -426,9 +430,18 @@ mod tests {
     fn verify_stdio_correct() {
         let code = "n = int(input())\nprint(n * 2)";
         let tests = vec![
-            TestCase { input: "5".into(), expected_output: "10".into() },
-            TestCase { input: "0".into(), expected_output: "0".into() },
-            TestCase { input: "100".into(), expected_output: "200".into() },
+            TestCase {
+                input: "5".into(),
+                expected_output: "10".into(),
+            },
+            TestCase {
+                input: "0".into(),
+                expected_output: "0".into(),
+            },
+            TestCase {
+                input: "100".into(),
+                expected_output: "200".into(),
+            },
         ];
         let result = verify(code, &tests, None, &default_config());
         assert_eq!(result.score, 1.0);
@@ -437,9 +450,10 @@ mod tests {
     #[test]
     fn verify_stdio_wrong() {
         let code = "n = int(input())\nprint(n + 1)"; // adds 1 instead of doubling
-        let tests = vec![
-            TestCase { input: "5".into(), expected_output: "10".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "5".into(),
+            expected_output: "10".into(),
+        }];
         let result = verify(code, &tests, None, &default_config());
         assert_eq!(result.score, 0.0);
     }
@@ -448,8 +462,14 @@ mod tests {
     fn verify_stdio_partial() {
         let code = "n = int(input())\nprint(n * 2)";
         let tests = vec![
-            TestCase { input: "5".into(), expected_output: "10".into() },  // pass
-            TestCase { input: "3".into(), expected_output: "7".into() },   // fail (6 != 7)
+            TestCase {
+                input: "5".into(),
+                expected_output: "10".into(),
+            }, // pass
+            TestCase {
+                input: "3".into(),
+                expected_output: "7".into(),
+            }, // fail (6 != 7)
         ];
         let result = verify(code, &tests, None, &default_config());
         assert!((result.score - 0.5).abs() < 0.01);
@@ -461,9 +481,18 @@ mod tests {
     fn verify_function_correct() {
         let code = "def add(a, b):\n    return a + b";
         let tests = vec![
-            TestCase { input: "[2, 3]".into(), expected_output: "5".into() },
-            TestCase { input: "[0, 0]".into(), expected_output: "0".into() },
-            TestCase { input: "[-1, 1]".into(), expected_output: "0".into() },
+            TestCase {
+                input: "[2, 3]".into(),
+                expected_output: "5".into(),
+            },
+            TestCase {
+                input: "[0, 0]".into(),
+                expected_output: "0".into(),
+            },
+            TestCase {
+                input: "[-1, 1]".into(),
+                expected_output: "0".into(),
+            },
         ];
         let result = verify(code, &tests, Some("add"), &default_config());
         assert_eq!(result.score, 1.0);
@@ -472,9 +501,10 @@ mod tests {
     #[test]
     fn verify_function_wrong() {
         let code = "def add(a, b):\n    return a - b"; // subtract instead of add
-        let tests = vec![
-            TestCase { input: "[2, 3]".into(), expected_output: "5".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[2, 3]".into(),
+            expected_output: "5".into(),
+        }];
         let result = verify(code, &tests, Some("add"), &default_config());
         assert_eq!(result.score, 0.0);
     }
@@ -485,8 +515,14 @@ mod tests {
     fn verify_with_markdown_code_block() {
         let model_output = "Here's my solution:\n```python\ndef double(n):\n    return n * 2\n```";
         let tests = vec![
-            TestCase { input: "[5]".into(), expected_output: "10".into() },
-            TestCase { input: "[0]".into(), expected_output: "0".into() },
+            TestCase {
+                input: "[5]".into(),
+                expected_output: "10".into(),
+            },
+            TestCase {
+                input: "[0]".into(),
+                expected_output: "0".into(),
+            },
         ];
         let result = verify(model_output, &tests, Some("double"), &default_config());
         assert_eq!(result.score, 1.0);
@@ -498,12 +534,19 @@ mod tests {
     fn antihardcode_different_functions_different_results() {
         let correct_code = "def f(x): return x * 2";
         let wrong_code = "def f(x): return x * 3";
-        let tests = vec![
-            TestCase { input: "[5]".into(), expected_output: "10".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[5]".into(),
+            expected_output: "10".into(),
+        }];
 
-        assert_eq!(verify(correct_code, &tests, Some("f"), &default_config()).score, 1.0);
-        assert_eq!(verify(wrong_code, &tests, Some("f"), &default_config()).score, 0.0);
+        assert_eq!(
+            verify(correct_code, &tests, Some("f"), &default_config()).score,
+            1.0
+        );
+        assert_eq!(
+            verify(wrong_code, &tests, Some("f"), &default_config()).score,
+            0.0
+        );
     }
 
     #[test]
@@ -517,20 +560,44 @@ def fizzbuzz(n):
     return str(n)
 "#;
         let fb_tests = vec![
-            TestCase { input: "[3]".into(), expected_output: "Fizz".into() },
-            TestCase { input: "[5]".into(), expected_output: "Buzz".into() },
-            TestCase { input: "[15]".into(), expected_output: "FizzBuzz".into() },
-            TestCase { input: "[7]".into(), expected_output: "7".into() },
+            TestCase {
+                input: "[3]".into(),
+                expected_output: "Fizz".into(),
+            },
+            TestCase {
+                input: "[5]".into(),
+                expected_output: "Buzz".into(),
+            },
+            TestCase {
+                input: "[15]".into(),
+                expected_output: "FizzBuzz".into(),
+            },
+            TestCase {
+                input: "[7]".into(),
+                expected_output: "7".into(),
+            },
         ];
-        assert_eq!(verify(fizzbuzz, &fb_tests, Some("fizzbuzz"), &default_config()).score, 1.0);
+        assert_eq!(
+            verify(fizzbuzz, &fb_tests, Some("fizzbuzz"), &default_config()).score,
+            1.0
+        );
 
         // Problem 2: Reverse string
         let reverse = "def reverse(s): return s[::-1]";
         let rev_tests = vec![
-            TestCase { input: "[\"hello\"]".into(), expected_output: "olleh".into() },
-            TestCase { input: "[\"abc\"]".into(), expected_output: "cba".into() },
+            TestCase {
+                input: "[\"hello\"]".into(),
+                expected_output: "olleh".into(),
+            },
+            TestCase {
+                input: "[\"abc\"]".into(),
+                expected_output: "cba".into(),
+            },
         ];
-        assert_eq!(verify(reverse, &rev_tests, Some("reverse"), &default_config()).score, 1.0);
+        assert_eq!(
+            verify(reverse, &rev_tests, Some("reverse"), &default_config()).score,
+            1.0
+        );
     }
 
     // ========== HumanEval-style Problem ==========
@@ -576,11 +643,15 @@ def add(a, b):
     return a + b
 print("Function defined!")
 "#;
-        let tests = vec![
-            TestCase { input: "[2, 3]".into(), expected_output: "5".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[2, 3]".into(),
+            expected_output: "5".into(),
+        }];
         let result = verify(code, &tests, Some("add"), &default_config());
-        assert_eq!(result.score, 1.0, "Print statements should not break function mode");
+        assert_eq!(
+            result.score, 1.0,
+            "Print statements should not break function mode"
+        );
     }
 
     #[test]
@@ -589,16 +660,24 @@ print("Function defined!")
         // This SHOULD pass (we can't distinguish hardcoding from real computation)
         // But with held-out tests it would fail
         let code = "def f(x): return 10";
-        let tests = vec![
-            TestCase { input: "[5]".into(), expected_output: "10".into() },
-        ];
-        assert_eq!(verify(code, &tests, Some("f"), &default_config()).score, 1.0);
+        let tests = vec![TestCase {
+            input: "[5]".into(),
+            expected_output: "10".into(),
+        }];
+        assert_eq!(
+            verify(code, &tests, Some("f"), &default_config()).score,
+            1.0
+        );
 
         // But it fails on a different input
-        let tests2 = vec![
-            TestCase { input: "[3]".into(), expected_output: "6".into() },
-        ];
-        assert_eq!(verify(code, &tests2, Some("f"), &default_config()).score, 0.0);
+        let tests2 = vec![TestCase {
+            input: "[3]".into(),
+            expected_output: "6".into(),
+        }];
+        assert_eq!(
+            verify(code, &tests2, Some("f"), &default_config()).score,
+            0.0
+        );
     }
 
     #[test]
@@ -606,9 +685,10 @@ print("Function defined!")
         // Model tries to import os — this should still work (we sandbox via env/cwd)
         // but shouldn't be able to do damage
         let code = "import os\ndef f(x): return x * 2";
-        let tests = vec![
-            TestCase { input: "[5]".into(), expected_output: "10".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[5]".into(),
+            expected_output: "10".into(),
+        }];
         let result = verify(code, &tests, Some("f"), &default_config());
         assert_eq!(result.score, 1.0, "Import os is allowed, just sandboxed");
     }
@@ -631,9 +711,10 @@ print("Function defined!")
     fn adversarial_exception_in_function() {
         // Function raises an exception — should score 0, not crash the verifier
         let code = "def f(x): raise ValueError('nope')";
-        let tests = vec![
-            TestCase { input: "[5]".into(), expected_output: "10".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[5]".into(),
+            expected_output: "10".into(),
+        }];
         let result = verify(code, &tests, Some("f"), &default_config());
         assert_eq!(result.score, 0.0, "Exception should score 0");
     }
@@ -642,9 +723,10 @@ print("Function defined!")
     fn adversarial_wrong_function_name() {
         // Model defines a different function name than expected
         let code = "def add(a, b): return a + b";
-        let tests = vec![
-            TestCase { input: "[2, 3]".into(), expected_output: "5".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[2, 3]".into(),
+            expected_output: "5".into(),
+        }];
         // Looking for function "multiply" but code defines "add"
         let result = verify(code, &tests, Some("multiply"), &default_config());
         assert_eq!(result.score, 0.0, "Wrong function name should fail");
@@ -654,18 +736,20 @@ print("Function defined!")
     fn adversarial_none_return() {
         // Function returns None when it should return a value
         let code = "def f(x): pass";
-        let tests = vec![
-            TestCase { input: "[5]".into(), expected_output: "10".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[5]".into(),
+            expected_output: "10".into(),
+        }];
         let result = verify(code, &tests, Some("f"), &default_config());
         assert_eq!(result.score, 0.0, "None != 10");
     }
 
     #[test]
     fn adversarial_empty_code() {
-        let tests = vec![
-            TestCase { input: "[5]".into(), expected_output: "10".into() },
-        ];
+        let tests = vec![TestCase {
+            input: "[5]".into(),
+            expected_output: "10".into(),
+        }];
         let result = verify("", &tests, Some("f"), &default_config());
         assert_eq!(result.score, 0.0, "Empty code should fail");
     }

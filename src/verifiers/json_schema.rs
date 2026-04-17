@@ -7,8 +7,8 @@
 //! 1. Is it valid JSON? (partial credit)
 //! 2. Does it conform to the schema? (full credit)
 
-use serde_json::Value;
 use super::VerifyResult;
+use serde_json::Value;
 
 /// A simplified JSON schema for verification.
 /// We implement a subset of JSON Schema that covers common RLVR tasks.
@@ -54,14 +54,22 @@ fn validate_inner(value: &Value, schema: &Schema, path: &str, errors: &mut Vec<S
         "array" => value.is_array(),
         "string" => value.is_string(),
         "number" => value.is_number(),
-        "integer" => value.is_i64() || value.is_u64() || (value.is_f64() && value.as_f64().map_or(false, |f| f == f.round())),
+        "integer" => {
+            value.is_i64()
+                || value.is_u64()
+                || (value.is_f64() && value.as_f64().is_some_and(|f| f == f.round()))
+        }
         "boolean" => value.is_boolean(),
         "null" => value.is_null(),
         _ => true,
     };
 
     if !type_ok {
-        errors.push(format!("{path}: expected type '{}', got {}", schema.schema_type, value_type_name(value)));
+        errors.push(format!(
+            "{path}: expected type '{}', got {}",
+            schema.schema_type,
+            value_type_name(value)
+        ));
         return; // Don't check sub-constraints if type is wrong
     }
 
@@ -93,12 +101,18 @@ fn validate_inner(value: &Value, schema: &Schema, path: &str, errors: &mut Vec<S
     if let (Some(items_schema), Some(arr)) = (&schema.items, value.as_array()) {
         if let Some(min) = schema.min_items {
             if arr.len() < min {
-                errors.push(format!("{path}: array has {} items, minimum is {min}", arr.len()));
+                errors.push(format!(
+                    "{path}: array has {} items, minimum is {min}",
+                    arr.len()
+                ));
             }
         }
         if let Some(max) = schema.max_items {
             if arr.len() > max {
-                errors.push(format!("{path}: array has {} items, maximum is {max}", arr.len()));
+                errors.push(format!(
+                    "{path}: array has {} items, maximum is {max}",
+                    arr.len()
+                ));
             }
         }
         for (i, item) in arr.iter().enumerate() {
@@ -189,7 +203,10 @@ pub fn verify(model_output: &str, schema_json: &str) -> VerifyResult {
         } else {
             0.2 // Valid JSON but no schema constraints to check
         };
-        VerifyResult::partial(score, format!("{} violations: {}", errors.len(), errors.join("; ")))
+        VerifyResult::partial(
+            score,
+            format!("{} violations: {}", errors.len(), errors.join("; ")),
+        )
     }
 }
 
@@ -207,7 +224,10 @@ fn extract_json(text: &str) -> &str {
     if let Some(start) = trimmed.find("```") {
         let after_marker = &trimmed[start + 3..];
         // Skip optional language tag on same line
-        let after_newline = after_marker.find('\n').map(|i| &after_marker[i + 1..]).unwrap_or(after_marker);
+        let after_newline = after_marker
+            .find('\n')
+            .map(|i| &after_marker[i + 1..])
+            .unwrap_or(after_marker);
         if let Some(end) = after_newline.find("```") {
             return after_newline[..end].trim();
         }
@@ -241,14 +261,30 @@ fn count_schema_checks(schema: &Schema) -> usize {
     if let Some(items) = &schema.items {
         count += count_schema_checks(items);
     }
-    if schema.minimum.is_some() { count += 1; }
-    if schema.maximum.is_some() { count += 1; }
-    if schema.min_length.is_some() { count += 1; }
-    if schema.max_length.is_some() { count += 1; }
-    if schema.min_items.is_some() { count += 1; }
-    if schema.max_items.is_some() { count += 1; }
-    if schema.enum_values.is_some() { count += 1; }
-    if schema.pattern.is_some() { count += 1; }
+    if schema.minimum.is_some() {
+        count += 1;
+    }
+    if schema.maximum.is_some() {
+        count += 1;
+    }
+    if schema.min_length.is_some() {
+        count += 1;
+    }
+    if schema.max_length.is_some() {
+        count += 1;
+    }
+    if schema.min_items.is_some() {
+        count += 1;
+    }
+    if schema.max_items.is_some() {
+        count += 1;
+    }
+    if schema.enum_values.is_some() {
+        count += 1;
+    }
+    if schema.pattern.is_some() {
+        count += 1;
+    }
     count
 }
 
@@ -296,7 +332,10 @@ mod tests {
 
     #[test]
     fn valid_person_with_email() {
-        let result = verify(r#"{"name": "Bob", "age": 25, "email": "bob@example.com"}"#, PERSON_SCHEMA);
+        let result = verify(
+            r#"{"name": "Bob", "age": 25, "email": "bob@example.com"}"#,
+            PERSON_SCHEMA,
+        );
         assert_eq!(result.score, 1.0);
     }
 
@@ -321,7 +360,10 @@ mod tests {
 
     #[test]
     fn invalid_email_pattern() {
-        let result = verify(r#"{"name": "Alice", "age": 30, "email": "no-at-sign"}"#, PERSON_SCHEMA);
+        let result = verify(
+            r#"{"name": "Alice", "age": 30, "email": "no-at-sign"}"#,
+            PERSON_SCHEMA,
+        );
         assert!(result.score < 1.0, "Email without @ should fail pattern");
     }
 
@@ -363,7 +405,10 @@ mod tests {
             "items": { "type": "string" }
         }"#;
         let result = verify(r#"[1, 2, 3]"#, schema);
-        assert!(result.score < 1.0, "Integer items should fail string schema");
+        assert!(
+            result.score < 1.0,
+            "Integer items should fail string schema"
+        );
     }
 
     // ========== Enum Schema ==========
@@ -459,7 +504,10 @@ mod tests {
     fn adversarial_extra_fields_allowed() {
         let schema = r#"{"type": "object", "required": ["name"], "properties": {"name": {"type": "string"}}}"#;
         let result = verify(r#"{"name": "Alice", "age": 30}"#, schema);
-        assert_eq!(result.score, 1.0, "Extra fields should be allowed by default");
+        assert_eq!(
+            result.score, 1.0,
+            "Extra fields should be allowed by default"
+        );
     }
 
     #[test]
@@ -473,9 +521,13 @@ mod tests {
     fn adversarial_multiple_json_in_text() {
         // When multiple JSON objects appear in text, extract_json grabs from first '{' to last '}'
         // which creates an invalid blob — verifier should NOT give full credit
-        let schema = r#"{"type": "object", "required": ["x"], "properties": {"x": {"type": "integer"}}}"#;
+        let schema =
+            r#"{"type": "object", "required": ["x"], "properties": {"x": {"type": "integer"}}}"#;
         let result = verify(r#"Answer: {"x": 1} is correct but {"x": 2} is not"#, schema);
-        assert!(result.score < 1.0, "Ambiguous JSON extraction should not score 1.0");
+        assert!(
+            result.score < 1.0,
+            "Ambiguous JSON extraction should not score 1.0"
+        );
     }
 
     #[test]

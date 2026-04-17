@@ -57,7 +57,12 @@ fn extract_answer_is_pattern(text: &str) -> Option<f64> {
     // Search from the end for explicit answer markers ONLY.
     // DO NOT include "= " — it matches intermediate calculations like "5 + 3 = 8"
     // and causes catastrophic false positives during training.
-    for pattern in &["the answer is ", "the answer is: ", "answer: ", "answer is "] {
+    for pattern in &[
+        "the answer is ",
+        "the answer is: ",
+        "answer: ",
+        "answer is ",
+    ] {
         if let Some(pos) = lower.rfind(pattern) {
             let after = &text[pos + pattern.len()..];
             // Take the first number after the pattern
@@ -124,9 +129,8 @@ fn extract_last_number(text: &str) -> Option<f64> {
     let mut i = 0;
     let bytes = text.as_bytes();
     while i < bytes.len() {
-        let is_negative_start = bytes[i] == b'-'
-            && i + 1 < bytes.len()
-            && bytes[i + 1].is_ascii_digit();
+        let is_negative_start =
+            bytes[i] == b'-' && i + 1 < bytes.len() && bytes[i + 1].is_ascii_digit();
         if bytes[i].is_ascii_digit() || is_negative_start {
             let start = i;
             // Skip the leading minus if present
@@ -173,7 +177,11 @@ pub fn parse_number(s: &str) -> Option<f64> {
     // Handle fractions: "3/4", "-1/3"
     if let Some(slash_pos) = s.find('/') {
         let numer = s[..slash_pos].trim().replace(',', "").parse::<f64>().ok()?;
-        let denom = s[slash_pos + 1..].trim().replace(',', "").parse::<f64>().ok()?;
+        let denom = s[slash_pos + 1..]
+            .trim()
+            .replace(',', "")
+            .parse::<f64>()
+            .ok()?;
         if denom == 0.0 {
             return None;
         }
@@ -253,7 +261,7 @@ mod tests {
 
     #[test]
     fn parse_decimals() {
-        assert_eq!(parse_number("3.14"), Some(3.14));
+        assert_eq!(parse_number("2.75"), Some(2.75));
         assert_eq!(parse_number("-0.5"), Some(-0.5));
         assert_eq!(parse_number("1,234.56"), Some(1234.56));
     }
@@ -282,7 +290,8 @@ mod tests {
 
     #[test]
     fn extract_gsm8k_format_answer() {
-        let text = "Let me work through this step by step.\nFirst, 5 + 3 = 8.\nThen 8 * 2 = 16.\n#### 16";
+        let text =
+            "Let me work through this step by step.\nFirst, 5 + 3 = 8.\nThen 8 * 2 = 16.\n#### 16";
         assert_eq!(extract_answer(text), Some(16.0));
     }
 
@@ -327,28 +336,19 @@ mod tests {
 
     #[test]
     fn verify_correct_integer() {
-        let result = verify(
-            "Step 1: 5 + 3 = 8\nStep 2: 8 * 6 = 48\n#### 48",
-            "#### 48",
-        );
+        let result = verify("Step 1: 5 + 3 = 8\nStep 2: 8 * 6 = 48\n#### 48", "#### 48");
         assert_eq!(result.score, 1.0);
     }
 
     #[test]
     fn verify_wrong_integer() {
-        let result = verify(
-            "Step 1: 5 + 3 = 8\nStep 2: 8 * 6 = 47\n#### 47",
-            "#### 48",
-        );
+        let result = verify("Step 1: 5 + 3 = 8\nStep 2: 8 * 6 = 47\n#### 47", "#### 48");
         assert_eq!(result.score, 0.0);
     }
 
     #[test]
     fn verify_correct_decimal() {
-        let result = verify(
-            "The answer is 3.14159",
-            "3.14159",
-        );
+        let result = verify("The answer is 3.14159", "3.14159");
         assert_eq!(result.score, 1.0);
     }
 
@@ -392,7 +392,10 @@ mod tests {
             ("#### 999", "#### 1000"),
         ] {
             let result = verify(pred, gold);
-            assert_eq!(result.score, 0.0, "Expected 0.0 for pred={pred}, gold={gold}");
+            assert_eq!(
+                result.score, 0.0,
+                "Expected 0.0 for pred={pred}, gold={gold}"
+            );
         }
     }
 
@@ -418,7 +421,8 @@ mod tests {
 
     #[test]
     fn gsm8k_extract_model_18() {
-        let model = "Janet has 16 eggs. She uses 3+4=7. She sells 16-7=9 eggs at $2 each = $18.\n#### 18";
+        let model =
+            "Janet has 16 eggs. She uses 3+4=7. She sells 16-7=9 eggs at $2 each = $18.\n#### 18";
         assert_eq!(extract_answer(model), Some(18.0));
     }
 
@@ -447,8 +451,13 @@ mod tests {
         // Model's reasoning mentions the correct answer (48) but gives wrong final answer
         // A naive "= " matcher would extract 48 from "8 * 6 = 48" in the reasoning
         let gold = "#### 48";
-        let model = "Step 1: 5 + 3 = 8. Step 2: 8 * 6 = 48. But wait, I need to subtract 10.\n#### 38";
-        assert_eq!(verify(model, gold).score, 0.0, "Should use #### answer, not intermediate = 48");
+        let model =
+            "Step 1: 5 + 3 = 8. Step 2: 8 * 6 = 48. But wait, I need to subtract 10.\n#### 38";
+        assert_eq!(
+            verify(model, gold).score,
+            0.0,
+            "Should use #### answer, not intermediate = 48"
+        );
     }
 
     #[test]
@@ -456,11 +465,19 @@ mod tests {
         // 47.6 should NOT round to match gold=48
         let gold = "#### 48";
         let model = "The answer is 47.6";
-        assert_eq!(verify(model, gold).score, 0.0, "47.6 should not match integer gold 48");
+        assert_eq!(
+            verify(model, gold).score,
+            0.0,
+            "47.6 should not match integer gold 48"
+        );
 
         // 47.9999 SHOULD match 48 (within integer tolerance)
         let model2 = "The answer is 47.9999";
-        assert_eq!(verify(model2, gold).score, 1.0, "47.9999 is close enough to 48");
+        assert_eq!(
+            verify(model2, gold).score,
+            1.0,
+            "47.9999 is close enough to 48"
+        );
     }
 
     #[test]
@@ -489,7 +506,11 @@ mod tests {
         assert_eq!(verify("#### 0", gold).score, 1.0);
         assert_eq!(verify("#### 1", gold).score, 0.0);
         assert_eq!(verify("#### -1", gold).score, 0.0);
-        assert_eq!(verify("#### 0.001", gold).score, 0.0, "0.001 is not 0 for integer gold");
+        assert_eq!(
+            verify("#### 0.001", gold).score,
+            0.0,
+            "0.001 is not 0 for integer gold"
+        );
     }
 
     #[test]
@@ -508,7 +529,11 @@ mod tests {
         assert_eq!(verify(model, gold).score, 1.0, "Should use last #### line");
 
         let model2 = "#### 42\nActually, I made an error.\n#### 30";
-        assert_eq!(verify(model2, gold).score, 0.0, "Should use last #### (30), not first (42)");
+        assert_eq!(
+            verify(model2, gold).score,
+            0.0,
+            "Should use last #### (30), not first (42)"
+        );
     }
 
     #[test]
@@ -516,12 +541,20 @@ mod tests {
         // "2/2 = 1" in reasoning should not be extracted as the answer
         let gold = "#### 5";
         let model = "We compute 2/2 = 1, then add 4.\n#### 5";
-        assert_eq!(verify(model, gold).score, 1.0, "#### takes priority over fraction in reasoning");
+        assert_eq!(
+            verify(model, gold).score,
+            1.0,
+            "#### takes priority over fraction in reasoning"
+        );
     }
 
     #[test]
     fn adversarial_division_by_zero() {
-        assert_eq!(parse_number("1/0"), None, "Division by zero should return None");
+        assert_eq!(
+            parse_number("1/0"),
+            None,
+            "Division by zero should return None"
+        );
         assert_eq!(parse_number("0/0"), None);
     }
 
@@ -564,7 +597,11 @@ mod tests {
     fn adversarial_very_close_but_wrong() {
         // For integer gold, even 47.5 should not match 48
         let gold = "#### 48";
-        assert_eq!(verify("#### 47.5", gold).score, 0.0, "47.5 is not close enough to integer 48");
+        assert_eq!(
+            verify("#### 47.5", gold).score,
+            0.0,
+            "47.5 is not close enough to integer 48"
+        );
     }
 
     #[test]
@@ -580,7 +617,9 @@ mod tests {
     #[test]
     fn gsm8k_corpus_no_extraction_failures() {
         let path = "raw/datasets/math/gsm8k_test.jsonl";
-        if !std::path::Path::new(path).exists() { return; }
+        if !std::path::Path::new(path).exists() {
+            return;
+        }
 
         let problems = crate::datasets::gsm8k::load(path).unwrap();
         let mut failures = Vec::new();
@@ -590,15 +629,21 @@ mod tests {
                 failures.push(format!("#{i}: {}", &p.answer[..p.answer.len().min(80)]));
             }
         }
-        assert!(failures.is_empty(), "Failed to extract from {} problems:\n{}",
-            failures.len(), failures.join("\n"));
+        assert!(
+            failures.is_empty(),
+            "Failed to extract from {} problems:\n{}",
+            failures.len(),
+            failures.join("\n")
+        );
     }
 
     #[test]
     fn gsm8k_corpus_self_consistency() {
         // Verify that every GSM8K gold answer matches itself
         let path = "raw/datasets/math/gsm8k_test.jsonl";
-        if !std::path::Path::new(path).exists() { return; }
+        if !std::path::Path::new(path).exists() {
+            return;
+        }
 
         let problems = crate::datasets::gsm8k::load(path).unwrap();
         let mut failures = Vec::new();
@@ -608,7 +653,11 @@ mod tests {
                 failures.push(format!("#{i}: self-verify failed: {}", result.reason));
             }
         }
-        assert!(failures.is_empty(), "{} self-consistency failures:\n{}",
-            failures.len(), failures.join("\n"));
+        assert!(
+            failures.is_empty(),
+            "{} self-consistency failures:\n{}",
+            failures.len(),
+            failures.join("\n")
+        );
     }
 }

@@ -22,6 +22,7 @@ from typing import Optional
 from .registry import load_registry, VerifierBackend, DataSourceType
 from .curriculum import CurriculumController
 from .generators import math_generators, puzzle_generators, science_generators
+from .client import RustVerifierClient, RustVerifierClientError
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] %(message)s')
 logger = logging.getLogger(__name__)
@@ -67,6 +68,16 @@ class VerifierClient:
     def __init__(self, registry, rust_server_url: Optional[str] = None):
         self.registry = registry
         self.rust_server_url = rust_server_url
+        self._rust_client = RustVerifierClient(rust_server_url) if rust_server_url else None
+        self._rust_supported = {
+            VerifierBackend.EXACT_MATCH,
+            VerifierBackend.CODE_EXECUTION,
+            VerifierBackend.MATH_EQUIVALENCE,
+            VerifierBackend.SQL_EXECUTION,
+            VerifierBackend.SCHEMA_VALIDATION,
+            VerifierBackend.CHEMISTRY_CHECK,
+            VerifierBackend.GRAPH_CHECK,
+        }
 
         # Import verifier backends
         from .verifiers import exact_match, code_execution
@@ -77,6 +88,26 @@ class VerifierClient:
 
     def verify(self, task: dict, response: str, domain: str) -> dict:
         """Verify a response and return score + metadata."""
+        config = self.registry.get(domain)
+        if config and self._should_use_rust(config.verifier_backend):
+            try:
+                return self._rust_client.verify(
+                    task=task,
+                    response=response,
+                    domain=domain,
+                    verifier=config.verifier_backend.value,
+                )
+            except RustVerifierClientError as exc:
+                logger.warning(
+                    "Rust verifier unavailable for %s: %s; using local fallback",
+                    domain,
+                    exc,
+                )
+
+        return self._verify_local(task, response, domain)
+
+    def _verify_local(self, task: dict, response: str, domain: str) -> dict:
+        """Verify with the in-process Python fallback path."""
         config = self.registry.get(domain)
         if not config:
             return {"score": 0.0, "reason": f"Unknown domain: {domain}"}
@@ -103,12 +134,58 @@ class VerifierClient:
             "difficulty": task.get("metadata", {}).get("difficulty", 5),
         }
 
-    def verify_batch(self, tasks: list[dict], responses: list[str], domains: list[str]) -> list[dict]:
+    def verify_batch(
+        self,
+        tasks: list[dict],
+        responses: list[str],
+        domains: list[str],
+    ) -> list[dict]:
         """Verify a batch of responses."""
-        return [
-            self.verify(task, response, domain)
-            for task, response, domain in zip(tasks, responses, domains)
-        ]
+        if not (len(tasks) == len(responses) == len(domains)):
+            raise ValueError("tasks, responses, and domains must have the same length")
+
+        if not self._rust_client:
+            return [
+                self._verify_local(task, response, domain)
+                for task, response, domain in zip(tasks, responses, domains)
+            ]
+
+        results = [None] * len(tasks)
+        rust_requests = []
+        rust_positions = []
+
+        for i, (task, response, domain) in enumerate(zip(tasks, responses, domains)):
+            config = self.registry.get(domain)
+            if config and self._should_use_rust(config.verifier_backend):
+                rust_positions.append(i)
+                rust_requests.append({
+                    "task_id": str(i),
+                    "domain": domain,
+                    "verifier": config.verifier_backend.value,
+                    "task": task,
+                    "response": response,
+                })
+            else:
+                results[i] = self._verify_local(task, response, domain)
+
+        if rust_requests:
+            try:
+                rust_results = self._rust_client.verify_batch(rust_requests)
+                for position, result in zip(rust_positions, rust_results):
+                    results[position] = result
+            except RustVerifierClientError as exc:
+                logger.warning("Rust batch verification failed: %s; using local fallback", exc)
+                for position in rust_positions:
+                    results[position] = self._verify_local(
+                        tasks[position],
+                        responses[position],
+                        domains[position],
+                    )
+
+        return results
+
+    def _should_use_rust(self, backend: VerifierBackend) -> bool:
+        return self._rust_client is not None and backend in self._rust_supported
 
 
 def train(
